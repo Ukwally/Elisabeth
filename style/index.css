@@ -4,6 +4,9 @@
   z-index: 1;
   color: var(--dark15);
 }
+html {
+  scroll-behavior: smooth;
+}
 .sticked {
   position: fixed;
   top: 0;
@@ -14,6 +17,7 @@
 :root {
   --godlBlue1: #0d99ff;
   --goldBlue2: #1a73e8; /*google*/
+  --goldBlue3: #1c9ad7; /*compainha propria*/
   --mainBlue1: #ecf2f9;
   --mainBlue2: #d9e6f2;
   --mainBlue3: #c6d9ec;
@@ -108,6 +112,10 @@ body {
   padding: 0px;
   background-color: #f0f2f5;
 }
+.cor-azul {
+  color: var(--godlBlue1);
+  font-weight: normal;
+}
 .txtOcultoMediaQ {
   display: none;
 }
@@ -171,6 +179,9 @@ body {
 }
 .div-tittle-contactos {
   text-align: center;
+  /* & h1{
+    color: var(--mainBlue8)!important;
+  }*/
 }
 @media only screen and (min-width: 800px) {
   .div-tittle-colaboracao {
@@ -190,7 +201,7 @@ body {
 /*Header Costomisation*/
 #top-info {
   background-color: white;
-  height: 34px;
+  height: 30px;
   padding: 0px 10px 0px 10px;
   display: flex;
   align-items: center;
@@ -206,22 +217,22 @@ body {
   margin-left: 0;
 }
 #top-info .networks-set a {
-  background-color: var(--mainBlue6);
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   margin-right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
   text-decoration: none;
-  box-shadow: inset 10px 0px 0px var(--mainBlue5);
+  background-color: var(--mainBlue1);
+  /*box-shadow: inset 10px 0px 0px var(--mainBlue5);*/
 }
 #top-info .networks-set a i {
-  color: white;
+  color: var(--mainBlue6);
 }
 #top-info .top-Email-Icon {
-  color: var(--mainBlue6);
+  color: var(--mainBlue1);
   font-size: 25px;
 }
 header {
@@ -229,8 +240,8 @@ header {
   height: 70px;
   display: flex;
   align-items: center;
-  padding-left: 10%;
-  padding-right: 10%;
+  padding-left: 5%;
+  padding-right: 0%;
   justify-content: space-between;
   width: 100%;
   object-fit: cover;
@@ -253,8 +264,14 @@ header {
 }
 .header-action i {
   display: block;
-  color: var(--mainBlue6);
   font-size: 40px;
+  color: var(--mainBlue6);
+
+  /*font-size: 35px;
+  color: white;
+  background-color: var(--mainBlue3);
+  border: 1px solid var(--mainBlue6);
+  border-radius: 4px;*/
 }
 .header-action nav {
   display: none;
@@ -264,13 +281,18 @@ header {
   color: var(--mainBlue10);
   padding: 10px;
   border-radius: 4px;
-  font-size: 14px;
+  font-size: 12px;
   transition: all 0.8s;
+  text-transform: uppercase;
 }
 .header-action nav a:hover {
   background-color: var(--mainBlue4);
 }
 @media only screen and (min-width: 800px) {
+  header {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
   .header-action nav {
     display: flex;
   }
@@ -306,7 +328,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   padding: 0% 10% 0% 10%;
   background-color: white;
   box-sizing: border-box;
@@ -326,7 +348,7 @@ header {
 }
 .section-banner .banner-description-side .banner-txt-head {
   font-size: 2.17rem;
-  color: var(--mainBlue8);
+  color: var(--mainBlue13);
   margin-top: 0;
   margin-bottom: 15px;
 }
@@ -370,7 +392,7 @@ header {
 }
 .section-banner .banner-description-side .banner-txt-description {
   font-size: 1.27rem;
-  color: var(--mainBlue6);
+  color: var(--mainBlue12);
 }
 
 .banner-acssoes {
@@ -493,6 +515,7 @@ header {
 .section-services .card-services p {
   font-size: 0.96rem;
   color: var(--dark12);
+  font-weight: 300;
 }
 .section-services .card-services i {
   font-size: 80px;
@@ -547,7 +570,7 @@ header {
 @media only screen and (min-width: 800px) {
   .section-resume {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     justify-content: space-between;
     align-items: center;
   }
@@ -634,6 +657,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 5%;
+  box-sizing: border-box;
 }
 @media only screen and (min-width: 800px) {
   .resume-left {
@@ -659,29 +684,47 @@ header {
 .resume-left span {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   margin-top: 0;
-  min-height: 100%;
+  height: 100%;
   width: 100%;
-  box-sizing: border-box;
-  object-fit: cover;
 }
-.resume-left span ul {
-  margin: 15px 0px;
-  padding: 24px 20px;
-  border-radius: 4px;
-  font-weight: 600;
+.resume-left span h5 {
+  margin-bottom: 0;
+  font-weight: 300;
 }
+.resume-left span h4 {
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-size: 2rem !important;
+}
+
 .resume-left span ul li {
-  display: flex;
-  margin: 0;
-  color: var(--mainBlue7);
-  font-size: 16px;
+  list-style: none;
   & i {
-    margin: 0;
-    margin-right: 50px;
-    font-size: 30px;
+    margin-right: 5px;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: normal;
   }
+}
+.resume-left span .resume-action {
+  justify-content: center;
+  /*
+  padding: 0px 20px;
+  background-color: var(--mainBlue1);
+  border-radius: 4px;
+  */
+}
+.resume-left span .resume-action button {
+  background-color: white;
+  border: 1px solid var(--godlBlue1);
+  color: var(--godlBlue1);
+  padding: 5px 20px;
+  border-radius: 20px;
+
+  outline-color: var(--mainBlue1);
+  outline-width: 3px;
+  outline-style: solid;
 }
 .resume-left img {
   max-width: 100%;
@@ -1006,13 +1049,34 @@ header {
 }
 /*SECTION MORE*/
 .section-more {
-  background-color: white;
-  /*background: linear-gradient(90deg, var(--mainBlue1),white);*/
   display: flex;
   justify-content: end;
   padding: 0 10%;
+  align-items: center;
+  /*background: url(../assets/images/blueBanner.png);
+  background-repeat: no-repeat;
+  background: linear-gradient(90deg, var(--mainBlue1), white);
+  */
 }
-.section-more div {
+.section-habilities {
+  padding: 5%;
+  background-color: var(--dark1);
+}
+.section-habilities div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.section-habilities div span {
+  border-radius: 20px;
+  border: 1px solid var(--dark6);
+  font-size: 14px;
+  font-weight: 500;
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 20px;
+  margin: 10px 20px;
 }
 @media only screen and (min-width: 800px) {
   .section-testimony .testimony-set svg {
@@ -1099,11 +1163,11 @@ header {
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
-  background-color: var(--complementar1);
   padding: 10px;
   box-sizing: border-box;
   object-fit: cover;
   border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(50, 64, 74, 0.1);
 }
 .mapa {
   width: 100%;
