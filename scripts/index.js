@@ -52,3 +52,10 @@ function addContentNumber() {
         element.style="background-color:red;!importa";
     });
 }
+
+
+
+/*
+const employer={};
+employer.name='Elisabeth Pedro';
+employer.skills[backend,frontend,server,AI,hosting,]*/

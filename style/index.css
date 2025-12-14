@@ -13,11 +13,40 @@ html {
   z-index: 20;
   box-shadow: 1px 1px 7px 1px rgba(128, 128, 128, 0.336);
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--godlBlue1);
+  height: 100px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mainBlue7);
+}
 
 :root {
   --godlBlue1: #0d99ff;
   --goldBlue2: #1a73e8; /*google*/
   --goldBlue3: #1c9ad7; /*compainha propria*/
+  --goldBlue4: #0694d6; /*tecnoblog*/
+
+  --font-color1: var(--dark9);
+  --font-color2: var(--dark12);
+  --font-color3: var(--dark15);
+
+  --bg1: #fff;
+  --bg2: #f8f8f8;
+  --bg3: var(--dark1);
+  --bg4: whitesmoke;
+
+  --font-size1: 11px;
+  --font-size2: 12px;
+  --font-size3: 0.96rem;
+  --font-size4-padrao: 1.2rem;
+
   --mainBlue1: #ecf2f9;
   --mainBlue2: #d9e6f2;
   --mainBlue3: #c6d9ec;
@@ -521,6 +550,10 @@ header {
 .section-services .card-services i {
   font-size: 80px;
   color: var(--mainGreen12);
+
+  /*color: transparent;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: var(--mainGreen13);*/
 }
 
 .section-services .card-services svg {
@@ -887,23 +920,38 @@ header {
   position: relative;
   box-shadow: 0rem 0.5rem 0.9rem rgba(47, 31, 138, 0.08);
 }
-/*OBS REVER ESTE MEDIA QUERY. É MAIS PRATICO ASSIM?*/
-@media only screen and (min-width: 800px) {
-  .section-portfolio .portfolio-items-set .portfolio-item.active {
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-  .section-portfolio .portfolio-items-set .portfolio-item div {
-    max-width: 49%;
-    height: fit-content;
-  }
+/*Costomizar apenas o mobile-tabs*/
+.section-portfolio
+  .portfolio-items-set
+  #mobile-tab
+  div
+  .portfolio-item-description {
+  position: absolute;
+  color: var(--dark15);
+  z-index: 2;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  padding-left: 10%;
+  flex-direction: column;
 }
+.section-portfolio
+  .portfolio-items-set
+  #mobile-tab
+  div
+  .portfolio-item-description .portfolio-icon-tech-set img {
+    opacity: .3;
+  }
+
 .section-portfolio .portfolio-items-set .portfolio-item div img {
   max-height: fit-content;
   max-width: 100%;
 }
-.section-portfolio .portfolio-items-set .portfolio-item div span {
+.section-portfolio
+  .portfolio-items-set
+  .portfolio-item
+  div
+  .portfolio-item-loop {
   color: var(--dark18);
   cursor: pointer;
   border-radius: 20px;
@@ -924,9 +972,26 @@ header {
     color: dodgerblue;
   }
 }
-.section-portfolio .portfolio-items-set .portfolio-item div span a {
+.section-portfolio
+  .portfolio-items-set
+  .portfolio-item
+  div
+  .portfolio-item-loop
+  a {
   color: dodgerblue;
   text-decoration: underline;
+}
+/*OBS REVER ESTE MEDIA QUERY. É MAIS PRATICO ASSIM?*/
+@media only screen and (min-width: 800px) {
+  .section-portfolio .portfolio-items-set .portfolio-item.active {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .section-portfolio .portfolio-items-set .portfolio-item div {
+    max-width: 49%;
+    height: fit-content;
+  }
 }
 /*SECÇÂO DE DEPOIMENTOS*/
 .section-testimony {
@@ -1187,33 +1252,50 @@ header {
   padding: 5% 10%;
 }
 .section-whatsapp .whatsapp-loop {
+  padding: 0.25rem 0.5rem 0.25rem 0;
+
+  background: #dcf8c6;
+  border-radius: 5px;
   display: flex;
-  align-items: center;
-  background-color: #00ff0034;
   justify-content: space-between;
-  padding:5px 10px;
-  border-radius: 4px;
+  overflow: hidden;
+  margin: 0;
+  max-height: 47px;
+  max-width: 650px;
+  box-sizing: border-box;
+  align-items: center;
+  font-size: 14px;
+  margin: auto;
 }
 .section-whatsapp .whatsapp-loop button {
-  background-color: #00cc00;
-  border: none;
-  height: fit-content;
-  padding: 10px 20px;
-  border-radius: 5px;
-  color: white;
-  font-weight: 100;
-  text-transform: uppercase;
-  font-size: 15px;
+  max-width: max-content;
+  max-height: max-content;
+  line-height: 1.2;
+  font-size: 12px;
+  margin: 0 0 0 0.25rem;
+  padding: 0.4rem;
+  box-sizing: border-box;
+  color: #fff;
+  border: 0;
+  background-color: #00bc10;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  border-radius: 4px;
 }
-.section-whatsapp .whatsapp-loop .div-bg3 .div-bg2 .div-bg1 img {
+.section-whatsapp .whatsapp-loop .div-bg3 .div-bg2 .div-bg1 svg {
   max-width: 30px;
   max-height: 30px;
+  fill: white;
 }
 .section-whatsapp .whatsapp-loop .div-bg3 .div-bg2 .div-bg1 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: var(--mainGreen12);
+
+  background: rgb(0 188 16);
+  outline: 5px solid rgb(0 188 16 / 0.5);
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1222,7 +1304,8 @@ header {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: var(--mainGreen11);
+  background: rgb(0 188 16 / 0.3);
+  outline: 9px solid rgb(0 188 16 / 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1231,10 +1314,58 @@ header {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background-color: var(--mainGreen9);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+/*CONTOMIZATION OF skills SECTION*/
+.section-skills {
+  padding: 5% 10%;
+  background-color: white;
+}
+.section-skills h1 {
+  color: var(--goldBlue4);
+}
+.section-skills .skill-set {
+  background: #fff;
+  padding: 10px;
+  font-size: 14px !important;
+  color: #212121;
+  border: 1px solid #dddedf;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 650px;
+  max-height: 430px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  line-height: 135%;
+}
+.section-skills .skill-set .skill-set-head {
+  background-color: var(--bg2);
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  align-items: flex-start;
+}
+.section-skills .skill-set .skill-set-body {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  border: 1px solid #dddedf;
+  border-radius: 8px;
+  padding: 15px 10px 10px;
+  background-color: var(--bg2);
+  justify-content: space-between;
+}
+.section-skills .skill-set-body .each-skill {
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  width: fit-content;
+  width: 120px;
+  text-align: center;
+  margin-bottom: 5px;
 }
 /*CONTOMIZATION OF CONTACTS SECTION*/
 .section-contacts {
@@ -1411,18 +1542,19 @@ footer {
   height: 70px;
   justify-content: center;
   background-color: whitesmoke;
-  color: var(--dark10);
+  color: var(--dark8);
   font-size: 12px;
+  border: 1px solid var(--dark2);
 }
 .footer-top a {
   /*color: var(--mainBlue1);*/
-  color: var(--dark10);
+  color: var(--dark8);
   font-weight: 600;
   margin-left: 5px;
   font-size: 12px;
 }
 footer .footer-span-heart {
-  color: #af7b2d;
+  color: #96723c;
   font-size: 14px;
   animation: Heart-Animation 2s ease infinite;
   /*animation: Heart-Animation 2s cubic-bezier(0.87, 0.19, 0, 0.65) infinite;*/
@@ -1438,12 +1570,12 @@ footer .footer-span-heart {
     opacity: 1;
   }
   50% {
-    font-size: 18px;
-    color: red;
+    font-size: 15px;
+    color: rgb(255, 0, 0);
   }
   100% {
     font-size: 8px;
-    color: #af7b2d;
+    color: #a18253;
     opacity: 0;
   }
 }
@@ -1464,10 +1596,10 @@ footer .footer-span-heart {
 }
 
 .footer-buttom ul li:first-child {
-  border-bottom: 1px solid var(--mainBlue4);
+  border-bottom: 1px solid var(--mainBlue3);
   margin-bottom: 10px;
   & b {
-    color: var(--mainBlue5);
+    color: var(--dark10);
   }
 }
 /*OBS VER CODIGO ABAIXO*/
@@ -1476,23 +1608,31 @@ footer .footer-span-heart {
 .footer-buttom ul li i,
 .footer-buttom ul li b {
   display: flex;
-  color: var(--mainBlue4);
+  color: var(--dark10);
   line-height: normal !important;
   text-decoration: none;
   cursor: pointer;
 }
 .footer-buttom ul li i {
-  background-color: var(--mainBlue1);
-  height: 30px;
-  width: 30px;
+  background-color: var(--dark2);
+  height: 25px;
+  width: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 15px;
-  color: var(--mainBlue7);
+  color: var(--dark10);
   padding: 0;
   margin: 0;
   margin-right: 10px;
+}
+.footer-buttom ul:last-child li:last-child {
+  display: inline-flex;
+  align-items: center;
+}
+.footer-buttom ul:last-child li:last-child i {
+  background-color: transparent;
+  border: none;
 }
 footer .termos-condicoes {
   background-color: var(--mainBlue5);
