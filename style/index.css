@@ -11,7 +11,7 @@ html {
   position: fixed;
   top: 0;
   z-index: 20;
-  box-shadow: 1px 1px 7px 1px rgba(128, 128, 128, 0.336);
+  box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.336);
   background: rgba(255, 255, 255, 0.452);
   backdrop-filter: blur(20px);
 }
@@ -44,7 +44,7 @@ html {
   --bg3: var(--dark1);
   --bg4: whitesmoke;
 
-  --compyellow:rgb(247, 220, 79);
+  --compyellow: rgb(247, 220, 79);
 
   --font-size1: 11px;
   --font-size2: 12px;
@@ -166,7 +166,7 @@ html {
 body {
   margin: 0px;
   padding: 0px;
- /* background-color: #f0f2f5;*/
+  /* background-color: #f0f2f5;*/
   background-color: white;
 }
 .cor-azul {
@@ -257,7 +257,7 @@ body {
 }
 /*Header Costomisation*/
 #top-info {
-  background-color: var(--bg1);
+  background-color: white;
   height: 30px;
   padding: 0px 10px 0px 10px;
   display: flex;
@@ -292,6 +292,33 @@ body {
   color: var(--mainBlue1);
   font-size: 25px;
 }
+
+#top-info select {
+  width: 120px;
+  padding:1px 1px 1px 25px;
+  border: none;
+  color: var(--dark10);/*
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  appearance: none;*/
+  background-image: url(../assets/icons/angola-circular.png);
+  transition: all 0.3s ease;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-size: 25px;
+}
+
+#top-info select:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+#top-info select:focus {
+  outline: none;/*
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.5);*/
+}
+
 header {
   background-color: white;
   height: 70px;

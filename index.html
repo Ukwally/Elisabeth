@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 
 <head>
     <meta charset="UTF-8">
@@ -71,10 +71,10 @@
         <i class="material-icons" style="margin-right: 10px; color: #8cb3d9;">email</i>
         elisabeth@gmail.com
         <!--i class="fa fa-spinner fa-spin"></!--i-->
-        <select name="language" id="language">
-            <option value="pt">Português</option>
-            <option value="en">English</option>
-        </select>
+        <!--select name="language" id="language" onchange="verificarSelecao()">
+            <option class="option" value="pt">Português</option>
+            <option class="option" value="en">English</option>
+        </select-->
     </div>
     <header id="header">
         <div class="logo"><!--span-- style="color:#3973ac4b ">Elisabeth Pedro</!--span--> </div>
@@ -391,8 +391,9 @@
                 <div class="portfolio-item" id="web-tab">
                     <div>
                         <img src="./assets/images/web-soft-selisnova2.png" alt="">
-                        <span class="portfolio-item-loop" >
-                            <a href="https://ukwally.github.io/selisnova"> <i class="fa fa-globe" style="margin-right: 5px;"></i>Ver site</a>
+                        <span class="portfolio-item-loop">
+                            <a href="https://ukwally.github.io/selisnova"> <i class="fa fa-globe"
+                                    style="margin-right: 5px;"></i>Ver site</a>
                         </span>
                     </div>
                     <div>
@@ -840,14 +841,16 @@
                 <div class="skill-set-body">
                     <div class="each-skill"><span> <img src="./assets/svgs/html5.svg" alt=""> HTML:5></span></div>
                     <div class="each-skill"><span> <img src="./assets/svgs/css3.svg" alt=""> CSS:3></span></div>
-                    <div class="each-skill"><span> <img src="./assets/svgs/javacript.svg" alt=""> JAVASCRIPT:5></span></div>
+                    <div class="each-skill"><span> <img src="./assets/svgs/javacript.svg" alt=""> JAVASCRIPT:5></span>
+                    </div>
                     <div class="each-skill"><span> <img src="./assets/svgs/react.svg" alt=""> REACT NATIVE></span></div>
                     <div class="each-skill"><span> <img src="./assets/svgs/python.svg" alt=""> PYTHON></span></div>
                     <div class="each-skill"><span> <img src="./assets/svgs/csharp.svg" alt=""> C#></span></div>
                     <div class="each-skill"><span> <img src="./assets/svgs/nodedotjs.svg" alt=""> NODE JS></span></div>
                     <div class="each-skill"><span> <img src="./assets/svgs/php.svg" alt=""> PHP></span></div>
                     <div class="each-skill"><span> <img src="./assets/svgs/mysql.svg" alt=""> MYSQL></span></div>
-                    <div class="each-skill"><span> <img src="./assets/svgs/postgresql.svg" alt=""> POSTGREESQL></span></div>
+                    <div class="each-skill"><span> <img src="./assets/svgs/postgresql.svg" alt=""> POSTGREESQL></span>
+                    </div>
                     <div class="each-skill"><span> <img src="./assets/svgs/sqlite.svg" alt=""> SQL></span></div>
                     <div class="each-skill"><span> <img src="./assets/svgs/docker.svg" alt=""> DOCKER></span></div>
 
@@ -961,6 +964,25 @@
     </footer>
 
     <script src="./scripts/index.js"></script>
+    <script>
+        function verificarSelecao() {
+            
+            const laguage = document.getElementById("language");
+            const selectedLaguage = laguage.value;
+
+            if (selectedLaguage === 'pt') {
+                language.style.backgroundImage = 'url(./assets/icons/angola-circular.png)';
+                language.style.backgroundRepeat = 'no-repeat';
+                language.style.backgroundPositionY = 'center';
+                language.style.backgroundSize = '25px';
+            } else {
+                language.style.backgroundImage = 'url(./assets/icons/reino-unido.png)';
+                language.style.backgroundRepeat = 'no-repeat';
+                language.style.backgroundPositionY = 'center';
+                language.style.backgroundSize = '25px';
+            }
+        }
+    </script>
 </body>
 
 </html>
