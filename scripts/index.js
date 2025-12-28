@@ -46,14 +46,6 @@ function openDesktopTab() {
     document.getElementById('web-tab-botton').classList.remove('active');
 }
 
-function addContentNumber() {
-    const experienceNumber = document.querySelector('resume-item');
-    experienceNumber.forEach(element => {
-        element.style="background-color:red;!importa";
-    });
-}
-
-
 
 /*
 const employer={};

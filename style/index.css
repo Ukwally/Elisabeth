@@ -10,13 +10,13 @@ html {
 .sticked {
   position: fixed;
   top: 0;
-  z-index: 20;
+  z-index: 15;
   box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.336);
   background: rgba(255, 255, 255, 0.452);
   backdrop-filter: blur(20px);
 }
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 4px;
 }
 ::-webkit-scrollbar-track {
   background: #f1f1f1;
@@ -30,6 +30,9 @@ html {
 }
 
 :root {
+  --intBlue: #9abff5;
+  --intBlue: #81b0f3;
+
   --godlBlue1: #0d99ff;
   --goldBlue2: #1a73e8; /*google*/
   --goldBlue3: #1c9ad7; /*compainha propria*/
@@ -173,16 +176,17 @@ body {
   color: var(--godlBlue1);
   font-weight: normal;
 }
-.txtOcultoMediaQ {
+.textoOcultoNoMobile {
   display: none;
 }
 @media only screen and (min-width: 800px) {
-  .txtOcultoMediaQ {
+  .textoOcultoNoMobile {
     display: block;
   }
 }
+/*
 .div-tittle {
-}
+}*/
 .tittle-tittle {
   font-size: 2.5rem !important;
   font-weight: 700;
@@ -216,7 +220,6 @@ body {
 .div-tittle-colaboracao {
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 5%;
   background-color: white;
   padding-bottom: 20px;
   text-align: center;
@@ -225,7 +228,9 @@ body {
     margin-bottom: 0;
   }
 }
+
 .div-tittle-portfolio {
+  padding-top: 10%;
 }
 .div-tittle-testemunhas {
   background-color: white;
@@ -295,9 +300,11 @@ body {
 
 #top-info select {
   width: 120px;
-  padding:1px 1px 1px 25px;
+  padding: 1px 1px 1px 25px;
   border: none;
-  color: var(--dark10);/*
+  color: var(
+    --dark10
+  ); /*
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -315,7 +322,7 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 #top-info select:focus {
-  outline: none;/*
+  outline: none; /*
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.5);*/
 }
 
@@ -333,7 +340,7 @@ header {
   transition: all 1s;
   margin-bottom: 0;
   position: relative;
-  z-index: 1000;
+  z-index: 15;
   box-shadow: 0 3px 12px -1px rgba(0, 0, 0, 0.068);
 }
 .logo {
@@ -367,13 +374,13 @@ header {
   text-decoration: none;
   color: var(--mainBlue10);
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 20px;
   font-size: 12px;
   transition: all 0.8s;
   text-transform: uppercase;
 }
 .header-action nav a:hover {
-  background-color: var(--mainBlue4);
+  background-color: var(--mainBlue1);
 }
 @media only screen and (min-width: 800px) {
   header {
@@ -420,6 +427,7 @@ header {
   background-color: white;
   box-sizing: border-box;
   object-fit: cover;
+  height: calc(100vh - 104px);
 }
 @media only screen and (min-width: 800px) {
   .section-banner {
@@ -503,6 +511,9 @@ header {
     flex-direction: row;
   }
 }
+.banner-acssoes a {
+  text-decoration: none;
+}
 .banner-acssoes button {
   padding: 10px 20px;
   font-size: 20px;
@@ -549,12 +560,20 @@ header {
   z-index: -1;
   background: radial-gradient(var(--mainBlue7), var(--mainBlue1), white, white);
 }*/
-.banner-image-side img {
-  max-width: 500px;
-  max-height: 500px;
+.section-banner .banner-image-side img {
+  max-width: 130px;
+  max-height: 130px;
   opacity: 0.8;
   filter: grayscale(10%);
 }
+
+@media only screen and (min-width: 800px) {
+  .section-banner .banner-image-side img {
+    max-width: 500px;
+    max-height: 500px;
+  }
+}
+
 /*SECTION SERVICES*/
 .section-services {
   display: flex;
@@ -616,7 +635,7 @@ header {
 }
 
 .section-services .card-services svg {
-  display: none !important;
+  fill: var(--mainBlue6) !important;
 }
 .card-services p {
   text-align: center;
@@ -992,8 +1011,19 @@ header {
   height: 70%;
   display: flex;
   justify-content: center;
-  padding-left: 10%;
+  padding-left: 5%;
   flex-direction: column;
+}
+.section-portfolio
+  .portfolio-items-set
+  #mobile-tab
+  div
+  .portfolio-item-description
+  .porto-item-descrip-subtittle {
+  font-size: 0.54rem;
+  line-height: 1rem;
+  color: var(--dark12);
+  text-transform: uppercase;
 }
 .section-portfolio
   .portfolio-items-set
@@ -1003,6 +1033,7 @@ header {
   .portfolio-icon-tech-set
   img {
   opacity: 0.3;
+  width: 25px !important;
 }
 
 .section-portfolio .portfolio-items-set .portfolio-item div img {
@@ -1042,6 +1073,37 @@ header {
   a {
   color: dodgerblue;
   text-decoration: underline;
+}
+/*Fim de costomizar apenas o mobile tabs*/
+@media only screen and (min-width: 800px) {
+  .section-portfolio
+    .portfolio-items-set
+    #mobile-tab
+    div
+    .portfolio-item-description {
+    padding-left: 10%;
+  }
+  .section-portfolio
+    .portfolio-items-set
+    #mobile-tab
+    div
+    .portfolio-item-description
+    .porto-item-descrip-subtittle {
+    display: block;
+    font-size: 1rem;
+    line-height: 1.3rem;
+    color: var(--dark12);
+    text-transform: none;
+  }
+  .section-portfolio
+    .portfolio-items-set
+    #mobile-tab
+    div
+    .portfolio-item-description
+    .portfolio-icon-tech-set
+    img {
+    width: 30px !important;
+  }
 }
 /*OBS REVER ESTE MEDIA QUERY. É MAIS PRATICO ASSIM?*/
 @media only screen and (min-width: 800px) {
@@ -1312,7 +1374,6 @@ header {
 /*CONTOMIZATION OF WHATSAPP SECTION*/
 .section-whatsapp {
   background-color: white;
-  padding: 0% 10%;
 }
 .section-whatsapp .whatsapp-loop {
   padding: 0.25rem 0.5rem 0.25rem 0;
@@ -1385,9 +1446,8 @@ header {
 .section-skills {
   padding: 5% 10%;
   background-color: white;
-}
-.section-skills h1 {
-  color: var(--goldBlue4);
+  display: flex;
+  flex-direction: column;
 }
 .section-skills .skill-set {
   background: #fff;
@@ -1398,12 +1458,18 @@ header {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 650px;
-  max-height: 430px;
+  max-height: 410px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   line-height: 135%;
 }
+.section-skills .skill-set h1 {
+  color: var(--goldBlue4);
+}
+/*
+.section-skills .skill-left {
+}*/
 .section-skills .skill-set .skill-set-head {
   background-color: var(--bg2);
   padding: 10px;
@@ -1419,14 +1485,14 @@ header {
   border-radius: 8px;
   padding: 15px 10px 10px;
   background-color: var(--bg2);
-  justify-content: space-between;
+  justify-content: center;
+  overflow-y: auto;
 }
-.section-skills .skill-set-body .each-skill {
+.section-skills .skill-set .skill-set-body .each-skill {
   background-color: white;
   padding: 10px;
   border-radius: 4px;
-  width: fit-content;
-  width: 120px;
+  width: 100%;
   text-align: center;
   margin-bottom: 5px;
   & span {
@@ -1435,10 +1501,32 @@ header {
     align-items: center;
   }
 }
-.section-skills .skill-set-body .each-skill img {
+.section-skills .skill-set .skill-set-body .each-skill img {
   max-width: 30px;
   opacity: 0.3;
 }
+@media only screen and (min-width: 800px) {
+  .section-skills {
+    padding: 5% 10%;
+    display: flex;
+    flex-direction: row;
+  }
+  .section-skills .skill-set {
+    max-height: 430px;
+    max-height: fit-content;
+  }
+  .section-skills .skill-set .skill-set-body {
+    justify-content: space-between;
+  }
+  .section-skills .skill-set .skill-set-body .each-skill {
+    width: 120px;
+  }
+  .section-skills .skill-left {
+    width: calc(100% - 650px);
+    padding-left: 40px;
+  }
+}
+
 /*CONTOMIZATION OF CONTACTS SECTION*/
 .section-contacts {
   background-color: white;
@@ -1725,6 +1813,54 @@ footer .termos-condicoes small a {
   .footer-buttom ul {
     padding-left: 40px;
     padding-right: none;
+  }
+}
+
+/*COSTOMIZATIONA OF DIALOG*/
+.dialog {
+  backdrop-filter: blur(8px);
+  background-color: rgba(252, 252, 252, 0.192);
+  position: fixed;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dialog .dialog-card {
+  background-color: white;
+  height: 15rem;
+  width: 30rem;
+  border-radius: 5px;
+  box-shadow: 0 12px 48px -8px rgba(0, 0, 0, 0.274);
+}
+.dialog .dialog-card .dialog-head {
+  height: 25%;
+  & span {
+    float: right;
+    margin: 10px 20px;
+    cursor: pointer;
+  }
+}
+.dialog .dialog-card .dialog-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dark10);
+  height: 50%;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.dialog .dialog-card .dialog-footer {
+  height: 25%;
+  & span {
+    float: right;
+    font-size: 12px;
+    margin-right: 20px;
+    font-weight: 600;
   }
 }
 

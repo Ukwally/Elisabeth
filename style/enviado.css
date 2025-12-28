@@ -1,0 +1,185 @@
+:root {
+  --intBlue: #9abff5;
+  --intBlue: #81b0f3;
+
+  --godlBlue1: #0d99ff;
+  --goldBlue2: #1a73e8; /*google*/
+  --goldBlue3: #1c9ad7; /*compainha propria*/
+  --goldBlue4: #0694d6; /*tecnoblog*/
+
+  --font-color1: var(--dark9);
+  --font-color2: var(--dark12);
+  --font-color3: var(--dark15);
+
+  --bg1: #fff;
+  --bg2: #f8f8f8;
+  --bg3: var(--dark1);
+  --bg4: whitesmoke;
+
+  --compyellow: rgb(247, 220, 79);
+
+  --font-size1: 11px;
+  --font-size2: 12px;
+  --font-size3: 0.96rem;
+  --font-size4-padrao: 1.2rem;
+
+  /* --mainBlue1: #ecf2f9;
+  --mainBlue2: #d9e6f2;
+  --mainBlue3: #c6d9ec;
+  --mainBlue4: #b3cce6;
+  --mainBlue5: #9fbfdf;
+  --mainBlue6: #8cb3d9;
+  --mainBlue7: #79a6d2;
+  --mainBlue8: #6699cc;
+  --mainBlue9: #538cc6;
+  --mainBlue10: #4080bf;
+  --mainBlue11: #3973ac;
+  --mainBlue12: #336699;
+  --mainBlue13: #2d5986;
+  --mainBlue14: #264d73;
+  --mainBlue15: #204060;
+  --mainBlue16: #19334d;
+  --mainBlue17: #132639;
+  --mainBlue18: #0d1a26;
+  --mainBlue19: #060d13;
+  --mainBlue20: #000000;*/
+
+  --mainBlue1: #e8f6fc;
+  --mainBlue2: #d2ecf9;
+  --mainBlue3: #bbe3f6;
+  --mainBlue4: #a5d9f3;
+  --mainBlue5: #8ed0f0;
+  --mainBlue6: #78c6ed;
+  --mainBlue7: #61bdea;
+  --mainBlue8: #4ab3e8;
+  --mainBlue9: #34aae5;
+  --mainBlue10: #1da0e2;
+  --mainBlue11: #1c9ad7;
+  --mainBlue12: #1a90cb;
+  --mainBlue13: #1780b5;
+  --mainBlue14: #15709e;
+  --mainBlue15: #126087;
+  --mainBlue16: #0f5071;
+  --mainBlue17: #0c405a;
+  --mainBlue18: #093044;
+  --mainBlue19: #06202d;
+  --mainBlue21: #031017;
+  --mainBlue22: #000000;
+
+  /*GREEN*/
+  --mainGreen1: #ffffff;
+  --mainGreen1: #e6ffe6;
+  --mainGreen2: #ccffcc;
+  --mainGreen3: #b3ffb3;
+  --mainGreen4: #99ff99;
+  --mainGreen5: #80ff80;
+  --mainGreen6: #66ff66;
+  --mainGreen7: #4dff4d;
+  --mainGreen8: #33ff33;
+  --mainGreen9: #1aff1a;
+  --mainGreen10: #00ff00;
+  --mainGreen11: #00e600;
+  --mainGreen12: #00cc00;
+  --mainGreen13: #00b300;
+  --mainGreen14: #009900;
+  --mainGreen15: #008000;
+  --mainGreen16: #006600;
+  --mainGreen17: #004d00;
+  --mainGreen18: #003300;
+  --mainGreen19: #001a00;
+  --mainGreen20: #000000;
+  /*GREY*/
+  --dark1: #ffffff;
+  --dark1: #f2f2f2;
+  --dark2: #e6e6e6;
+  --dark3: #d9d9d9;
+  --dark4: #cccccc;
+  --dark5: #bfbfbf;
+  --dark6: #b3b3b3;
+  --dark7: #a6a6a6;
+  --dark8: #999999;
+  --dark9: #8c8c8c;
+  --dark10: #808080;
+  --dark11: #737373;
+  --dark12: #666666;
+  --dark13: #595959;
+  --dark14: #4d4d4d;
+  --dark15: #404040;
+  --dark16: #333333;
+  --dark17: #262626;
+  --dark18: #1a1a1a;
+  --dark19: #0d0d0d;
+  --dark20: #000000;
+
+  /*COMPLEMENTAR*/
+
+  --complementar1: #ffffff;
+  --complementar1: #fff7e6;
+  --complementar2: #ffeecc;
+  --complementar3: #ffe6b3;
+  --complementar4: #ffdd99;
+  --complementar5: #ffd480;
+  --complementar6: #ffcc66;
+  --complementar7: #ffc34d;
+  --complementar8: #ffbb33;
+  --complementar9: #ffb31a;
+  --complementar10: #ffaa00;
+  --complementar11: #e69900;
+  --complementar12: #cc8800;
+  --complementar13: #b37700;
+  --complementar14: #996600;
+  --complementar15: #805500;
+  --complementar16: #664400;
+  --complementar17: #4d3300;
+  --complementar18: #332200;
+  --complementar19: #1a1100;
+  --complementar20: #000000;
+}
+* {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.content .icon-enviado img {
+
+  max-width: 100px;
+  max-height: 100px;
+}
+.content .titulo-enviado {
+  color: var(--mainBlue10);
+  font-weight: 600;
+  font-size: 4rem;
+}
+.content .descricao-enviado {
+  color: var(--dark10);
+  font-weight: 500;
+  text-align: center;
+  font-size: 1.3rem;
+}
+.content .btn-voltar {
+  margin-top: 20px;
+}
+.content .btn-voltar a {
+  text-decoration: none;
+  color: var(--dark12);
+  padding: 10px 20px;
+  background-color: var(--bg3);
+  border-radius: 5px;
+
+  /*
+    outline-width: 4px;
+    outline-style: solid;
+    outline-color: var(--mainBlue1);
+    border: 1px solid var(--mainBlue5);
+    */
+}
