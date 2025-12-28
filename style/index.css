@@ -1459,7 +1459,7 @@ header {
   font-size: 14px;
   margin: auto;
 }
-.section-whatsapp .whatsapp-loop button {
+.section-whatsapp .whatsapp-loop .whatsapp-button {
   max-width: max-content;
   max-height: max-content;
   line-height: 1.2;
@@ -1474,6 +1474,7 @@ header {
   align-items: center;
   font-weight: 600;
   border-radius: 4px;
+  text-decoration: none;
 }
 .section-whatsapp .whatsapp-loop .div-bg3 .div-bg2 .div-bg1 svg {
   max-width: 30px;
