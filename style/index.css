@@ -172,6 +172,9 @@ body {
   /* background-color: #f0f2f5;*/
   background-color: white;
 }
+.hidden {
+  display: none !important;
+}
 .cor-azul {
   color: var(--godlBlue1);
   font-weight: normal;
@@ -181,7 +184,8 @@ body {
 }
 @media only screen and (min-width: 800px) {
   .textoOcultoNoMobile {
-    display: block;
+    display: initial;/*display:inline;*/
+    color: inherit;
   }
 }
 /*
@@ -196,6 +200,14 @@ body {
 .tittle-subtittle {
   font-size: 2rem !important;
   color: var(--dark12);
+  margin: 10px 0px 10px 0px;
+}
+@media only screen and (min-width: 800px) {
+  .tittle-subtittle {
+    font-size: 2rem !important;
+    color: var(--dark12);
+    margin: 32px 0px 32px 0px;
+  }
 }
 .tittle-description {
   font-size: 1.2rem;
@@ -213,9 +225,9 @@ body {
   background-color: white;
   padding-top: 5%;
   text-align: center;
-  & p {
-    margin-bottom: 0;
-  }
+}
+.div-tittle-experiencias p {
+  margin-bottom: 0;
 }
 .div-tittle-colaboracao {
   padding-left: 5%;
@@ -224,9 +236,9 @@ body {
   padding-bottom: 20px;
   text-align: center;
   /*background: linear-gradient(90deg, white, var(--mainGreen1));*/
-  & p {
-    margin-bottom: 0;
-  }
+}
+.div-tittle-colaboracao p {
+  margin-bottom: 0;
 }
 
 .div-tittle-portfolio {
@@ -294,8 +306,9 @@ body {
   color: var(--mainBlue6);
 }
 #top-info .top-Email-Icon {
-  color: var(--mainBlue1);
+  color: var(--mainBlue6);
   font-size: 25px;
+  margin-right: 10px;
 }
 
 #top-info select {
@@ -446,6 +459,7 @@ header {
   color: var(--mainBlue12);
   margin-top: 0;
   margin-bottom: 15px;
+  line-height: 1.2; /*remover isto para não comprimir o texto*/
 }
 .section-banner .banner-description-side .banner-txt-tittle {
   color: var(--mainBlue12);
@@ -453,14 +467,19 @@ header {
   font-weight: 600;
   /*-webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--mainBlue13);*/
-  & .ElisabetTxt {
-    color: var(--mainBlue12);
-    /*
+}
+.section-banner .banner-description-side .banner-txt-tittle .ElisabetTxt {
+  color: var(--mainBlue12);
+  /*
     background: linear-gradient(45deg, #4e7efe, #0d99ff, #4e7efe);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;*/
-  }
 }
+.hastagName {
+  font-family: sans-serif;
+  color: #1a90cb;
+}
+
 .hand-animated {
   display: inline-block;
   animation: wave-hand 1.5s ease-in-out infinite;
@@ -490,6 +509,7 @@ header {
 .section-banner .banner-description-side .banner-txt-description {
   font-size: 1.27rem;
   color: var(--mainBlue12);
+  line-height: 1.2; /*remover isto para não comprimir o texto*/
 }
 
 .banner-acssoes {
@@ -499,14 +519,19 @@ header {
 @media only screen and (min-width: 800px) {
   .section-banner .banner-description-side .banner-txt-head {
     font-size: 2.9rem;
+    line-height: 1;
   }
   .section-banner .banner-description-side .banner-txt-tittle {
     font-size: 4.3rem;
+    line-height: 1;
+  }
+  .hastagName {
+    font-family: poppins;
   }
   .section-banner .banner-description-side .banner-txt-description {
     font-size: 1.7rem;
+    line-height: 1;
   }
-
   .banner-acssoes {
     flex-direction: row;
   }
@@ -514,7 +539,7 @@ header {
 .banner-acssoes a {
   text-decoration: none;
 }
-.banner-acssoes button {
+.banner-acssoes .banner-btn {
   padding: 10px 20px;
   font-size: 20px;
   margin: 10px;
@@ -527,16 +552,17 @@ header {
   color: whitesmoke;
   border: none;
   line-height: normal;
+  /*
   display: flex;
-  align-items: center;
+  align-items: center;*/
 
   box-shadow: 0 14px 20px -8px rgba(0, 70, 255, 0.4);
   background-color: #4e7efe;
   color: #fff;
-  & span {
-    color: var(--mainBlue1);
-    margin-left: 5px;
-  }
+}
+.banner-acssoes-btn1 span {
+  color: var(--mainBlue1);
+  margin-left: 5px;
 }
 .banner-acssoes-btn2 {
   background-color: white;
@@ -551,6 +577,7 @@ header {
   box-sizing: border-box;
 
   overflow: hidden;
+  height: 130px;
 }
 /*.banner-image-background {
   height: 500px;
@@ -568,6 +595,9 @@ header {
 }
 
 @media only screen and (min-width: 800px) {
+  .section-banner .banner-image-side {
+    height: auto;
+  }
   .section-banner .banner-image-side img {
     max-width: 500px;
     max-height: 500px;
@@ -709,12 +739,12 @@ header {
   margin: 0;
   display: flex;
   flex-direction: column;
-  & small {
-    margin-top: 16px;
-    margin-bottom: 8px;
-    font-size: 11px;
-    color: var(--dark9);
-  }
+}
+.resume-item-date small {
+  margin-top: 16px;
+  margin-bottom: 8px;
+  font-size: 11px;
+  color: var(--dark9);
 }
 .resume-item-date span {
   position: absolute;
@@ -813,12 +843,12 @@ header {
 
 .resume-left span ul li {
   list-style: none;
-  & i {
-    margin-right: 5px;
-    font-size: 18px;
-    font-weight: 100;
-    line-height: normal;
-  }
+}
+.resume-left span ul li i {
+  margin-right: 5px;
+  font-size: 18px;
+  font-weight: 100;
+  line-height: normal;
 }
 .resume-left span .resume-action {
   justify-content: center;
@@ -1055,15 +1085,17 @@ header {
   padding: 5px 10px;
   font-size: 15px;
   margin: 10px;
-  margin-bottom: 20px;
   box-sizing: border-box;
   object-fit: cover;
-  & i {
-    background-color: #ecf2f9;
-    padding: 10px;
-    border-radius: 50%;
-    color: dodgerblue;
-  }
+}
+.section-portfolio
+  .portfolio-items-set
+  .portfolio-item
+  div
+  .portfolio-item-loop
+  i {
+  border-radius: 50%;
+  color: dodgerblue;
 }
 .section-portfolio
   .portfolio-items-set
@@ -1104,6 +1136,23 @@ header {
     img {
     width: 30px !important;
   }
+  .section-portfolio
+    .portfolio-items-set
+    .portfolio-item
+    div
+    .portfolio-item-loop {
+    margin-bottom: 20px;
+  }
+  .section-portfolio
+    .portfolio-items-set
+    .portfolio-item
+    div
+    .portfolio-item-loop
+    i {
+    background-color: #ecf2f9;
+    padding: 10px;
+    color: dodgerblue;
+  }
 }
 /*OBS REVER ESTE MEDIA QUERY. É MAIS PRATICO ASSIM?*/
 @media only screen and (min-width: 800px) {
@@ -1138,7 +1187,7 @@ header {
   flex-direction: column;
   position: relative;
   width: fit-content; /*para ocultar o .textimony-item-set e meter o título ao lado  310px*/
-  height: fit-content;
+  margin: auto;
 }
 @media only screen and (min-width: 800px) {
   .section-testimony {
@@ -1159,11 +1208,12 @@ header {
   align-items: center;
   /*background: linear-gradient(90deg, rgba(255, 255, 255, 0.829), transparent);*/
   padding: 0 20px;
-  & span {
-    font-size: 1.9rem;
-    font-weight: 600;
-    color: var(--dark13);
-    /*background: linear-gradient(
+}
+.testimony-item-text span {
+  font-size: 1.9rem;
+  font-weight: 600;
+  color: var(--dark13);
+  /*background: linear-gradient(
       45deg,
       var(--mainBlue15),
       var(--mainBlue10),
@@ -1171,7 +1221,6 @@ header {
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;*/
-  }
 }
 .section-testimony .testimony-set .testimony-item {
   width: 250px;
@@ -1210,30 +1259,43 @@ header {
   .testimony-item-body-description {
   font-size: 14px;
   color: var(--dark17);
-
-  & sup .fa-quote-left {
-    font-size: 7px;
-    color: var(--mainBlue7);
-  }
-
-  & sup .fa-quote-right {
-    font-size: 7px;
-    color: var(--mainBlue7);
-  }
 }
+
+.section-testimony
+  .testimony-set
+  .testimony-item
+  .testimony-item-body
+  .testimony-item-body-description
+  sup
+  .fa-quote-left {
+  font-size: 7px;
+  color: var(--mainBlue7);
+}
+.section-testimony
+  .testimony-set
+  .testimony-item
+  .testimony-item-body
+  .testimony-item-body-description
+  sup
+  .fa-quote-right {
+  font-size: 7px;
+  color: var(--mainBlue7);
+}
+
 .section-testimony .testimony-set svg {
   position: absolute;
   right: 0px;
   top: -25px;
   z-index: 2;
-  & ellipse {
-    fill: white;
-    filter: drop-shadow(1px 1px 12px rgba(128, 128, 128, 0.075));
-  }
-  & path {
-    filter: drop-shadow(1px 1px 7px rgba(128, 128, 128, 0.219));
-  }
 }
+.section-testimony .testimony-set svg ellipse {
+  fill: white;
+  filter: drop-shadow(1px 1px 12px rgba(128, 128, 128, 0.075));
+}
+.section-testimony .testimony-set svg path {
+  filter: drop-shadow(1px 1px 7px rgba(128, 128, 128, 0.219));
+}
+
 .svg-line path {
   stroke: var(--mainBlue2);
 }
@@ -1350,25 +1412,31 @@ header {
   margin-bottom: 5px;
   font-size: 1.5rem;
 }
-.section-about .about-div .about-txt span {
+.section-about .about-div .about-txt .about-txt-description {
   color: var(--dark12);
-  & i {
-    margin-right: 7px;
-    background-color: var(--mainBlue1);
-    color: var(--mainBlue5);
-    height: 30px;
-    width: 30px;
-    border-radius: 15px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
+}
+.section-about .about-div .about-txt .about-networks-set {
+  text-align: center;
+}
+.section-about .about-div .about-txt .about-networks-set i {
+  margin-right: 7px;
+  background-color: var(--mainBlue1);
+  color: var(--mainBlue5);
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 @media only screen and (min-width: 800px) {
   .section-about .about-div {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+  .section-about .about-div .about-txt .about-networks-set {
+    text-align: initial;
   }
 }
 /*CONTOMIZATION OF WHATSAPP SECTION*/
@@ -1442,6 +1510,9 @@ header {
   align-items: center;
   justify-content: center;
 }
+.section-whatsapp .whatsapp-loop .whatsapp-loop-div {
+}
+
 /*CONTOMIZATION OF skills SECTION*/
 .section-skills {
   padding: 5% 10%;
@@ -1463,6 +1534,7 @@ header {
   display: flex;
   flex-direction: column;
   line-height: 135%;
+  margin-bottom: 40px;
 }
 .section-skills .skill-set h1 {
   color: var(--goldBlue4);
@@ -1500,6 +1572,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .section-skills .skill-set .skill-set-body .each-skill img {
@@ -1515,6 +1588,7 @@ header {
   .section-skills .skill-set {
     max-height: 430px;
     max-height: fit-content;
+    margin: 0 auto;
   }
   .section-skills .skill-set .skill-set-body {
     justify-content: space-between;
@@ -1644,9 +1718,9 @@ header {
   background-color: var(--mainBlue1);
   font-weight: 600;
   font-size: 14;
-  & i {
-    color: var(--mainBlue4);
-  }
+}
+.form-contacto button i {
+  color: var(--mainBlue4);
 }
 .form-contacto textarea {
   resize: none;
@@ -1759,9 +1833,9 @@ footer .footer-span-heart {
 .footer-buttom ul li:first-child {
   border-bottom: 1px solid var(--mainBlue3);
   margin-bottom: 10px;
-  & b {
-    color: var(--dark10);
-  }
+}
+.footer-buttom ul li:first-child b {
+  color: var(--dark10);
 }
 /*OBS VER CODIGO ABAIXO*/
 .footer-buttom ul li,
@@ -1834,17 +1908,17 @@ footer .termos-condicoes small a {
 .dialog .dialog-card {
   background-color: white;
   height: 15rem;
-  width: 30rem;
+  width: 17rem;
   border-radius: 5px;
   box-shadow: 0 12px 48px -8px rgba(0, 0, 0, 0.274);
 }
 .dialog .dialog-card .dialog-head {
   height: 25%;
-  & span {
-    float: right;
-    margin: 10px 20px;
-    cursor: pointer;
-  }
+}
+.dialog .dialog-card .dialog-head span {
+  float: right;
+  margin: 10px 20px;
+  cursor: pointer;
 }
 .dialog .dialog-card .dialog-body {
   display: flex;
@@ -1857,11 +1931,17 @@ footer .termos-condicoes small a {
 }
 .dialog .dialog-card .dialog-footer {
   height: 25%;
-  & span {
-    float: right;
-    font-size: 12px;
-    margin-right: 20px;
-    font-weight: 600;
+}
+.dialog .dialog-card .dialog-footer span {
+  float: right;
+  font-size: 12px;
+  margin-right: 20px;
+  font-weight: 600;
+}
+@media only screen and (min-width: 800px) {
+  .dialog .dialog-card {
+    height: 15rem;
+    width: 30rem;
   }
 }
 

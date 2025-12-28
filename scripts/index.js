@@ -47,7 +47,13 @@ function openDesktopTab() {
 }
 
 
+function mostrarAviso (){
+    const modal = document.getElementById('modal-aviso');
+    modal.classList.toggle('hidden');
+}
 /*
 const employer={};
 employer.name='Elisabeth Pedro';
-employer.skills[backend,frontend,server,AI,hosting,]*/
+employer.skills[backend,frontend,server,AI,hosting,]
+
+*/
