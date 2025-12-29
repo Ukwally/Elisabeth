@@ -12,8 +12,9 @@ html {
   top: 0;
   z-index: 15;
   box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.336);
+  /*
   background: rgba(255, 255, 255, 0.452);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);*/
 }
 ::-webkit-scrollbar {
   width: 4px;
@@ -22,7 +23,7 @@ html {
   background: #f1f1f1;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--godlBlue1);
+  background: var(--goldBlue1);
   height: 100px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -30,13 +31,14 @@ html {
 }
 
 :root {
-  --intBlue: #9abff5;
-  --intBlue: #81b0f3;
+  --intBlue1: #9abff5;
+  --intBlue2: #81b0f3;
 
-  --godlBlue1: #0d99ff;
+  --goldBlue1: #0d99ff;
   --goldBlue2: #1a73e8; /*google*/
   --goldBlue3: #1c9ad7; /*compainha propria*/
   --goldBlue4: #0694d6; /*tecnoblog*/
+  --goldBlue5: #4e7efe; /*super dark blue*/
 
   --font-color1: var(--dark9);
   --font-color2: var(--dark12);
@@ -176,7 +178,7 @@ body {
   display: none !important;
 }
 .cor-azul {
-  color: var(--godlBlue1);
+  color: var(--goldBlue1);
   font-weight: normal;
 }
 .textoOcultoNoMobile {
@@ -184,7 +186,7 @@ body {
 }
 @media only screen and (min-width: 800px) {
   .textoOcultoNoMobile {
-    display: initial;/*display:inline;*/
+    display: initial; /*display:inline;*/
     color: inherit;
   }
 }
@@ -456,20 +458,20 @@ header {
 }
 .section-banner .banner-description-side .banner-txt-head {
   font-size: 2.17rem;
-  color: var(--mainBlue12);
+  color: var(--goldBlue1);
   margin-top: 0;
   margin-bottom: 15px;
   line-height: 1.2; /*remover isto para não comprimir o texto*/
 }
 .section-banner .banner-description-side .banner-txt-tittle {
-  color: var(--mainBlue12);
+  color: var(--goldBlue1);
   font-size: 3.22rem;
   font-weight: 600;
   /*-webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: var(--mainBlue13);*/
 }
 .section-banner .banner-description-side .banner-txt-tittle .ElisabetTxt {
-  color: var(--mainBlue12);
+  color: var(--goldBlue1);
   /*
     background: linear-gradient(45deg, #4e7efe, #0d99ff, #4e7efe);
     -webkit-background-clip: text;
@@ -477,7 +479,7 @@ header {
 }
 .hastagName {
   font-family: sans-serif;
-  color: #1a90cb;
+  color: var(--mainBlue12);
 }
 
 .hand-animated {
@@ -508,7 +510,7 @@ header {
 }
 .section-banner .banner-description-side .banner-txt-description {
   font-size: 1.27rem;
-  color: var(--mainBlue12);
+  color: var(--goldBlue1);
   line-height: 1.2; /*remover isto para não comprimir o texto*/
 }
 
@@ -556,8 +558,10 @@ header {
   display: flex;
   align-items: center;*/
 
+  /*box-shadow: 0 14px 20px -8px rgba(0, 70, 255, 0.4);
+  background-color: #4e7efe;*/
   box-shadow: 0 14px 20px -8px rgba(0, 70, 255, 0.4);
-  background-color: #4e7efe;
+  background-color: var(--goldBlue1);
   color: #fff;
 }
 .banner-acssoes-btn1 span {
@@ -800,30 +804,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-right: 5%;
+  padding-right: 0%;
   box-sizing: border-box;
 }
-@media only screen and (min-width: 800px) {
-  .resume-left {
-    height: 578px;
-    width: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .resume-item-enterprise span:last-child {
-    width: 35%;
-  }
-  .resume-item-date {
-    position: static;
-  }
-  .resume-item-date span {
-    position: static;
-    width: none;
-    bottom: 0;
-    left: 0;
-  }
-}
+
 .resume-left span {
   display: flex;
   flex-direction: column;
@@ -841,6 +825,9 @@ header {
   font-size: 2rem !important;
 }
 
+.resume-left span ul {
+  padding-inline-start: 0px;
+}
 .resume-left span ul li {
   list-style: none;
 }
@@ -860,8 +847,8 @@ header {
 }
 .resume-left span .resume-action button {
   background-color: white;
-  border: 1px solid var(--godlBlue1);
-  color: var(--godlBlue1);
+  border: 1px solid var(--goldBlue1);
+  color: var(--goldBlue1);
   padding: 5px 20px;
   border-radius: 20px;
 
@@ -872,6 +859,31 @@ header {
 .resume-left img {
   max-width: 100%;
   max-height: 100%;
+}
+@media only screen and (min-width: 800px) {
+  .resume-left {
+    height: 578px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 5%;
+  }
+  .resume-left span ul {
+    padding-inline-start: 0px;
+  }
+  .resume-item-enterprise span:last-child {
+    width: 35%;
+  }
+  .resume-item-date {
+    position: static;
+  }
+  .resume-item-date span {
+    position: static;
+    width: none;
+    bottom: 0;
+    left: 0;
+  }
 }
 /*SECTION OF ENTERPRISES*/
 .section-enterprises {
@@ -1416,11 +1428,11 @@ header {
   color: var(--dark12);
 }
 .section-about .about-div .about-txt .about-networks-set {
-  text-align: center;
+  text-align: center; 
 }
 .section-about .about-div .about-txt .about-networks-set i {
   margin-right: 7px;
-  background-color: var(--mainBlue1);
+  border:1px solid var(--mainBlue1);
   color: var(--mainBlue5);
   height: 30px;
   width: 30px;
@@ -1512,6 +1524,7 @@ header {
   justify-content: center;
 }
 .section-whatsapp .whatsapp-loop .whatsapp-loop-div {
+  text-align: center;
 }
 
 /*CONTOMIZATION OF skills SECTION*/
@@ -1832,7 +1845,7 @@ footer .footer-span-heart {
 }
 
 .footer-buttom ul li:first-child {
-  border-bottom: 1px solid var(--mainBlue3);
+  border-bottom: 1px solid var(--dark3);
   margin-bottom: 10px;
 }
 .footer-buttom ul li:first-child b {
@@ -1866,9 +1879,14 @@ footer .footer-span-heart {
   display: inline-flex;
   align-items: center;
 }
-.footer-buttom ul:last-child li:last-child i {
+.footer-buttom ul:last-child .fa-map {
   background-color: transparent;
   border: none;
+}
+.footer-buttom ul:last-child .footer-buttom-name{
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 10px;
 }
 footer .termos-condicoes {
   background-color: var(--mainBlue5);
