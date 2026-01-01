@@ -47,9 +47,10 @@ html {
   --bg1: #fff;
   --bg2: #f8f8f8;
   --bg3: var(--dark1);
-  --bg4: whitesmoke;
+  --bg4: #f8f9fa;
 
   --compyellow: rgb(247, 220, 79);
+  --goldComplemento1: #f96e59;
 
   --font-size1: 11px;
   --font-size2: 12px;
@@ -473,13 +474,19 @@ header {
 .section-banner .banner-description-side .banner-txt-tittle .ElisabetTxt {
   color: var(--goldBlue1);
   /*
-    background: linear-gradient(45deg, #4e7efe, #0d99ff, #4e7efe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;*/
+  background: linear-gradient(45deg, #4e7efe, #0d99ff, #4e7efe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
 }
-.hastagName {
+.section-banner
+  .banner-description-side
+  .banner-txt-tittle
+  .ElisabetTxt
+  .hastagName {
   font-family: sans-serif;
   color: var(--mainBlue12);
+  font-size: 3.22rem;
+  font-weight: 600;
 }
 
 .hand-animated {
@@ -549,6 +556,7 @@ header {
   font-weight: 400;
   transition: all 0.8s;
   outline-style: none;
+  text-align: center;
 }
 .banner-acssoes-btn1 {
   color: whitesmoke;
@@ -1056,6 +1064,7 @@ header {
   padding-left: 5%;
   flex-direction: column;
 }
+
 .section-portfolio
   .portfolio-items-set
   #mobile-tab
@@ -1099,6 +1108,7 @@ header {
   margin: 10px;
   box-sizing: border-box;
   object-fit: cover;
+  margin-bottom: 13px;
 }
 .section-portfolio
   .portfolio-items-set
@@ -1107,7 +1117,7 @@ header {
   .portfolio-item-loop
   i {
   border-radius: 50%;
-  color: dodgerblue;
+  color: var(--goldBlue1);
 }
 .section-portfolio
   .portfolio-items-set
@@ -1115,7 +1125,7 @@ header {
   div
   .portfolio-item-loop
   a {
-  color: dodgerblue;
+  color: var(--goldBlue1);
   text-decoration: underline;
 }
 /*Fim de costomizar apenas o mobile tabs*/
@@ -1126,6 +1136,14 @@ header {
     div
     .portfolio-item-description {
     padding-left: 10%;
+  }
+  .section-portfolio
+    .portfolio-items-set
+    #mobile-tab
+    div
+    .portfolio-item-description
+    .porto-item-descrip-tittle {
+    font-weight: 600;
   }
   .section-portfolio
     .portfolio-items-set
@@ -1263,6 +1281,13 @@ header {
 .section-testimony .testimony-set .testimony-item .testimony-item-body small {
   font-size: 11px;
   color: var(--dark12);
+}
+.section-testimony .testimony-set .testimony-item .testimony-item-body small .fa-star {
+  color:  var(--complementar3);
+  border-width: 2px;
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-stroke-color: var(--complementar12); 
+  font-size: 13px;
 }
 .section-testimony
   .testimony-set
@@ -1428,11 +1453,11 @@ header {
   color: var(--dark12);
 }
 .section-about .about-div .about-txt .about-networks-set {
-  text-align: center; 
+  text-align: center;
 }
 .section-about .about-div .about-txt .about-networks-set i {
   margin-right: 7px;
-  border:1px solid var(--mainBlue1);
+  border: 1px solid var(--mainBlue1);
   color: var(--mainBlue5);
   height: 30px;
   width: 30px;
@@ -1553,9 +1578,7 @@ header {
 .section-skills .skill-set h1 {
   color: var(--goldBlue4);
 }
-/*
-.section-skills .skill-left {
-}*/
+
 .section-skills .skill-set .skill-set-head {
   background-color: var(--bg2);
   padding: 10px;
@@ -1682,6 +1705,7 @@ header {
   border-radius: 4px;
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .form-contacto {
   display: flex;
@@ -1883,7 +1907,7 @@ footer .footer-span-heart {
   background-color: transparent;
   border: none;
 }
-.footer-buttom ul:last-child .footer-buttom-name{
+.footer-buttom ul:last-child .footer-buttom-name {
   font-size: 14px;
   font-weight: 600;
   margin-top: 10px;
