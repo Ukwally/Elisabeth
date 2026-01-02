@@ -51,6 +51,10 @@ function mostrarAviso (){
     const modal = document.getElementById('modal-aviso');
     modal.classList.toggle('hidden');
 }
+function mostrarModalRecrutar (){
+    const modal = document.getElementById('modal-recrutar');
+    modal.classList.toggle('hidden');
+}
 /*
 const employer={};
 employer.name='Elisabeth Pedro';

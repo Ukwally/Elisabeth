@@ -1,3 +1,4 @@
+/*INICIO DOS ESTILOS GERAIS*/
 * {
   font-family: poppins, sans-serif;
   line-height: normal;
@@ -6,16 +7,6 @@
 }
 html {
   scroll-behavior: smooth;
-}
-.sticked {
-  position: fixed;
-  top: 0;
-  transition: top 0.5s ease;
-  z-index: 15;
-  box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.336);
-  /*
-  background: rgba(255, 255, 255, 0.452);
-  backdrop-filter: blur(20px);*/
 }
 ::-webkit-scrollbar {
   width: 4px;
@@ -30,7 +21,6 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--mainBlue7);
 }
-
 :root {
   --intBlue1: #9abff5;
   --intBlue2: #81b0f3;
@@ -176,8 +166,15 @@ body {
   /* background-color: #f0f2f5;*/
   background-color: white;
 }
-main {
+.sticked {
+  position: fixed;
+  top: 0;
   transition: top 0.5s ease;
+  z-index: 15;
+  box-shadow: 0px 0px 7px rgba(128, 128, 128, 0.336);
+  /*
+  background: rgba(255, 255, 255, 0.452);
+  backdrop-filter: blur(20px);*/
 }
 .hidden {
   display: none !important;
@@ -194,6 +191,10 @@ main {
     display: initial; /*display:inline;*/
     color: inherit;
   }
+}
+/*FIM DOS ESTILOS GERAIS*/
+main {
+  transition: top 0.5s ease;
 }
 /*
 .div-tittle {
@@ -1758,6 +1759,38 @@ header {
   outline-width: 3px;
   outline-style: solid;
 }
+/*Inicion de costomisar o checkbox*/
+.form-contacto .txtAceitarTermos input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  border: 2px solid var(--mainBlue2);
+  background-color: white;
+  position: relative;
+  transform: scale(0.8);
+}
+.form-contacto .txtAceitarTermos input[type="checkbox"]:checked {
+  border: 2px solid var(--mainBlue8);
+}
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 7px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--mainBlue10);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+
+  box-sizing: border-box;
+}
+/*Fim de costomisar o checkbox*/
+
 .form-contacto button {
   height: 35px;
   border: 1px solid var(--mainBlue2);
@@ -1964,6 +1997,29 @@ footer .termos-condicoes small a {
     padding-right: none;
   }
 }
+/*COSTOMIZATIONAR A FAIXA VER TERMOS*/
+.section-ver-termos {
+  background-color: #d2ecf9;
+  position: fixed;
+  bottom: 5px;
+  z-index: 3000;
+  padding: 5px 10%;
+  width: 80%;
+  margin-left: 10%;
+  box-sizing: border-box;
+}
+.section-ver-termos small {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+}
+.section-ver-termos small i {
+  padding: 8px 10px;
+  background-color: var(--mainBlue1);
+  border-radius: 20px;
+  color: var(--goldBlue4);
+}
 
 /*COSTOMIZATIONA OF DIALOG*/
 .dialog {
@@ -1996,8 +2052,8 @@ footer .termos-condicoes small a {
 }
 .dialog .dialog-card .dialog-body {
   display: flex;
-  align-items: center;
   justify-content: center;
+  flex-direction: column;
   color: var(--dark10);
   height: 50%;
   padding: 10px 20px;

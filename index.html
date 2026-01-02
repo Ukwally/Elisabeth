@@ -85,7 +85,7 @@
                 <a href="#top-info">Início</a> <a href="#sobre">Sobre</a> <a href="#servicos">Serviços</a> <a
                     href="#portfolio">Portfólio</a> <a href="#curriculo">Corrículo</a>
             </nav>
-            <button class="button btn-contratar">CONTRATAR</button>
+            <button class="button btn-contratar" onclick="mostrarModalRecrutar()">CONTRATAR</button>
         </div>
     </header>
     <!-- Crio sites, apps e sistemas personalizados, modernos e eficientes, além de soluções que automatizam processos e aumentam sua produtividade.-->
@@ -963,7 +963,8 @@
                     <input type="email" name="email" id="email" placeholder="E-mail">
                     <input type="text" name="assunto" id="assunto" placeholder="Assunto">
                     <textarea name="texto" id="texto" placeholder="A tua mensagem..."></textarea>
-                    <span class="txtAceitarTermos"><input type="checkbox" name="termos" required> Li e aceito as <a href="tp.html" target="_self" class="cor-azul"> políticas de privacidade</a>.</span>
+                    <span class="txtAceitarTermos"><input type="checkbox" name="termos" required> Li e aceito as <a
+                            href="tp.html" target="_self" class="cor-azul"> políticas de privacidade</a>.</span>
                     <button type="submit">
                         ENVIAR <i class="fa fa-send"></i>
                     </button>
@@ -983,6 +984,10 @@
                 </div>
             </div>
         </section>
+
+        <!--section-- class="section section-ver-termos">
+            <small><span>Por favor, leia os termos de uso do site. <a href="tp.html">Ler termos</a></span>  <i class="fa fa-close"></i> </small>
+        </section-->
         <!--section>
             <svg class="svg-line" width="100%" height="auto" viewBox="0 0 1400 160" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g clip-path="url(#clip0_2423_20329)">
@@ -1014,6 +1019,22 @@
                     As informações neste site podem estar desatualizadas, e incompletas.
                     Para obter informações completas você precisas contactar-me <br>
                     Obrigada!
+                </div>
+                <div class="dialog-footer">
+                    <span class="cor-azul"><a href="tel:+244948024170"
+                            style="text-decoration: none;color: inherit;">LIGAR AGORA</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="dialog hidden" id="modal-recrutar">
+            <div class="dialog-card">
+                <div class="dialog-head">
+                    <span class="close-dialog" onclick="mostrarModalRecrutar()">x</span>
+                </div>
+                <div class="dialog-body">
+                    <span>Estou feliz que me queiras recrutar!</span>
+                    <span>Não exites enque eu te mostre na entrevista o meu potencial que este site não pode mostrar!</span>
+                    <small style="margin-top: 20px; font-weight: 600;">| E-mail: elisabeth@gmail.com | Tel.: +244 948 024 170 | </small>
                 </div>
                 <div class="dialog-footer">
                     <span class="cor-azul"><a href="tel:+244948024170"
