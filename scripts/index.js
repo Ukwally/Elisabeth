@@ -47,32 +47,76 @@ function openDesktopTab() {
 }
 
 
-function mostrarAviso (){
+function mostrarAviso() {
     const modal = document.getElementById('modal-aviso');
     modal.classList.toggle('hidden');
 }
-function mostrarModalRecrutar (){
+function mostrarModalRecrutar() {
     const modal = document.getElementById('modal-recrutar');
     modal.classList.toggle('hidden');
 }
-function mostrarErroWhatsapp (){
+function mostrarErroWhatsapp() {
     const modal = document.getElementById('modal-erro-Whatsapp');
     modal.classList.toggle('hidden');
 }
 
-function contarTempo (){
-    const mes = 30;
-    const dia = 24;
-    const hora = 60;
+/*
+function contarTempo() {
+    const inicio = Date.now();
+    const final = new Date('2026-02-02').getTime();
+    const falta = final - inicio;
 
-    setInterval(() => {
-        for (let hora = 60; hora > 0; hora--) {
-            const element = array[hora];
-        }
+    const miliSegundoPorDia = 1000 * 60 * 60 * 24;
+    diasEmFalta = Math.floor(falta / miliSegundoPorDia);
 
-    }, 1000);
+    const miliSegundoPorHora = 1000 * 60 * 60;
+    horasEmFalta = Math.floor(diasEmFalta / miliSegundoPorHora) % 60;
+
+    const miliSegundoPorSegundo = 1000 * 60;
+    segundosEmFalta = Math.floor(horasEmFalta / miliSegundoPorSegundo) % 60;
+
+    document.getElementById('show-segundo').innerHTML = horasEmFalta;
+
+    console.log('INICIO E ' + inicio);
+    console.log('FINAL E ' + final);
+    console.log('O TEMPO EM FALTA  E ' + falta);
+    console.log('DIAS EM FALTA' + diasEmFalta);
+
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#formats_of_tostring_method_return_values
+
+    //setInterval(() => {
+    //    for (let hora = 60; hora > 0; hora--) {
+    //        const element = array[hora];
+    //    }
+    //
+    //}, 1000);
+}*/
+
+function contarTempo() {
+    const inicio = Date.now();
+    const final = new Date('2026-02-02').getTime();
+    const falta = final - inicio;
+
+    const segundos = Math.floor(falta / 1000) % 60;
+    const minutos = Math.floor(falta / (1000 * 60)) % 60;
+    const horas = Math.floor(falta / (1000 * 60 * 60)) % 24;
+    const dias = Math.floor(falta / (1000 * 60 * 60 * 24));
+
+
+    document.getElementById('show-segundo').innerHTML = segundos;
+    document.getElementById('show-minuto').innerHTML = minutos;
+    document.getElementById('show-hora').innerHTML = horas;
+    document.getElementById('show-dia').innerHTML = dias;
+
+
+
 
 }
+
+
+setInterval(() => {
+    contarTempo()
+}, 1000);
 /*
 const employer={};
 employer.name='Elisabeth Pedro';
