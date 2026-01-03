@@ -1,3 +1,17 @@
+/*
+
+Upercase no softwares por:?
+
+Verificar tamanhos dos textos e paddings das sections.
+Rever sections testemunhas.
+
+rever os cards servicos.
+
+definir as cores do banner
+
+talvez criar uma página sobre onde expor certificados e apenas mais um pouquinho sinho sobre mim
+
+*/
 /*INICIO DOS ESTILOS GERAIS*/
 * {
   font-family: poppins, sans-serif;
@@ -34,6 +48,7 @@ html {
   --font-color1: var(--dark9);
   --font-color2: var(--dark12);
   --font-color3: var(--dark15);
+  /*Que as fontes variem de dark 9 a 17 (base 15, com bold para mais escuros e weight: x00 para mais claro) */
 
   --bg1: #fff;
   --bg2: #f8f8f8;
@@ -42,6 +57,7 @@ html {
 
   --compyellow: rgb(247, 220, 79);
   --goldComplemento1: #f96e59;
+  --goldComlementar2: #419e86;
 
   --font-size1: 11px;
   --font-size2: 12px;
@@ -255,6 +271,7 @@ main {
 .div-tittle-testemunhas {
   background-color: white;
   padding-bottom: 20px;
+  padding-right: 0;
 }
 .div-tittle-about .tittle-tittle {
   font-size: 1.9rem !important;
@@ -278,6 +295,9 @@ main {
   .div-tittle-experiencias {
     padding-left: 10%;
     padding-right: 10%;
+  }
+  .div-tittle-testemunhas {
+    padding-right: 20px;
   }
 }
 /*Header Costomisation*/
@@ -1109,6 +1129,7 @@ header {
   cursor: pointer;
   border-radius: 20px;
   background-color: #ecf2f98f;
+  /*background-color: #e8f6fc7a;*/
   position: absolute;
   bottom: 0;
   width: calc(100% - 40px);
@@ -1188,9 +1209,18 @@ header {
     div
     .portfolio-item-loop
     i {
+    /*
     background-color: #ecf2f9;
-    padding: 10px;
-    color: dodgerblue;
+    border:none;
+    */
+    background-color: var(--bg1);
+    color: var(--goldBlue1);
+    border: 1px solid var(--mainBlue4);
+    padding: 9.5px 10px;
+    /*
+    background-color: var(--mainBlue1);
+    border: 2px solid var(--bg1);
+    color: var(--goldBlue1);*/
   }
 }
 /*OBS REVER ESTE MEDIA QUERY. É MAIS PRATICO ASSIM?*/
@@ -1285,11 +1315,11 @@ header {
   font-size: 15px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: var(--dark16);
+  margin-top: 5px;
 }
 .section-testimony .testimony-set .testimony-item .testimony-item-body small {
   font-size: 11px;
-  color: var(--dark12);
+  color: var(--font-color2);
 }
 .section-testimony
   .testimony-set
@@ -1454,9 +1484,9 @@ header {
   width: 90%;
   display: flex;
   flex-direction: column;
-  & b {
-    color: var(--dark10);
-  }
+}
+.section-about .about-div .about-txt b {
+  color: var(--dark10);
 }
 .section-about .about-div .about-txt strong {
   color: var(--dark12);
@@ -1577,7 +1607,6 @@ header {
   background: #fff;
   padding: 10px;
   font-size: 14px !important;
-  color: #212121;
   border: 1px solid #dddedf;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -1829,7 +1858,7 @@ input[type="checkbox"]:checked::after {
   justify-content: center;
   align-items: center;
   font-size: 12px;
-  color: #666666;
+  color: var(--dark12);
   flex-wrap: wrap;
   line-height: 1;
   margin: 8px 0px;
@@ -2043,7 +2072,7 @@ footer .termos-condicoes small a {
   box-shadow: 0 12px 48px -8px rgba(0, 0, 0, 0.274);
 }
 .dialog .dialog-card .dialog-head {
-  height: 25%;
+  height: 20%;
 }
 .dialog .dialog-card .dialog-head span {
   float: right;
@@ -2059,8 +2088,18 @@ footer .termos-condicoes small a {
   padding: 10px 20px;
   font-size: 14px;
 }
+.dialog .dialog-card .dialog-body small {
+  margin-top: 10px;
+  font-weight: 600;
+}
 .dialog .dialog-card .dialog-footer {
-  height: 25%;
+  height: 30%;
+  padding-top: 10px;
+}
+.dialog .dialog-card .dialog-footer span a {
+  text-decoration: none;
+  color: inherit;
+  padding: 5px;
 }
 .dialog .dialog-card .dialog-footer span {
   float: right;
