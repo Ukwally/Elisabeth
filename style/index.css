@@ -1,16 +1,12 @@
 /*
 
+definir as cores do banner
+Rever sections testemunhas.
 Upercase no softwares por:?
 
-Verificar tamanhos dos textos e paddings das sections.
-Rever sections testemunhas.
 
 rever os cards servicos.
-
-definir as cores do banner
-
 talvez criar uma página sobre onde expor certificados e apenas mais um pouquinho sinho sobre mim
-
 */
 /*INICIO DOS ESTILOS GERAIS*/
 * {
@@ -239,7 +235,7 @@ main {
 .div-tittle-servicos {
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 5%;
+  padding-top: 20%;
   background-color: white;
   padding-bottom: 20px;
 }
@@ -247,7 +243,7 @@ main {
   padding-left: 5%;
   padding-right: 5%;
   background-color: white;
-  padding-top: 5%;
+  padding-top: 20%;
   text-align: center;
 }
 .div-tittle-experiencias p {
@@ -291,10 +287,12 @@ main {
   .div-tittle-servicos {
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 5%;
   }
   .div-tittle-experiencias {
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 5%;
   }
   .div-tittle-testemunhas {
     padding-right: 20px;
@@ -667,6 +665,7 @@ header {
   margin: 10px;
   border-radius: 4px;
   box-shadow: 0rem 1rem 1.8rem rgba(47, 31, 138, 0.15);
+  cursor: pointer;
 }
 .card:first-child {
   box-shadow: 0rem 0.5rem 0.9rem rgba(47, 31, 138, 0.08);
@@ -698,11 +697,14 @@ header {
 }
 .section-services .card-services i {
   font-size: 80px;
+  color: transparent;
+  -webkit-text-stroke-width: 1.2px;
+  -webkit-text-stroke-color: var(--mainGreen13);
+  /*
   color: var(--mainGreen12);
-
-  /*color: transparent;
   -webkit-text-stroke-width: 0.7px;
-  -webkit-text-stroke-color: var(--mainGreen13);*/
+ -webkit-text-stroke-color: var(--dark10);
+ */
 }
 
 .section-services .card-services svg {
@@ -997,8 +999,8 @@ header {
   padding-right: 10%;
   display: flex;
   flex-direction: column;
-  padding-bottom: 100px;
-  padding-top: 5%;
+  padding-top: 20%;
+  padding-bottom: 5%;
 }
 
 .section-portfolio .portfolio-tabs {
@@ -1024,6 +1026,9 @@ header {
   margin-right: 10px;
 }
 @media only screen and (min-width: 800px) {
+  .section-portfolio {
+    padding-top: 5%;
+  }
   .section-portfolio .portfolio-tabs {
     border-radius: 40px;
     width: fit-content;
@@ -1598,10 +1603,10 @@ header {
 
 /*CONTOMIZATION OF skills SECTION*/
 .section-skills {
-  padding: 5% 10%;
+  padding: 20% 10% 10% 10%;
   background-color: white;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
 }
 .section-skills .skill-set {
   background: #fff;
@@ -1659,6 +1664,9 @@ header {
   max-width: 30px;
   opacity: 0.3;
 }
+.section-skills .skill-left {
+  padding-bottom: 1.5em;
+}
 @media only screen and (min-width: 800px) {
   .section-skills {
     padding: 5% 10%;
@@ -1679,6 +1687,7 @@ header {
   .section-skills .skill-left {
     width: calc(100% - 650px);
     padding-left: 40px;
+    padding-bottom: 0;
   }
 }
 
@@ -1718,6 +1727,7 @@ header {
   .section-contacts {
     padding-left: 10%;
     padding-right: 10%;
+    padding-top: 10%;
   }
   .section-contacts-set {
     flex-direction: row;
