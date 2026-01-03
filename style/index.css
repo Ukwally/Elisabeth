@@ -1,8 +1,8 @@
 /*
 
+Upercase no softwares por:?
 definir as cores do banner
 Rever sections testemunhas.
-Upercase no softwares por:?
 
 
 rever os cards servicos.
@@ -330,8 +330,10 @@ main {
 }
 #top-info .networks-set a i {
   color: var(--mainBlue6);
+  /*color: var(--mainBlue8);*/
 }
 #top-info .top-Email-Icon {
+  /*color: var(--mainBlue8);*/
   color: var(--mainBlue6);
   font-size: 25px;
   margin-right: 10px;
@@ -2101,6 +2103,20 @@ footer .termos-condicoes small a {
 .dialog .dialog-card .dialog-body small {
   margin-top: 10px;
   font-weight: 600;
+}
+.dialog .dialog-card .dialog-body .counter {
+  display: flex;
+  background-color: var(--bg2);
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+}
+.dialog .dialog-card .dialog-body .counter .counter-item{
+ background-color: var(--bg3);
+ width: 50px;
+ text-align: center;
+ margin: 5px 0px;
+ border-radius: 5px;
 }
 .dialog .dialog-card .dialog-footer {
   height: 30%;

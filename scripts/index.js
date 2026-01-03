@@ -55,6 +55,24 @@ function mostrarModalRecrutar (){
     const modal = document.getElementById('modal-recrutar');
     modal.classList.toggle('hidden');
 }
+function mostrarErroWhatsapp (){
+    const modal = document.getElementById('modal-erro-Whatsapp');
+    modal.classList.toggle('hidden');
+}
+
+function contarTempo (){
+    const mes = 30;
+    const dia = 24;
+    const hora = 60;
+
+    setInterval(() => {
+        for (let hora = 60; hora > 0; hora--) {
+            const element = array[hora];
+        }
+
+    }, 1000);
+
+}
 /*
 const employer={};
 employer.name='Elisabeth Pedro';

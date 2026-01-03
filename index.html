@@ -62,7 +62,7 @@
     <!-- FIM DO GRAFICO DO GOOGLE-->
 </head>
 
-<body onload="openMobileTab()">
+<body onload="openMobileTab(),contarTempo()">
     <div id="top-info">
         <span class="networks-set">
             <a href="#"><i class="fa fa-facebook"></i></a>
@@ -464,8 +464,8 @@
                         </small>
                         <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
                             Escelente
-                            profissional. Escelente profissional. Escelente<sup><i
-                                    class="fa fa-quote-right"></i></sup></p>
+                            profissional. Escelente profissional. Escelente<sup><i class="fa fa-quote-right"></i></sup>
+                        </p>
                     </div>
                 </div>
                 <div class="testimony-item">
@@ -485,8 +485,8 @@
 
                         <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
                             Escelente
-                            profissional. Escelente profissional. Escelente.<sup><i
-                                    class="fa fa-quote-right"></i></sup></p>
+                            profissional. Escelente profissional. Escelente.<sup><i class="fa fa-quote-right"></i></sup>
+                        </p>
                     </div>
                 </div>
                 <div class="testimony-item">
@@ -505,8 +505,8 @@
                         </small>
                         <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
                             Escelente
-                            profissional. Escelente profissional. Escelente.<sup><i
-                                    class="fa fa-quote-right"></i></sup></p>
+                            profissional. Escelente profissional. Escelente.<sup><i class="fa fa-quote-right"></i></sup>
+                        </p>
                     </div>
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="162" height="162" fill="none" viewBox="0 0 162 162">
@@ -907,7 +907,7 @@
                         Onde cada ferramenta indica meses de experiência. Mas o meu conhecimento profissional não se
                         resume nisto, há muito mais alem da lista. Me contacte para saber mais.</p>
                 </div>
-                <section class="section section-whatsapp">
+                <section class="section section-whatsapp" id="#texteDelta">
                     <div class="whatsapp-loop">
                         <div class="div-bg3">
                             <div class="div-bg2">
@@ -922,7 +922,8 @@
                         <div class="whatsapp-loop-div">🚀Colabore <span class="textoOcultoNoMobile"> mais de perto
                                 comigo,</span> pelo <strong style="color: #17b452;"> Whatsapp</strong>
                         </div>
-                        <a class="whatsapp-button" href="https://wa.me/+244948024170">
+                        <a class="whatsapp-button" href="#texteDelta" onclick="mostrarErroWhatsapp()">
+                        <!--a class="whatsapp-button" href="https://wa.me/+244948024170" onclick="mostrarErroWhatsapp()"-->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="20px"
                                 fill="white" style="margin-right: 5px;">
                                 <path
@@ -962,7 +963,7 @@
 
                     <input type="text" name="nome" id="nome" placeholder="* Nome" required>
                     <input type="email" name="email" id="email" placeholder="E-mail">
-                    <input type="text" name="telefone" id="telefone" placeholder="Telefone" >
+                    <input type="text" name="telefone" id="telefone" placeholder="Telefone">
                     <textarea name="texto" id="texto" placeholder="* A tua mensagem..." required></textarea>
                     <span class="txtAceitarTermos"><input type="checkbox" name="termos" required> Li e aceito as <a
                             href="tp.html" target="_self" class="cor-azul"> políticas de privacidade</a>.</span>
@@ -1034,8 +1035,37 @@
                 </div>
                 <div class="dialog-body">
                     <span>Estou feliz que me queiras recrutar!</span>
-                    <span>Não exites enque eu te mostre na entrevista o meu potencial que este site não pode mostrar!</span>
+                    <span>Não exites enque eu te mostre na entrevista o meu potencial que este site não pode
+                        mostrar!</span>
                     <small>| E-mail: elisabeth@gmail.com | Tel.: +244 948 024 170 | </small>
+                </div>
+                <div class="dialog-footer">
+                    <span class="cor-azul"><a href="tel:+244948024170">LIGAR AGORA</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="dialog hidden" id="modal-erro-Whatsapp">
+            <div class="dialog-card">
+                <div class="dialog-head">
+                    <span class="close-dialog" onclick="mostrarErroWhatsapp()">x</span>
+                </div>
+                <div class="dialog-body">
+                    <span>O whatsapp está quase pronto. Faltam apenas</span>
+                    <span class="counter">
+                        <span class="counter-item counter-dias">
+                            <small>Dias</small>
+                            <pre>29</pre>
+                        </span>:
+                        <span class="counter-item counter-horas">
+                            <small>horas</small>
+                            <pre>16</pre>
+                        </span>:
+                        <span class="counter-item counter-segundos">
+                            <small>Segun.</small>
+                            <pre>07</pre>
+                        </span>
+                    </span>
+                    <small>Mas você pode usar outras formas de contactar-me.</small>
                 </div>
                 <div class="dialog-footer">
                     <span class="cor-azul"><a href="tel:+244948024170">LIGAR AGORA</a></span>
