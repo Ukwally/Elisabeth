@@ -59,6 +59,12 @@ function mostrarErroWhatsapp() {
     const modal = document.getElementById('modal-erro-Whatsapp');
     modal.classList.toggle('hidden');
 }
+function mostrarRedeSocialIndisponivel(nomeDaRede) {
+    const modal = document.getElementById('modal-erro-RedeSocial');
+    modal.classList.toggle('hidden');
+    const rede = document.getElementById('nomeDaRede');
+    rede.innerHTML = nomeDaRede;
+}
 
 /*
 function contarTempo() {
@@ -108,16 +114,41 @@ function contarTempo() {
     document.getElementById('show-hora').innerHTML = horas;
     document.getElementById('show-dia').innerHTML = dias;
 
-
-
-
+    document.getElementById('show-segundo2').innerHTML = segundos;
+    document.getElementById('show-minuto2').innerHTML = minutos;
+    document.getElementById('show-hora2').innerHTML = horas;
+    document.getElementById('show-dia2').innerHTML = dias;
 }
-
 
 setInterval(() => {
     contarTempo()
 }, 1000);
+
+
+function copiarLink(link) {
+
+    if (link.indexOf('http') === -1) {
+        document.getElementById('mini-dialog-txt').innerHTML = 'Erro ao copiar';
+        document.getElementById('mini-dialog-div').classList.add('visivel');
+    } else {
+        navigator.clipboard.writeText(link);
+        document.getElementById('mini-dialog-txt').innerHTML = 'Link Copiado';
+        document.getElementById('mini-dialog-div').classList.add('visivel');
+    }
+    
+    
+    setTimeout(() => {
+        document.getElementById('mini-dialog-div').classList.remove('visivel');
+    }, 2000);
+
+
+}
+
 /*
+
+
+
+
 const employer={};
 employer.name='Elisabeth Pedro';
 employer.skills[backend,frontend,server,AI,hosting,]

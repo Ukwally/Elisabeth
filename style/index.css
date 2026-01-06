@@ -8,6 +8,9 @@ Rever sections testemunhas.
 rever os cards servicos.
 talvez criar uma página sobre onde expor certificados e apenas mais um pouquinho sinho sobre mim
 */
+/*
+@media only screen and (min-width: 800px) and (max-width: 1024px) {
+}*/
 /*INICIO DOS ESTILOS GERAIS*/
 * {
   font-family: poppins, sans-serif;
@@ -268,6 +271,7 @@ main {
   background-color: white;
   padding-bottom: 20px;
   padding-right: 0;
+  max-width: 100%;
 }
 .div-tittle-about .tittle-tittle {
   font-size: 1.9rem !important;
@@ -296,6 +300,7 @@ main {
   }
   .div-tittle-testemunhas {
     padding-right: 20px;
+    max-width: 50%;
   }
 }
 /*Header Costomisation*/
@@ -468,12 +473,14 @@ header {
   background-color: white;
   box-sizing: border-box;
   object-fit: cover;
-  height: calc(100vh - 104px);
+  /*min-height: calc(100vh - 104px);*/
+  min-height: calc(100vh - 104px);
 }
 @media only screen and (min-width: 800px) {
   .section-banner {
     flex-direction: row;
-    height: calc(100vh - 104px);
+    /*height: calc(100vh - 104px);*/
+    min-height: calc(100vh - 104px);
     justify-content: space-between;
   }
 }
@@ -691,6 +698,7 @@ header {
 }
 .card-services-head h4 {
   color: var(--mainBlue8);
+  text-align: center;
 }
 .section-services .card-services p {
   font-size: 0.96rem;
@@ -1265,16 +1273,6 @@ header {
   width: fit-content; /*para ocultar o .textimony-item-set e meter o título ao lado  310px*/
   margin: auto;
 }
-@media only screen and (min-width: 800px) {
-  .section-testimony {
-    flex-direction: row;
-    padding-left: 10%;
-    padding-right: 10%;
-  }
-  .section-testimony .testimony-set {
-    flex-direction: row;
-  }
-}
 .testimony-item-text {
   width: 310px;
   height: 250px;
@@ -1299,12 +1297,71 @@ header {
     -webkit-text-fill-color: transparent;*/
 }
 .section-testimony .testimony-set .testimony-item {
-  width: 250px;
+  /*max-width: 250px; con esta medida a margem orizontal fica muito bonita no meu telefone*/
+  max-width: 100%;
   height: 250px;
   background-color: white;
   margin: 20px;
   border-radius: 4px;
   box-shadow: 1px 1px 7px 1px rgba(87, 87, 87, 0.055);
+}
+@media only screen and (min-width: 800px) {
+  .section-testimony {
+    padding-left: 10%;
+    padding-right: 10%;
+    flex-direction: row;
+  }
+  .section-testimony .testimony-set {
+    flex-direction: row;
+    width: 290px;
+    overflow: hidden;
+  }
+  .section-testimony .testimony-set .testimony-item {
+    min-width: 250px;
+    animation: mudarTestemunha 10s cubic-bezier(0.075, 0.92, 0.165, 1) infinite;
+  }
+  .section-testimony .testimony-set #testimony-item-joy-duplicado {
+    display: block !important;
+  }
+}
+@keyframes mudarTestemunha {
+  0% {
+    transform: translateX(0px);
+  }
+  33% {
+    transform: translateX(-290px);
+  }
+  66% {
+    transform: translateX(-580px);
+  }
+  100% {
+    transform: translateX(-870px);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .div-tittle-testemunhas {
+    max-width: 100%;
+  }
+  .section-testimony {
+    flex-direction: column;
+  }
+  .section-testimony .testimony-set {
+    width: max-content;
+    overflow: initial;
+  }
+  .section-testimony .testimony-set .testimony-item {
+    width: 250px;
+    animation: none;
+  }
+  .section-testimony .testimony-set #testimony-item-joy-duplicado {
+    display: none !important;
+  }
+}
+@media only screen and (min-width: 1500px) {
+  .section-testimony {
+    flex-direction: row;
+  }
 }
 
 .section-testimony .testimony-set .testimony-item .testimony-item-head {
@@ -1506,7 +1563,7 @@ header {
 .section-about .about-div .about-txt .about-networks-set {
   text-align: center;
 }
-.section-about .about-div .about-txt .about-networks-set i {
+.section-about .about-div .about-txt .about-networks-set a i {
   margin-right: 7px;
   border: 1px solid var(--mainBlue1);
   color: var(--mainBlue5);
@@ -1669,11 +1726,11 @@ header {
 .section-skills .skill-left {
   padding-bottom: 1.5em;
 }
+
+/*Media mobile*/
 @media only screen and (min-width: 800px) {
   .section-skills {
     padding: 5% 10%;
-    display: flex;
-    flex-direction: row;
   }
   .section-skills .skill-set {
     max-height: 430px;
@@ -1685,6 +1742,12 @@ header {
   }
   .section-skills .skill-set .skill-set-body .each-skill {
     width: 120px;
+  }
+}
+/*Media tablet*/
+@media only screen and (min-width: 1200px) {
+  .section-skills {
+    flex-direction: row;
   }
   .section-skills .skill-left {
     width: calc(100% - 650px);
@@ -1761,6 +1824,9 @@ header {
   display: flex;
   align-items: center;
   text-decoration: none;
+  box-sizing: border-box;
+  object-fit: cover;
+  overflow: hidden;
 }
 .form-contacto {
   display: flex;
@@ -1781,6 +1847,12 @@ header {
   }
   .section-contacts-set .contacts .contacts-item {
     margin: 5px;
+  }
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1160px) {
+  .section-contacts-set .contacts .contacts-item {
+    padding: 5%;
   }
 }
 .form-contacto input {
@@ -1890,7 +1962,10 @@ input[type="checkbox"]:checked::after {
   border-radius: 4px;
   margin-right: 20px;
 }
-.contacts-item .fa-icon3 {
+.contacts-item a {
+  text-decoration: none;
+}
+.contacts-item a .fa-icon3 {
   color: white;
   background-color: var(--mainBlue8);
   height: 30px;
@@ -1990,6 +2065,10 @@ footer .footer-span-heart {
   line-height: normal !important;
   text-decoration: none;
   cursor: pointer;
+  align-items: center;
+}
+.footer-buttom ul li a {
+  text-decoration: none;
 }
 .footer-buttom ul li i {
   background-color: var(--dark2);
@@ -2063,6 +2142,38 @@ footer .termos-condicoes small a {
 }
 
 /*COSTOMIZATIONA OF DIALOG*/
+.mini-dialog {
+  position: fixed;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  visibility: hidden;
+}
+.mini-dialog.visivel {
+  visibility: visible;
+  animation: aparecerScale 2s;
+}
+@keyframes aparecerScale {
+  0% {
+    opacity: 0;
+    scale: 0.9;
+  }
+  50% {
+    opacity: 1;
+    scale: 1;
+  }
+  100% {
+    opacity: 0;
+    scale: 0.9;
+  }
+}
+.mini-dialog span {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 12px 48px -8px rgba(0, 0, 0, 0.685);
+  box-shadow: 0px 10px 20px rgba(50, 64, 74, 0.1);
+  padding: 10px 20px;
+}
 .dialog {
   backdrop-filter: blur(8px);
   background-color: rgba(252, 252, 252, 0.192);
@@ -2104,6 +2215,24 @@ footer .termos-condicoes small a {
   margin-top: 10px;
   font-weight: 600;
 }
+.dialog .dialog-card .dialog-body small a i {
+  margin-right: 10px;
+  border: 0.2px solid var(--mainBlue4);
+  color: var(--goldBlue1);
+  height: 30px;
+  width: 30px;
+  border-radius: 15px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+.dialog .dialog-card .dialog-body small a i.fa-plus {
+  font-weight: 300 !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  color: var(--goldBlue1);
+}
 .dialog .dialog-card .dialog-body .counter {
   display: flex;
   background-color: var(--bg2);
@@ -2111,7 +2240,7 @@ footer .termos-condicoes small a {
   align-items: center;
   border-radius: 5px;
 }
-.dialog .dialog-card .dialog-body .counter .counter-item{
+.dialog .dialog-card .dialog-body .counter .counter-item {
   background-color: var(--bg3);
   width: 50px;
   margin: 5px 0px;
@@ -2119,12 +2248,14 @@ footer .termos-condicoes small a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 .dialog .dialog-card .dialog-body .counter .counter-item small {
   margin: 0;
 }
-.dialog .dialog-card .dialog-body .counter .counter-item b { font-size: 16px; color: var(--mainBlue12);}
+.dialog .dialog-card .dialog-body .counter .counter-item b {
+  font-size: 16px;
+  color: var(--mainBlue12);
+}
 .dialog .dialog-card .dialog-footer {
   height: 30%;
   padding-top: 10px;

@@ -65,9 +65,9 @@
 <body onload="openMobileTab(),contarTempo()">
     <div id="top-info">
         <span class="networks-set">
-            <a href="#"><i class="fa fa-facebook"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
-            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#" onclick="mostrarRedeSocialIndisponivel('Facebook')"><i class="fa fa-facebook"></i></a>
+            <a href="https://github.com/Ukwally/"><i class="fa fa-github"></i></a>
+            <a href="httpS://www.linkedin.com/in/elisain"><i class="fa fa-linkedin"></i></a>
         </span>
         <i class="material-icons top-Email-Icon">email</i>
         elisabeth@gmail.com
@@ -509,7 +509,28 @@
                         </p>
                     </div>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="162" height="162" fill="none" viewBox="0 0 162 162">
+                <div class="testimony-item" id="testimony-item-joy-duplicado" style="display: none;">
+                    <div class="testimony-item-head">
+                        <img src="./assets/icons/user.png" alt="Vemba">
+                    </div>
+                    <div class="testimony-item-body">
+                        <p class="testimony-item-body-tittle">Joy Vemba</p>
+                        <small>Engenheiro Eletrónico</small> <br>
+                        <small>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </small>
+                        <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
+                            Escelente
+                            profissional. Escelente profissional. Escelente<sup><i class="fa fa-quote-right"></i></sup>
+                        </p>
+                    </div>
+                </div>
+                <svg id="svg-aspas" xmlns="http://www.w3.org/2000/svg" width="162" height="162" fill="none"
+                    viewBox="0 0 162 162">
                     <mask id="b" fill="#fff">
                         <path
                             d="M97.203 47.04c8.113-7.886 18.004-13.871 28.906-17.492a78 78 0 0 1 33.969-3.39c11.443 1.39 22.401 5.295 32.024 11.411s17.656 14.28 23.476 23.86c5.819 9.579 9.269 20.318 10.083 31.385a69.85 69.85 0 0 1-5.387 32.44c-4.358 10.272-11.115 19.443-19.747 26.801-8.632 7.359-18.908 12.709-30.034 15.637l-6.17-21.698c7.666-2.017 14.746-5.703 20.694-10.773 5.948-5.071 10.603-11.389 13.606-18.467a48.14 48.14 0 0 0 3.712-22.352c-.561-7.625-2.938-15.025-6.948-21.625s-9.544-12.226-16.175-16.44-14.181-6.904-22.065-7.863a53.75 53.75 0 0 0-23.405 2.336c-7.513 2.495-14.327 6.62-19.918 12.053z">
@@ -830,9 +851,9 @@
                     <strong>Elisabeth Pedro</strong>
                     <small>Engenheira informática</small>
                     <span class="about-networks-set">
-                        <i class="fa fa-facebook"></i>
-                        <i class="fa fa-linkedin"></i>
-                        <i class="fa fa-twitter"></i>
+                        <a> <i class="fa fa-facebook" onclick="mostrarRedeSocialIndisponivel('Facebook')"></i></a>
+                        <a href="https://www.linkedin.com/in/elisain""> <i class=" fa fa-linkedin"></i></a>
+                        <a> <i class="fa fa-twitter" onclick="mostrarRedeSocialIndisponivel('Twitter')"></i></a>
                     </span>
                     <span class="about-txt-description">
                         Engenheira informática licenciada em angola em 2024 com certificado de honra. Especialista em
@@ -923,7 +944,7 @@
                                 comigo,</span> pelo <strong style="color: #17b452;"> Whatsapp</strong>
                         </div>
                         <a class="whatsapp-button" href="#texteDelta" onclick="mostrarErroWhatsapp()">
-                        <!--a class="whatsapp-button" href="https://wa.me/+244948024170" onclick="mostrarErroWhatsapp()"-->
+                            <!--a class="whatsapp-button" href="https://wa.me/+244948024170" onclick="mostrarErroWhatsapp()"-->
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="20px" height="20px"
                                 fill="white" style="margin-right: 5px;">
                                 <path
@@ -971,17 +992,20 @@
                         ENVIAR <i class="fa fa-send"></i>
                     </button>
                 </form>
-                <div class="contacts">
+                <div class="contacts" id="lista-contactos">
                     <p class="contacts-txt1">Estou ansionsa pelo seu contacto</p>
                     <p class="contacts-txt2"> Colabore comigo pelos contactos ao lado...</p>
                     <a href="tel:948024170" class="contacts-item"><i class="fa-icon2 fa fa-phone"></i> + 244 948024170
                     </a>
                     <div class="contacts-item"><i class="fa-icon2 fa fa-envelope"></i> elisabeth@gmail.com</div>
                     <div class="contacts-item">
-                        <i class=" fa-icon3 fa fa-facebook"></i>
-                        <i class=" fa-icon3 fa fa-instagram"></i>
-                        <i class=" fa-icon3 fa fa-linkedin"></i>
-                        <i class=" fa-icon3 fa fa-link"></i>
+                        <a onclick="mostrarRedeSocialIndisponivel('Facebook')"><i
+                                class=" fa-icon3 fa fa-facebook"></i></a>
+                        <a onclick="mostrarRedeSocialIndisponivel('Instagram')"><i
+                                class=" fa-icon3 fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/elisain"><i class=" fa-icon3 fa fa-linkedin"></i></a>
+                        <a><i class=" fa-icon3 fa fa-link"
+                                onclick="copiarLink('https:/\/ukwally.github.io/Elisabeth/')"></i></a>
                     </div>
                 </div>
             </div>
@@ -1044,6 +1068,9 @@
                 </div>
             </div>
         </div>
+        <span class="mini-dialog" id="mini-dialog-div">
+            <span id="mini-dialog-txt"></span>
+        </span>
         <div class="dialog hidden" id="modal-erro-Whatsapp">
             <div class="dialog-card">
                 <div class="dialog-head">
@@ -1054,22 +1081,63 @@
                     <span class="counter">
                         <span class="counter-item counter-dias">
                             <small>Dias</small>
+                            <b id="show-dia2"></b>
+                        </span>:
+                        <span class="counter-item counter-horas">
+                            <small>horas</small>
+                            <b id="show-hora2"></b>
+                        </span>:
+                        <span class="counter-item counter-horas">
+                            <small>Minut.</small>
+                            <b id="show-minuto2"></b>
+                        </span>:
+                        <span class="counter-item counter-segundos">
+                            <small>Segun.</small>
+                            <b id="show-segundo2"></b>
+                        </span>
+                    </span>
+                    <small>Mas você pode usar outras formas de contactar-me.<br>
+                        <a href="https://www.linkedin.com/in/elisain"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://github.com/Ukwally/"><i class="fa fa-github"></i></a>
+                        <a href="#lista-contactos" onclick="mostrarErroWhatsapp()"><i class="fa fa-plus"></i></a>
+
+                    </small>
+                </div>
+                <div class="dialog-footer">
+                    <span class="cor-azul"><a href="tel:+244948024170">LIGAR AGORA</a></span>
+                </div>
+            </div>
+        </div>
+        <div class="dialog hidden" id="modal-erro-RedeSocial">
+            <div class="dialog-card">
+                <div class="dialog-head">
+                    <span class="close-dialog" onclick="mostrarRedeSocialIndisponivel('Facebook')">x</span>
+                </div>
+                <div class="dialog-body">
+                    <span>O <span class="cor-azul" style="font-weight: bold !important;" id="nomeDaRede"> </span> está
+                        quase pronto. Faltam apenas</span>
+                    <span class="counter">
+                        <span class="counter-item counter-dias">
+                            <small>Dias</small>
                             <b id="show-dia"></b>
                         </span>:
                         <span class="counter-item counter-horas">
                             <small>horas</small>
-                            <b id="show-hora" ></b>
+                            <b id="show-hora"></b>
                         </span>:
                         <span class="counter-item counter-horas">
                             <small>Minut.</small>
-                            <b id="show-minuto" ></b>
+                            <b id="show-minuto"></b>
                         </span>:
                         <span class="counter-item counter-segundos">
                             <small>Segun.</small>
                             <b id="show-segundo"></b>
                         </span>
                     </span>
-                    <small>Mas você pode usar outras formas de contactar-me.</small>
+                    <small>Mas estou disponível nas seguintes redes: <br>
+                        <a href="https://www.linkedin.com/in/elisain"><i class="fa fa-linkedin"></i></a>
+                        <a href="https://github.com/Ukwally/"><i class="fa fa-github"></i></a>
+                    </small>
                 </div>
                 <div class="dialog-footer">
                     <span class="cor-azul"><a href="tel:+244948024170">LIGAR AGORA</a></span>
@@ -1095,8 +1163,11 @@
             </ul>
             <ul>
                 <li><b>SIGA-ME</b></li>
-                <li><i class="fa fa-facebook"></i> <i class="fa fa-linkedin"></i> </li>
-                <li><i class="fa fa-map"></i> Luanda, Angola </li>
+                <li>
+                    <a onclick="mostrarRedeSocialIndisponivel('Facebook')"> <i class="fa fa-facebook"></i></a>
+                    <a href=""><i class="fa fa-linkedin"></i></a>
+                </li>
+                <li> <a href="https://www.linkedin.com/in/elisain"> <i class="fa fa-map"></i> Luanda, Angola </li></a>
                 <li class="footer-buttom-name">#ELISABETH PEDRO </li>
             </ul>
         </div>
