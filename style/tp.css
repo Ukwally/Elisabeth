@@ -244,12 +244,12 @@ body {
   padding-bottom: 150px;
 }
 .content .content-head {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .content .content-head * {
-    margin-top: 3px;
+  margin-top: 3px;
 }
 
 @media only screen and (min-width: 800px) {

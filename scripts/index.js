@@ -1,6 +1,13 @@
 /*Constomize didamic Header*/
 document.addEventListener('DOMContentLoaded', () => {
     "use strict";
+    //inicio animação banner
+    document.getElementById('banner-txt-head-id').classList.add('visivel');
+    document.getElementById('banner-txt-tittle-id').classList.add('visivel');
+    document.getElementById('banner-txt-description-id').classList.add('visivel');
+    document.getElementById('banner-description-side-txt-set-id').classList.add('visivel');
+    //fim animação banner
+
     const header = document.querySelector('#header');
     if (header) {
         document.addEventListener('scroll', () => {
@@ -64,6 +71,10 @@ function mostrarRedeSocialIndisponivel(nomeDaRede) {
     modal.classList.toggle('hidden');
     const rede = document.getElementById('nomeDaRede');
     rede.innerHTML = nomeDaRede;
+}
+function mostrarModalInfo() {
+    const modal = document.getElementById('modal-info');
+    modal.classList.toggle('hidden');
 }
 
 /*
@@ -135,8 +146,8 @@ function copiarLink(link) {
         document.getElementById('mini-dialog-txt').innerHTML = 'Link Copiado';
         document.getElementById('mini-dialog-div').classList.add('visivel');
     }
-    
-    
+
+
     setTimeout(() => {
         document.getElementById('mini-dialog-div').classList.remove('visivel');
     }, 2000);
@@ -144,11 +155,24 @@ function copiarLink(link) {
 
 }
 
+/*ATRIBUIR ANIMAÇÕES*/
+
+window.addEventListener('scroll', function () {
+    const elementoAnimado = document.querySelectorAll('.animado');
+
+    // Verifica se o elemento está visível na tela
+    elementoAnimado.forEach(function (box) {
+        const posicaoElemento = box.getBoundingClientRect().top;
+        const areaRenderizada = window.innerHeight / 1.5;  // O fator 1.5 vai fazer o efeito acontecer antes de estar no centro total
+
+        // Se o topo do elemento estiver dentro da janela de visualização
+        if (posicaoElemento < areaRenderizada) {
+            box.classList.add('visivel');
+        }
+    });
+});
+
 /*
-
-
-
-
 const employer={};
 employer.name='Elisabeth Pedro';
 employer.skills[backend,frontend,server,AI,hosting,]

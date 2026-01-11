@@ -2,7 +2,7 @@
   --intBlue: #9abff5;
   --intBlue: #81b0f3;
 
-  --godlBlue1: #0d99ff;
+  --goldBlue1: #0d99ff;
   --goldBlue2: #1a73e8; /*google*/
   --goldBlue3: #1c9ad7; /*compainha propria*/
   --goldBlue4: #0694d6; /*tecnoblog*/
@@ -160,21 +160,27 @@ body {
   font-size: 4rem;
 }
 .content .descricao-enviado {
-  color: var(--dark10);
-  font-weight: 500;
+  color: var(--dark8);
+  font-weight: 300;
   text-align: center;
   font-size: 1.3rem;
 }
+.content .descricao-enviado strong{
+  font-weight: 600;
+  font-style: italic;
+}
 .content .btn-voltar {
-  margin-top: 20px;
+  margin-top: 30px;
   box-sizing: border-box;
 }
 .content .btn-voltar a {
   text-decoration: none;
   color: var(--dark12);
   padding: 10px 20px;
-  background-color: var(--bg3);
   border-radius: 5px;
+  border: 1px solid var(--dark2);
+  color: var(--goldBlue1);
+  font-weight: 600;
 
   /*
     outline-width: 4px;
