@@ -11,55 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-    <!--GRAFICO DO GOOGLE-->
-    <!--https://developers.google.com/chart/interactive/docs?hl=pt-br-->
-    <!--Load the AJAX API-->
-    <!--script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></!--script>
-    <script-- type="text/javascript">
-        // Load the Visualization API and the corechart package.
-        google.charts.load('current', { 'packages': ['corechart'] });
-        // Set a callback to run when the Google Visualization API is loaded.
-        google.charts.setOnLoadCallback(drawChart);
-        // Callback that creates and populates a data table,
-        // instantiates the pie chart, passes in the data and
-        // draws it.
-        function drawChart() {
-            // Create the data table.
-            var data = new google.visualization.DataTable();
-            data.addColumn('string', 'Topping');
-            data.addColumn('number', 'Slices');
-            data.addRows([
-                ['GESTDOC', 6],
-                ['SONLINE', 5],
-                ['ISPAJ', 2],
-                ['LEVERAGE', 1],
-                ['COMPTI', 1],
-            ]);
-            // Set chart options
-            var options = {
-                //'title': 'RESUMO DE ESPERIÊNCIA',
-                'width': 600,
-                'height': 600,
-                colors: ['#8cb3d9', '#9fbfdf', '#b3cce6', '#c6d9ec', '#d9e6f2']
-            };
-            // Instantiate and draw our chart, passing in some options.
-            var chart = new google.visualization.PieChart(document.getElementById('chart_div'));
-            //chart.draw(data, options);
-            var options2 = {
-                'width': 200,
-                'height': 200,
-                colors: ['#8cb3d9', '#9fbfdf', '#b3cce6', '#c6d9ec', '#d9e6f2']
-            };
-            const tamanhoDaTela = screen.width;
-            if (tamanhoDaTela > 800) {
-                chart.draw(data, options);
-            } else {
-                chart.draw(data, options2);
-            }
-        }
-    </script-->
-    <!-- FIM DO GRAFICO DO GOOGLE-->
 </head>
 
 <body onload="openMobileTab(),contarTempo()">
@@ -80,10 +31,79 @@
     <header id="header">
         <div class="logo"><!--span-- style="color:#3973ac4b ">Elisabeth Pedro</!--span--> </div>
         <div class="header-action">
-            <i class="material-icons">menu</i>
-            <nav>
-                <a href="#top-info">Início</a> <a href="#sobre">Sobre</a> <a href="#servicos">Serviços</a> <a
-                    href="#portfolio">Portfólio</a> <a href="#curriculo">Corrículo</a>
+            <i class="material-icons" onclick="abrirMenu()">menu</i>
+            <nav class="hidden-menu" id="menu">
+                <span onclick="abrirMenu()" class="hidden" id="icon-close-menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="lucide lucide-x-icon lucide-x">
+                        <path d="M18 6 6 18" />
+                        <path d="m6 6 12 12" />
+                    </svg>
+                </span>
+                <span style="display: flex;" class="nav-item-set">
+                    <a href="#top-info" onclick="abrirMenu()">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-house-icon lucide-house">
+                                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8" />
+                                <path
+                                    d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            </svg>
+                        </span>
+                        Início
+                    </a>
+                    <a href="#sobre" onclick="abrirMenu()">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-user-icon lucide-user">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </span>
+                        Sobre
+                    </a>
+                    <a href="#servicos" onclick="abrirMenu()">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-wrench-icon lucide-wrench">
+                                <path
+                                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+                            </svg>
+                        </span>
+                        Serviços
+                    </a>
+                    <a href="#portfolio" onclick="abrirMenu()">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-images-icon lucide-images">
+                                <path d="m22 11-1.296-1.296a2.4 2.4 0 0 0-3.408 0L11 16" />
+                                <path d="M4 8a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2" />
+                                <circle cx="13" cy="7" r="1" fill="currentColor" />
+                                <rect x="8" y="2" width="14" height="14" rx="2" />
+                            </svg>
+                        </span>
+                        Portfólio
+                    </a>
+                    <a href="#curriculo" onclick="abrirMenu()">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-file-user-icon lucide-file-user">
+                                <path
+                                    d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z" />
+                                <path d="M14 2v5a1 1 0 0 0 1 1h5" />
+                                <path d="M16 22a4 4 0 0 0-8 0" />
+                                <circle cx="12" cy="15" r="3" />
+                            </svg>
+                        </span>
+                        Corrículo
+                    </a>
+                </span>
             </nav>
             <button class="button btn-contratar" onclick="mostrarModalRecrutar()">CONTRATAR</button>
         </div>
@@ -98,7 +118,8 @@
                     <path d="M12 9v4" />
                     <path d="M12 17h.01" />
                 </svg>
-                <span style="color:#f96e59; display:inline-flex; font-size: 14px; font-weight: bold;">Este Website ainda está inacabado. Algumas coisas
+                <span style="color:#f96e59; display:inline-flex; font-size: 14px; font-weight: bold;">Este Website ainda
+                    está inacabado. Algumas coisas
                     podem falhar!</span>
             </span>
             <i onclick="fecharAlerta()" style="color: grey;" class="fa fa-close"></i>
@@ -539,8 +560,9 @@
         </section>
         <div class="div-tittle div-tittle-colaboracao">
             <!--h1 class="tittle-tittle">Parceiros <span class="textoOcultoNoMobile">e Colaborações</span></h1-->
-            <h3 class="tittle-subtittle">Parcerias que fizeram a diferença</h3>
-            <p class="tittle-description">Ao longo da minha trajetória profissional, tive a oportunidade de prestar
+            <h3 class="tittle-subtittle animado">Parcerias que fizeram a diferença</h3>
+            <p class="tittle-description animado">Ao longo da minha trajetória profissional, tive a oportunidade de
+                prestar
                 serviços e colaborar com diversas empresas e instituições, contribuindo com soluções personalizadas e
                 eficientes.
                 Entre os meus clientes e parceiros destacam-se:</p>
@@ -598,9 +620,10 @@
         <section class="section section-portfolio">
             <div class="div-tittle div-tittle-portfolio" id="portfolio">
                 <!--h1-- class="tittle-tittle">Portfólio</!--h1-->
-                <h1 class="tittle-tittle"> <span class="textoOcultoNoMobile">Meus</span> projectos</h1>
-                <h3 class="tittle-subtittle">Conheça alguns dos projectos que eu tornei realidade</h3>
-                <p class="tittle-description"> <span class="textoOcultoNoMobile">Aqui encontras uma seleção de meus
+                <h1 class="tittle-tittle animado "> <span class="textoOcultoNoMobile">Meus</span> projectos</h1>
+                <h3 class="tittle-subtittle animado ">Conheça alguns dos projectos que eu tornei realidade</h3>
+                <p class="tittle-description animado"> <span class="textoOcultoNoMobile">Aqui encontras uma seleção de
+                        meus
                         trabalhos e projetos desenvolvidos.</span>
                     Cada projeto reflete a minha dedicação <span class="textoOcultoNoMobile"> à qualidade, inovação e à
                         criação de soluções eficientes e
@@ -615,7 +638,7 @@
             </div>
             <div class="portfolio-items-set">
                 <div class="portfolio-item" id="mobile-tab">
-                    <div>
+                    <div class="animado">
                         <span class="portfolio-item-description">
                             <span class="porto-item-descrip-tittle">DTSER</span>
                             <span class="porto-item-descrip-subtittle">Identificação de veículos</span>
@@ -632,7 +655,7 @@
                             <i class="fa fa-download" onclick="mostrarModalInfo()"></i> Baixar App
                         </span>
                     </div>
-                    <div>
+                    <div class="animado">
                         <span class="portfolio-item-description">
                             <span class="porto-item-descrip-tittle">LUCAR</span>
                             <span class="porto-item-descrip-subtittle">Identificação de veículos</span>
@@ -650,14 +673,14 @@
                     </div>
                 </div>
                 <div class="portfolio-item" id="web-tab">
-                    <div>
+                    <div class="animado">
                         <img src="./assets/images/web-soft-selisnova2.png" alt="">
                         <span class="portfolio-item-loop">
                             <a href="https://ukwally.github.io/selisnova"> <i class="fa fa-globe"
                                     style="margin-right: 5px;"></i>Ver site</a>
                         </span>
                     </div>
-                    <div>
+                    <div class="animado">
                         <img src="./assets/images/web-soft-InovaHelth.png" alt="">
                         <span class="portfolio-item-loop">
                             <a href="https://ukwally.github.io/InovaHelth/"><i class="fa fa-globe"
@@ -782,8 +805,8 @@
                         </p>
                     </div>
                 </div>
-                <svg id="svg-aspas" xmlns="http://www.w3.org/2000/svg" width="162" height="162" fill="none"
-                    viewBox="0 0 162 162">
+                <svg class="animado" id="svg-aspas" xmlns="http://www.w3.org/2000/svg" width="162" height="162"
+                    fill="none" viewBox="0 0 162 162">
                     <mask id="b" fill="#fff">
                         <path
                             d="M97.203 47.04c8.113-7.886 18.004-13.871 28.906-17.492a78 78 0 0 1 33.969-3.39c11.443 1.39 22.401 5.295 32.024 11.411s17.656 14.28 23.476 23.86c5.819 9.579 9.269 20.318 10.083 31.385a69.85 69.85 0 0 1-5.387 32.44c-4.358 10.272-11.115 19.443-19.747 26.801-8.632 7.359-18.908 12.709-30.034 15.637l-6.17-21.698c7.666-2.017 14.746-5.703 20.694-10.773 5.948-5.071 10.603-11.389 13.606-18.467a48.14 48.14 0 0 0 3.712-22.352c-.561-7.625-2.938-15.025-6.948-21.625s-9.544-12.226-16.175-16.44-14.181-6.904-22.065-7.863a53.75 53.75 0 0 0-23.405 2.336c-7.513 2.495-14.327 6.62-19.918 12.053z">
@@ -1099,8 +1122,8 @@
                 <p class="tittle-description">Saiba mais sobre mim...</p>
             </div>
             <div class="about-div">
-                <div class="about-img"><img src="./assets/images/elisabeth.png" alt="#Elisabeth Photo"></div>
-                <div class="about-txt">
+                <div class="about-img animado"><img src="./assets/images/elisabeth.png" alt="#Elisabeth Photo"></div>
+                <div class="about-txt animado">
                     <strong>Elisabeth Pedro</strong>
                     <small>Engenheira informática</small>
                     <span class="about-networks-set">
@@ -1182,7 +1205,7 @@
                         resume nisto, há muito mais alem da lista. Me contacte para saber mais.</p>
                 </div>
                 <section class="section section-whatsapp" id="#texteDelta">
-                    <div class="whatsapp-loop">
+                    <div class="whatsapp-loop animado">
                         <div class="div-bg3">
                             <div class="div-bg2">
                                 <div class="div-bg1">
@@ -1248,10 +1271,11 @@
                 <div class="contacts" id="lista-contactos">
                     <p class="contacts-txt1">Estou ansionsa pelo seu contacto</p>
                     <p class="contacts-txt2"> Colabore comigo pelos contactos ao lado...</p>
-                    <a href="tel:948024170" class="contacts-item"><i class="fa-icon2 fa fa-phone"></i> + 244 948024170
+                    <a href="tel:948024170" class="contacts-item animado"><i class="fa-icon2 fa fa-phone"></i> + 244
+                        948024170
                     </a>
-                    <div class="contacts-item"><i class="fa-icon2 fa fa-envelope"></i> elisabeth@gmail.com</div>
-                    <div class="contacts-item">
+                    <div class="contacts-item animado"><i class="fa-icon2 fa fa-envelope"></i> elisabeth@gmail.com</div>
+                    <div class="contacts-item animado">
                         <a onclick="mostrarRedeSocialIndisponivel('Facebook')"><i
                                 class=" fa-icon3 fa fa-facebook"></i></a>
                         <a onclick="mostrarRedeSocialIndisponivel('Instagram')"><i
@@ -1464,7 +1488,7 @@
     <script>
 
         function fecharAlerta() {
-            document.getElementById('spanInacabado').style='display:none';
+            document.getElementById('spanInacabado').style = 'display:none';
         }
         function verificarSelecao() {
 
@@ -1482,6 +1506,11 @@
                 language.style.backgroundPositionY = 'center';
                 language.style.backgroundSize = '25px';
             }
+        }
+
+        function abrirMenu() {
+            document.getElementById('menu').classList.toggle('hidden-menu');
+            document.getElementById('icon-close-menu').classList.toggle('hidden');
         }
     </script>
 </body>

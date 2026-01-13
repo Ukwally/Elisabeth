@@ -454,6 +454,7 @@ header {
   background-color: var(--mainBlue3);
   border: 1px solid var(--mainBlue6);
   font-size: 13.3px;
+  text-decoration: none;
 
 }
 .button:hover {
@@ -495,9 +496,10 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 .section-problemas .section-problemas-div h3 {
-  color: var(--mainBlue15);
+  color: var(--mainBlue14);
   font-size: 1.875rem;
   margin-bottom: 5px;
+  font-weight: 600;
 }
 .section-problemas .section-problemas-div > small {
   color: var(--font-color2);
