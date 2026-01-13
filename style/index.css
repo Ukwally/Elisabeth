@@ -534,6 +534,48 @@ header {
   background-color: var(--mainBlue4);
   box-sizing: border-box;
 }
+/*section site inacabado*/
+.section-site-inacabado {
+  background-color: var(--bg2);
+  padding: 1% 5%;
+  flex-direction: column;
+}
+.section-site-inacabado div {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-site-inacabado .percentagem {
+  background-color: var(--mainBlue1);
+  width: 100%;
+  height: 10px;
+  text-align: center;
+  border-radius: 50px;
+  position: relative;
+  margin-top: 10px;
+}
+.section-site-inacabado .percentagem div {
+  width: 57%;
+  height: 100%;
+  background-color: var(--mainBlue2);
+  left: 0;
+  top: 0;
+  position: relative;
+}
+.section-site-inacabado .percentagem div small {
+  color: var(--goldComplementar2);
+  font-size: 13px;
+  position: absolute;
+  background-color: var(--mainBlue1);
+  height: 30px;
+  width: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
 /*End of header costomisation*/
 .section-banner {
   /*background: url(../assets/images/bg-image.png);*/
@@ -839,7 +881,7 @@ header {
   width: fit-content;
   border-radius: 5px;
 
-  opacity: 0.3;
+  opacity: 1;
   transition: all 500ms;
 }
 .section-introduction a.visivel {
