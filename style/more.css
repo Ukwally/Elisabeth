@@ -1,9 +1,10 @@
 /*INICIO DOS ESTILOS GERAIS*/
 * {
-  font-family: poppins, sans-serif;
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
+
+  color: var(--dark15);
   line-height: normal;
   z-index: 1;
-  color: var(--dark15);
 }
 html {
   scroll-behavior: smooth;
@@ -422,11 +423,12 @@ header {
   color: var(--mainBlue11);
   padding: 10px 20px;
   border-radius: 20px;
-  font-weight: bold;
-  font-size: 12px;
-  transition: all 0.8s;
-  text-transform: uppercase;
   background-color: var(--mainBlue1);
+  font-weight: 600;
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: all 0.8s;
+  font-size: 13px;
 }
 .header-action nav a:hover {
   background-color: var(--mainBlue2);
@@ -441,21 +443,20 @@ header {
   }
 }
 .button {
-  background-color: var(--mainBlue6);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 10px;
   border-radius: 20px;
   font-weight: 600;
-  transition: all 0.8s;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none;
+  line-height: 1;
 }
+
 .btn-contratar {
   background-color: var(--mainBlue3);
   border: 1px solid var(--mainBlue6);
-  font-size: 13.3px;
-  text-decoration: none;
-
+  color: white;
+  transition: all 0.8s;
 }
 .button:hover {
   border: 1px solid var(--mainBlue9);
@@ -556,6 +557,9 @@ header {
   padding: 10px 20px;
   border-radius: 20px;
   font-weight: 500;
+  line-height: 1;
+  display: inline;
+  align-items: center;
 }
 .section-problemas-div .div-saber-mais {
   margin-top: 1rem;
@@ -579,7 +583,7 @@ header {
   padding: 10px;
   border-radius: 8px;
   color: var(--mainBlue13);
-  font-weight: 100;
+  font-weight: 400;
 }
 @media only screen and (min-width: 800px) {
   .section-problemas {
@@ -640,7 +644,7 @@ header {
   color: inherit;
 }
 .section-cta p:first-child {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 2rem;
   line-height: normal;
   margin: 0;
@@ -678,20 +682,23 @@ header {
   align-items: center;
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-top: 4px solid var(--mainBlue2);
 }
 .section-valores .div-valor svg {
-  stroke: var(--mainBlue1);
+  stroke: var(--mainBlue4);
   stroke-width: 1px;
   margin-bottom: 10px;
   height: 40px;
   width: 40px;
   padding: 10px;
   border-radius: 50%;
-  border: 0.1rem solid var(--mainBlue1);
+  border: 0.1rem solid transparent;
+  background-color: var(--mainBlue2);
 }
 .section-valores .div-valor span {
   color: white;
   font-size: 1.5rem;
+  font-weight: 400;
 }
 @media only screen and (min-width: 800px) {
   .section-valores {

@@ -98,6 +98,8 @@ html {
   --goldBlue4: #0694d6; /*tecnoblog*/
   --goldBlue5: #4e7efe; /*super dark blue*/
   --goldBlue6: #297be6; /*buton do google chat*/
+  --goldBlue7: #2596be; /*Inova Health*/
+  --goldBlue8: #3e95e5; /*wizard*/
 
   --font-color1: var(--dark9);
   --font-color2: var(--dark12);
@@ -381,8 +383,16 @@ main {
 }
 /*animação abaixo*/
 .div-tittle-portfolio > .tittle-tittle {
-  transform: translateY(130px);
+  transform: translateY(160px);
   transition: all 1s;
+}
+
+@media only screen and (min-width: 800px) {
+  /*OBS ATT BUG: quando fiz o media deste titulo provavelmente a animação teve bug*/
+  .div-tittle-portfolio > .tittle-tittle {
+    transform: translateY(110px);
+    transition: all 1s;
+  }
 }
 .div-tittle-portfolio > .tittle-subtittle {
   opacity: 0;
@@ -558,7 +568,6 @@ header {
   top: 0;
   left: 0;
 }
-
 .header-action nav #icon-close-menu {
   background-color: var(--bg2);
   width: 80vw;
@@ -661,24 +670,23 @@ header {
   }
 }
 .button {
-  background-color: var(--mainBlue6);
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 10px;
   border-radius: 20px;
   font-weight: 600;
-  transition: all 0.8s;
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-decoration: none;
 }
 .btn-contratar {
   /*OBS: super Cor inicial golden
   background-color: var(--mainBlue3);
   border: 1px solid var(--mainBlue6);
   */
+
   background-color: var(--mainBlue3);
   border: 1px solid var(--mainBlue6);
-  font-size: 13.3px;
-  text-decoration: none;
+  color: white;
+  transition: all 0.8s;
 }
 .button:hover {
   border: 1px solid var(--mainBlue9);
@@ -793,7 +801,6 @@ header {
   transition: all 1s;
 }
 .section-banner .banner-description-side .banner-txt-tittle .ElisabetTxt {
-  color: var(--goldComplemento1);
   color: var(--goldBlue1);
   /*
   background: linear-gradient(45deg, #4e7efe, #0d99ff, #4e7efe);
@@ -969,7 +976,7 @@ header {
   padding: 10px 20px;
   border-radius: 5px;
   margin-left: 0;
-  margin-bottom: 2%;
+  margin-bottom: 4%;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
@@ -1335,6 +1342,12 @@ header {
   border-radius: 4px;
   */
 }
+/*Inicio animação*/
+.resume-left span .resume-action button,
+.resume-left span .resume-action a.visivel {
+  animation: vibrarHorizontal 400ms;
+}
+/*FIM animação*/
 .resume-left span .resume-action button,
 .resume-left span .resume-action a {
   border-radius: 20px;
@@ -1345,12 +1358,10 @@ header {
   text-align: center;
   font-weight: 500;
   font-size: 15px;
-
   /*border: 1px solid var(--goldBlue1);
   color: var(--goldBlue1);
   background-color: white;
   outline-color: var(--mainBlue1);*/
-
   border: 1px solid var(--mainBlue8);
   color: var(--white-color1);
   background-color: var(--mainBlue5);
@@ -2450,13 +2461,13 @@ header {
   width: 20px;
   height: 20px;
   border-radius: 3px;
-  border: 2px solid var(--mainBlue2);
+  border: 1px solid var(--mainBlue2);
   background-color: white;
   position: relative;
   transform: scale(0.8);
 }
 .form-contacto .txtAceitarTermos input[type="checkbox"]:checked {
-  border: 2px solid var(--mainBlue8);
+  border: 1px solid var(--goldBlue1);
 }
 input[type="checkbox"]:checked::after {
   content: "";
