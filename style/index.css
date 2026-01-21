@@ -37,6 +37,7 @@ html {
   --goldBlue6: #297be6; /*buton do google chat*/
   --goldBlue7: #2596be; /*Inova Health*/
   --goldBlue8: #3e95e5; /*wizard*/
+  --goldBlue9: #50a8f0; /*Selisnova*/
 
   --font-color1: var(--dark9);
   --font-color2: var(--dark12);
@@ -2338,6 +2339,14 @@ header {
     padding-left: 40px;
     padding-bottom: 0;
   }
+}
+
+/*CONTOMIZATION OF CONTACTS POSTS*/
+
+.section-post {
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 
 /*CONTOMIZATION OF CONTACTS SECTION*/

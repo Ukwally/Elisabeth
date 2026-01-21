@@ -380,6 +380,9 @@ main {
   box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.5);*/
 }
 
+header * {
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
+}
 header {
   background-color: white;
   height: 70px;
