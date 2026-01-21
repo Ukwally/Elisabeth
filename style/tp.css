@@ -1,6 +1,6 @@
 /*INICIO DOS ESTILOS GERAIS*/
 * {
-  font-family: poppins, sans-serif;
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
   line-height: normal;
   z-index: 1;
   color: var(--dark15);
@@ -326,7 +326,7 @@ hr {
   background-color: var(--goldBlue3) !important;
   color: white !important;
 }
-.main .footer .footer-body span {
+.main .footer .footer-body a {
   background-color: var(--bg3);
   padding: 7px;
   margin: 3px;
@@ -338,25 +338,26 @@ hr {
   width: 40%;
   cursor: pointer;
   text-align: center;
+  text-decoration: none;
 }
 @media only screen and (min-width: 900px) {
-  .main .footer .footer-body span {
+  .main .footer .footer-body a {
     width: 20%;
   }
 }
-.main .footer .footer-body span small {
+.main .footer .footer-body a small {
   color: inherit;
   font-weight: bold;
 }
-.main .footer .footer-body span.ativo {
+.main .footer .footer-body a.ativo {
   color: var(--goldBlue1);
 }
-.main .footer .footer-body span i {
+.main .footer .footer-body a i {
   background-color: white;
   padding: 5px 20px;
   border-radius: 20px;
   margin-bottom: 10px;
 }
-.main .footer .footer-body span i.ativo {
+.main .footer .footer-body a i.ativo {
   background-color: var(--mainBlue3);
 }

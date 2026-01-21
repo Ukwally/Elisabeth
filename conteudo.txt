@@ -1,13 +1,54 @@
-Formação Académica & Certificações ?
+Upercase no softwares por:?
+
+"Google Sans", Roboto, Arial, Helvetica, sans-serif
+"Product Sans",Arial,Helvetica,sans-serif.
+
+Formação Académica & Certificações com links ?
 Competências Técnicas?
-
-
 
 Experiência Profissional:
 Principais responsabilidades?
 Resultados alcançados?
+Destaque para experiências relevantes, responsabilidades técnicas e conquistas mensuráveis (ex: "otimizei a latência da API em 40%").
+Resultados, não apenas funções: Destaque para conquistas mensuráveis e projetos pessoais que demonstrem competência.
+Resultados em experiências.problemas Solução. CTA para ele aderir também aos meus serviços.
 
-
-
-
+areas de atuação de um engenheiro informático?
+Habilidades de um Desenvolvedor de software
+Habilidades de um Engenheiro de Software
+Á reas (DevOps, IA, Cybersecurity)
 Análise de Dados?
+
+CV/Currículo: Disponível para download ou em uma página dedicada.
+
+
+Fonte legível (ex: Inter, Open Sans, Roboto).
+emmeusar todos os textos(Humano,artistico, rectórico)
+
+Exemplos Práticos: Recrutadores valorizam relatos concretos de desafios passados, resultados alcançados e lições aprendidas em vez de listas genéricas de qualidades. 
+Personalização: Currículos ajustados especificamente usando palavras-chave estratégicas.
+Autenticidade: Honestidade sobre lacunas
+Preparar exemplos de como você resolveu problemas em experiências anteriores.
+___________________________________________________________________
+#Missão e Visão?
+#Perguntas frequentes?
+
+1Automatização de processos:
+Reduzir trabalho manual com scripts, integrações entre sistemas e fluxos automáticos.
+2Gestão e análise de dados:
+Bases de dados, relatórios, dashboards e apoio à tomada de decisão.
+3Manutenção e suporte técnico:
+Correção de erros, atualizações e melhoria contínua dos sistemas.
+4Consultoria e planeamento:
+Analisar necessidades do cliente, Propor soluções tecnológicas adequadas
+, Otimizar custos e melhorar eficiência, Acompanhar a transformação digital
+
+PageSpeed Insights
+https://tinypng.com/ (compressor de imagens)
+No formato moderno (.webp é melhor que .jpg/.png)
+Com tamanho correto (não use uma imagem de 2000px para exibir em 400px)
+Caching Ativado: 
+Poucas Requisições: Reduzir o número de arquivos externos (fontes customizadas excessivas, scripts desnecessários).
+SEO: O Google prioriza sites rápidos nos resultados de busca.
+Partilhar com recrutadores https://www.shopify.com/br/blog/site-pessoal#14
+SEO https://www.shopify.com/br/blog/seo-marketing

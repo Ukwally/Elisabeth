@@ -111,7 +111,7 @@ function contarTempo() {
 
 function contarTempo() {
     const inicio = Date.now();
-    const final = new Date('2026-02-02').getTime();
+    const final = new Date('2026-03-02').getTime();
     const falta = final - inicio;
 
     const segundos = Math.floor(falta / 1000) % 60;

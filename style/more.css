@@ -1,6 +1,8 @@
 /*INICIO DOS ESTILOS GERAIS*/
+/*SUBSTITUIR O POPPINS VISTO QUE OCUPA MUITO ESPAÇO*/
+
 * {
-  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
+  font-family: ui-sans-serif, system-ui, sans-serif;
 
   color: var(--dark15);
   line-height: normal;
@@ -47,6 +49,7 @@ html {
   --bg2: #f8f8f8;
   --bg3: var(--dark1);
   --bg4: #f8f9fa;
+  --bg2-1:rgb(248, 249, 250);
 
   --compyellow: rgb(247, 220, 79);
   --goldComplemento1: #f96e59;
@@ -189,7 +192,7 @@ body {
   display: none !important;
 }
 .cor-azul {
-  color: var(--goldBlue1);
+  color: var(--goldBlue1)!important;
   font-weight: normal;
 }
 .textoOcultoNoMobile {
@@ -205,9 +208,10 @@ body {
 main {
   transition: top 0.5s ease;
 }
-/*
-.div-tittle {
-}*/
+
+.div-tittle * {
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
+}
 .tittle-tittle {
   font-size: 2.5rem !important;
   font-weight: 700;
@@ -234,7 +238,7 @@ main {
   padding: 5% 10% 0;
 }
 .div-tittle-contactos h1 span {
-  color: var(--goldComplemento1) !important;
+  color: var(--mainGreen13) !important;
   font-size: 3rem !important;
 }
 /*Header Costomisation*/
@@ -429,6 +433,7 @@ header {
   text-transform: uppercase;
   transition: all 0.8s;
   font-size: 13px;
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
 }
 .header-action nav a:hover {
   background-color: var(--mainBlue2);
@@ -453,14 +458,15 @@ header {
 }
 
 .btn-contratar {
-  background-color: var(--mainBlue3);
-  border: 1px solid var(--mainBlue6);
   color: white;
   transition: all 0.8s;
+
+  background-color: var(--mainBlue5);
+  border: 3px solid var(--mainBlue1);
 }
 .button:hover {
-  border: 1px solid var(--mainBlue9);
-  background-color: var(--mainBlue4);
+  border: 3px solid var(--mainBlue4);
+  background-color: var(--mainBlue3);
   box-sizing: border-box;
 }
 /*SECTION RECRUTADORES*/
@@ -472,21 +478,35 @@ header {
   flex-direction: column;
 }
 .section-recrutadores div span {
-  color: var(--mainBlue9);
-  font-weight: 500;
-  font-size: 3rem;
+    color: var(--font-color2);
+
+  font-weight: 600;
+  font-size: 2.7rem;
+  /*font-size: 3rem;*/
   margin-bottom: 1rem;
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
+  line-height: 1.25;
 }
 .section-recrutadores div small {
-  color: var(--font-color1);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   text-transform: uppercase;
   font-weight: 500;
+  color: var(--mainBlue9);
+}
+.section-recrutadores .cta-entrevista i {
+  font-size: 0.6rem;
+  color: var(--mainBlue5);
+}
+.section-recrutadores .cta-entrevista small {
+  color: var(--font-color2);
+  font-style: italic;
+  font-size: 1.1rem;
 }
 /*SECTION PROBLEMAS*/
 .section-problemas {
   background-color: var(--bg2);
   padding: 5%;
+  background-color: var(--bg2-1);
 }
 .section-problemas .section-problemas-div {
   background-color: var(--white-color1);
@@ -514,7 +534,10 @@ header {
   width: 18px;
   margin-right: 5px;
 }
-.section-problemas .section-problemas-div .problemas-empresas {
+.section-problemas .section-problemas-div .problemas-empresas .txt-semi-invisivel{
+  color: var(--font-color1);
+  font-weight: 400;
+  display: inline-block;
 }
 .section-problemas .section-problemas-div .problemas-empresas h5 {
   margin-bottom: 0.2rem;
@@ -569,7 +592,7 @@ header {
 }
 .section-problemas .div-historias {
   background-color: var(--white-color1);
-  padding: 1% 2%;
+  padding: 2% 2%;
   border-radius: 10px;
 
   border-radius: 8px;
@@ -591,6 +614,9 @@ header {
   }
   .section-problemas .section-problemas-div .problemas-empresas-info {
     padding: 1.3% 2%;
+  }
+  .section-problemas .div-historias {
+      padding: 1% 2%;
   }
 }
 /*PARTE DE RESULTADOS NAS FUNÇÕES*/
@@ -628,6 +654,9 @@ header {
 .section-resultados {
 }
 /*SECTION CTA*/
+.section-cta * {
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
+}
 .section-cta {
   background-color: var(--mainBlue6);
   padding: 5% 10%;
@@ -710,7 +739,53 @@ header {
     width: calc(70% / 3);
   }
 }
+/*CONTOMIZATION OF SECTION CTA ENTREVISTA*/
+.section-cta-entrevista-txt {
+  padding: 5% 10%;
+}
+.section-cta-entrevista-txt div {
+  border: 2px dashed var(--mainBlue1);
+  padding: 5%;
+  border-radius: 20px;
+  text-align: center;
+}
+.section-cta-entrevista-txt div span {
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.6rem;
+  color: var(--font-color2);
+  font-weight: 600;
+}
+.section-cta-entrevista-txt div span .fa-quote-left {
+  color: var(--mainBlue3);
+}
 /*CONTOMIZATION OF CONTACTS SECTION*/
+.wave-animation {
+  display: inline-block;
+  animation: wave-hand 1.5s ease-in-out infinite;
+}
+@keyframes wave-hand {
+  0% {
+    transform: rotate(0deg);
+  }
+  20% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-8deg);
+  }
+  60% {
+    transform: rotate(14deg);
+  }
+  80% {
+    transform: rotate(-4deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.section-contacts * {
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
+}
 .section-contacts {
   background-color: white;
   padding-left: 5%;
@@ -834,13 +909,13 @@ header {
   width: 20px;
   height: 20px;
   border-radius: 3px;
-  border: 2px solid var(--mainBlue2);
+  border: 1px solid var(--mainBlue2);
   background-color: white;
   position: relative;
   transform: scale(0.8);
 }
 .form-contacto .txtAceitarTermos input[type="checkbox"]:checked {
-  border: 2px solid var(--mainBlue8);
+  border: 1px solid var(--goldBlue1);
 }
 input[type="checkbox"]:checked::after {
   content: "";
@@ -985,7 +1060,7 @@ input[type="checkbox"]:checked::after {
 .dialog .dialog-card {
   background-color: white;
   height: 15rem;
-  width: 17rem;
+  width: 19rem;
   border-radius: 5px;
   box-shadow: 0 12px 48px -8px rgba(0, 0, 0, 0.274);
 }
@@ -1086,6 +1161,9 @@ input[type="checkbox"]:checked::after {
 }
 
 /*FOOTER COSTOMIZATION*/
+footer * {
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
+}
 footer {
   display: flex;
   flex-direction: column;

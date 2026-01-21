@@ -1,73 +1,6 @@
-/*
-areas de atuação de um engenheiro informático?
-Habilidades de um Desenvolvedor de software
-Habilidades de um Engenheiro de Software
-
-emmeusar todos os textos(Humano,artistico, rectórico)
--sobre Bio
-habilidades
-#Blog?
-CV/Currículo: Disponível para download ou em uma página dedicada.
-
--Contacto:
--Por que entrar em contato?
--Recrutar
--Solicitar serviço: aplicações para o teu negócio, Sites instituicionais, Automatizar processos.
--Solicitar Aconselhamento técnico
-
-
-#Perguntas frequentes.
-
-Botão ver todos serviços com mais serviços.
-
--Totalis: Projectos , Empresas , Clientes , Soluções de sucesso.
-
-Resultados em experiências.problemas Solução. CTA para ele aderir também aos meus serviços.
-
--Valores: Confiça, crescimeto, excelencia
-#Missão e Visão?
-Resultados, não apenas funções: Destaque para conquistas mensuráveis e projetos pessoais que demonstrem competência.
-
-Exemplos Práticos: Recrutadores valorizam relatos concretos de desafios passados, resultados alcançados e lições aprendidas em vez de listas genéricas de qualidades. 
-Personalização: Currículos ajustados especificamente usando palavras-chave estratégicas.
-Autenticidade: Honestidade sobre lacunas
-Preparar exemplos de como você resolveu problemas em experiências anteriores.
-
-Upercase no softwares por:?
-definir as cores do banner
-rever os cards servicos.
-SEO https://www.shopify.com/br/blog/seo-marketing
-
-Partilhar com recrutadores https://www.shopify.com/br/blog/site-pessoal#14
-
-
-Automatização de processos
-Reduzir trabalho manual com scripts, integrações entre sistemas e fluxos automáticos.
-
-Gestão e análise de dados
-Bases de dados, relatórios, dashboards e apoio à tomada de decisão.
-
-Manutenção e suporte técnico
-Correção de erros, atualizações e melhoria contínua dos sistemas.
-
-
-Consultoria e planeamento
-Analisar necessidades do cliente
-Propor soluções tecnológicas adequadas
-Otimizar custos e melhorar eficiência
-Acompanhar a transformação digital
-
-talvez criar uma página sobre onde expor certificados e apenas mais um pouquinho sinho sobre mim
-*/
-
-/*
-
-
-@media only screen and (min-width: 800px) and (max-width: 1024px) {
-}*/
 /*INICIO DOS ESTILOS GERAIS*/
 * {
-  font-family: poppins, sans-serif;
+  font-family: poppins, ui-sans-serif, system-ui, sans-serif;
   line-height: normal;
   z-index: 1;
   color: var(--dark15);
@@ -113,12 +46,14 @@ html {
 
   --bg1: #fff;
   --bg2: #f8f8f8;
+  --bg2-1: rgb(248, 249, 250);
   --bg3: var(--dark1);
   --bg4: #f8f9fa;
 
   --compyellow: rgb(247, 220, 79);
   --goldComplemento1: #f96e59;
   --goldComplementar2: #419e86;
+  --goldComplementar3: #f2a600;
 
   --font-size1: 11px;
   --font-size2: 12px;
@@ -277,13 +212,16 @@ main {
 .div-tittle {
 }*/
 .tittle-tittle {
-  font-size: 2.5rem !important;
+  /*font-size: 2.5rem !important;*/
+  font-size: 2.3rem !important;
   font-weight: 700;
   margin: 0;
   text-transform: uppercase;
 }
 .tittle-subtittle {
-  font-size: 2rem !important;
+  /*font-size: 2rem !important;
+  */
+  font-size: 1.9rem !important;
   color: var(--dark12);
   margin: 10px 0px 10px 0px;
 }
@@ -453,6 +391,7 @@ main {
   align-items: center;
   font-family: monospace;
   color: var(--mainBlue6);
+  border-top: 2px solid var(--mainBlue5);
 }
 #top-info .networks-set {
   display: flex;
@@ -533,10 +472,14 @@ header {
 .logo {
   font-size: 30px;
   color: var(--mainBlue1);
-  /*
-    background: linear-gradient(45deg, var(--mainBlue1), var(--mainBlue7));
-   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;*/
+  background: linear-gradient(
+    45deg,
+    var(--mainBlue7),
+    rgb(127, 0, 177),
+    var(--goldBlue1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-weight: 500;
 }
 .header-action {
@@ -587,10 +530,10 @@ header {
   flex-direction: column;
 }
 .header-action nav .nav-item-set a {
-  border-bottom: 1px solid var(--bg2);
   display: flex;
   align-items: center;
   border-radius: 0;
+  font-weight: 500;
 }
 .header-action nav .nav-item-set a svg {
   margin-right: 10px;
@@ -622,10 +565,10 @@ header {
   }
 
   .header-action nav .nav-item-set a {
-    border-bottom: initial;
     display: block;
     align-items: initial;
     border-radius: 20px;
+    font-weight: initial;
   }
   .header-action nav .nav-item-set a svg {
     display: none;
@@ -644,6 +587,9 @@ header {
   background-color: var(--mainBlue1);
 }
 @media only screen and (min-width: 800px) {
+  #top-info {
+    border-top: none;
+  }
   header {
     padding-left: 10%;
     padding-right: 10%;
@@ -682,15 +628,16 @@ header {
   background-color: var(--mainBlue3);
   border: 1px solid var(--mainBlue6);
   */
-
-  background-color: var(--mainBlue3);
-  border: 1px solid var(--mainBlue6);
   color: white;
   transition: all 0.8s;
+
+  background-color: var(--mainBlue5);
+  border: 3px solid var(--mainBlue1);
+  line-height: 1;
 }
 .button:hover {
-  border: 1px solid var(--mainBlue9);
-  background-color: var(--mainBlue4);
+  border: 3px solid var(--mainBlue4);
+  background-color: var(--mainBlue3);
   box-sizing: border-box;
 }
 /*section site inacabado*/
@@ -783,8 +730,14 @@ header {
 
 .section-banner .banner-description-side .banner-txt-head {
   font-size: 2.17rem;
-  color: var(--goldBlue1); /*super Cor inicial golden*/
+  /*color: var(--goldBlue1); super Cor inicial golden*/
   color: var(--mainBlue9);
+  /*
+    color: var(--mainBlue14);
+    opacity: .6;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    */
   margin-top: 0;
   margin-bottom: 15px;
   line-height: 1.2; /*remover isto para não comprimir o texto*/
@@ -799,6 +752,17 @@ header {
   -webkit-text-stroke-color: var(--mainBlue13);*/
   scale: 0;
   transition: all 1s;
+  /*
+      background: linear-gradient(
+    45deg,
+    var(--goldBlue2),
+    rgb(0, 217, 255),
+    var(--goldBlue1)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  */
 }
 .section-banner .banner-description-side .banner-txt-tittle .ElisabetTxt {
   color: var(--goldBlue1);
@@ -846,11 +810,18 @@ header {
 }
 .section-banner .banner-description-side .banner-txt-description {
   font-size: 1.27rem;
-  color: var(--goldBlue1); /*super Cor inicial golden*/
+  /*color: var(--goldBlue1); super Cor inicial golden*/
   color: var(--mainBlue8);
+  /*
+    color: var(--mainBlue14);
+    font-weight: 300;
+  */
   line-height: 1.2; /*remover isto para não comprimir o texto*/
   scale: 0;
   transition: all 1s;
+}
+.section-banner .banner-description-side .banner-txt-description strong {
+  color: inherit;
 }
 
 .banner-acssoes {
@@ -1400,8 +1371,9 @@ header {
 .section-totais {
   display: flex;
   justify-content: space-between;
-  padding: 5% 10%;
+  padding: 5% 10% 0;
   flex-wrap: wrap;
+  display: none;
 }
 .section-totais .div-total {
   background-color: white;
@@ -1413,7 +1385,6 @@ header {
   padding: 10px 20px;
   border-radius: 5px;
   width: 100%;
-  margin-bottom: 4%;
   text-align: center;
   border: 1px solid var(--bg2);
 }
@@ -1431,6 +1402,9 @@ header {
 }
 
 @media only screen and (min-width: 800px) {
+  .section-totais {
+    display: flex;
+  }
   .section-totais .div-total {
     width: 15%;
   }
@@ -1438,7 +1412,7 @@ header {
 /*SECTION OF ENTERPRISES*/
 .section-enterprises {
   /*background: linear-gradient(90deg, white, var(--mainGreen1));*/
-  background-color: rgb(250, 250, 250);
+  background-color: var(--bg2-1);
   height: 150px;
   max-width: 100%;
   overflow: hidden;
@@ -1779,7 +1753,7 @@ header {
   /*background-color: var(--mainBlue1);
   border: 1px dashed var(--mainBlue2);*/
 
-  border-bottom: 2px solid var(--goldComplemento1);
+  border-bottom: 2px dashed var(--mainBlue1);
 
   display: flex;
   flex-direction: column;
@@ -1905,9 +1879,10 @@ header {
   .testimony-item-body
   small
   .fa-star {
-  color: var(--complementar3);
   border-width: 2px;
-  -webkit-text-stroke-width: 0.7px;
+  color: var(--complementar10);
+  /*
+  -webkit-text-stroke-width: 0.7px;*/
   -webkit-text-stroke-color: var(--complementar12);
   font-size: 13px;
 }
@@ -2768,13 +2743,11 @@ footer .termos-condicoes small a {
   align-items: center;
   justify-content: center;
 }
-.dialog#modal-recrutar .dialog-card {
-  min-height: 18rem !important;
-}
 .dialog .dialog-card {
   background-color: white;
   height: 15rem;
-  width: 17rem;
+  width: 19rem;
+  /*width: 17rem;*/
   border-radius: 5px;
   box-shadow: 0 12px 48px -8px rgba(0, 0, 0, 0.274);
 }
