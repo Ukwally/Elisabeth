@@ -46,7 +46,7 @@ html {
 
   --bg1: #fff;
   --bg2: #f8f8f8;
-  --bg2-1: rgb(248, 249, 250);
+  --bg2-1: #f8f9fa;
   --bg3: var(--dark1);
   --bg4: #f8f9fa;
 
@@ -391,7 +391,7 @@ main {
   align-items: center;
   font-family: monospace;
   color: var(--mainBlue6);
-  border-top: 2px solid var(--mainBlue5);
+  border-top: 2px solid var(--mainBlue4);
 }
 #top-info .networks-set {
   display: flex;
@@ -632,7 +632,7 @@ header {
   transition: all 0.8s;
 
   background-color: var(--mainBlue5);
-  border: 3px solid var(--mainBlue1);
+  border: 3px solid var(--mainBlue2);
   line-height: 1;
 }
 .button:hover {
@@ -935,6 +935,7 @@ header {
 .section-introduction p {
   color: #fffffff2;
   font-weight: 500;
+  font-size: 1.1rem;
 }
 .section-introduction .porque-contactar {
   display: flex;
@@ -944,7 +945,7 @@ header {
 
 .section-introduction .porque-contactar .motivo-contactar {
   background-color: white !important;
-  padding: 10px 20px;
+  padding: 10px;
   border-radius: 5px;
   margin-left: 0;
   margin-bottom: 4%;
@@ -976,7 +977,8 @@ header {
   height: 40px;
   width: 40px;
   box-sizing: border-box;
-  background-color: var(--mainBlue2);
+  background-color: var(--mainBlue4);
+  /*background-color: var(--mainBlue2);*/
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -989,20 +991,32 @@ header {
   .motivo-contactar-head
   .motivo-contactar-svg
   svg {
-  stroke: var(--goldComplemento1);
+  stroke: white;
+  /*stroke: var(--goldComplemento1);*/
 }
 .section-introduction .porque-contactar .motivo-contactar-head span h5 {
   margin: 0;
   font-size: 0.83rem;
+  font-family: ui-sans-serif, system-ui, sans-serif;
 }
 .section-introduction .porque-contactar .motivo-contactar-head span small {
   margin: 0;
   color: var(--font-color2);
   font-size: 0.79rem;
 }
+.section-introduction .porque-contactar .motivo-contactar-body {
+  margin-left: 4%;
+}
+.section-introduction .porque-contactar .motivo-contactar-body small{
+  color: var(--font-color2);
+}
 .section-introduction a {
-  background-color: var(--goldComplemento1);
-  color: var(--white-color1);
+ /*background-color: var(--goldComplemento1);*/
+  background: linear-gradient(45deg,var(--mainBlue3), var(--mainBlue5),var(--mainBlue3));
+  color: var(--white-color2);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: 2px solid var(--mainBlue1);
   padding: 0.6rem 1.6rem;
   text-decoration: none;
   margin-top: 2rem;
@@ -2085,6 +2099,9 @@ header {
 .section-about .about-div .about-txt .about-networks-set {
   text-align: center;
 }
+.section-about .about-div .about-txt .about-networks-set a {
+  text-decoration: none;
+}
 .section-about .about-div .about-txt .about-networks-set a i {
   margin-right: 7px;
   border: 1px solid var(--mainBlue1);
@@ -2180,15 +2197,15 @@ header {
 .section-whatsapp .whatsapp-loop .div-bg3 .div-bg2 .div-bg1 svg {
   max-width: 30px;
   max-height: 30px;
-  fill: white;
+  fill: white!important;
 }
 .section-whatsapp .whatsapp-loop .div-bg3 .div-bg2 .div-bg1 {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
+  border-radius: 20px;
 
-  background: rgb(0 188 16);
-  outline: 5px solid rgb(0 188 16 / 0.5);
+  background: rgb(0, 188, 16);
+  /*border: 5px solid rgb(0 188 16 / 0.1);*/
 
   display: flex;
   align-items: center;
@@ -2197,7 +2214,7 @@ header {
 .section-whatsapp .whatsapp-loop .div-bg3 .div-bg2 {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: 25px;
   background: rgb(0 188 16 / 0.3);
   outline: 9px solid rgb(0 188 16 / 0.1);
   display: flex;
@@ -2207,7 +2224,7 @@ header {
 .section-whatsapp .whatsapp-loop .div-bg3 {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
