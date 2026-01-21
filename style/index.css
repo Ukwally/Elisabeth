@@ -2344,9 +2344,17 @@ header {
 /*CONTOMIZATION OF CONTACTS POSTS*/
 
 .section-post {
- display: flex;
- align-items: center;
- justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 10%;
+  
+}
+.section-post .post-set {
+  max-width: 100%;
+}
+.section-post .post-set iframe{
+  max-width: 100%;
 }
 
 /*CONTOMIZATION OF CONTACTS SECTION*/
