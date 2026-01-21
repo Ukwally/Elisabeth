@@ -2348,13 +2348,16 @@ header {
   align-items: center;
   justify-content: center;
   padding: 2% 5%;
+  background-color: var(--bg2-1);
+  height: fit-content;
   
 }
 .section-post .post-set {
-  max-width: 100%;
+  height: fit-content;
 }
 .section-post .post-set iframe{
-  max-width: 100%;
+  max-height:243px;
+  max-width:504px;
 }
 
 /*CONTOMIZATION OF CONTACTS SECTION*/
