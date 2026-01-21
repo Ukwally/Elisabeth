@@ -25,6 +25,10 @@ html {
   --intBlue1: #9abff5;
   --intBlue2: #81b0f3;
 
+  
+  --goldBlue0: #3398ce;
+  --goldBlue0-2claro: #67aacd;
+  --goldBlue0-3claro: #a4d5ed;
   --goldBlue1: #0d99ff;
   --goldBlue2: #1a73e8; /*google*/
   --goldBlue3: #1c9ad7; /*compainha propria*/
@@ -198,9 +202,16 @@ body {
 .textoOcultoNoMobile {
   display: none;
 }
+.textoOcultoNoWeb {
+  display: initial;
+}
 @media only screen and (min-width: 800px) {
   .textoOcultoNoMobile {
     display: initial; /*display:inline;*/
+    color: inherit;
+  }
+  .textoOcultoNoWeb {
+    display: none; /*display:inline;*/
     color: inherit;
   }
 }
@@ -637,7 +648,7 @@ header {
 }
 .button:hover {
   border: 3px solid var(--mainBlue4);
-  background-color: var(--mainBlue3);
+  background-color: var(--mainBlue6);
   box-sizing: border-box;
 }
 /*section site inacabado*/
