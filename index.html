@@ -1544,16 +1544,6 @@
     <script>
 
         const tamanhoDaTela = screen.availWidth;
-        const postIframe = document.getElementById('postIframe');
-        if (postIframe) {
-            document.addEventListener('DOMContentLoaded', () => {
-                const postIframeButoes = document.querySelector('.social-action-bar__button');
-                if (postIframeButoes) {
-                    postIframeButoes.disabled = true;
-                }
-            })
-        }
-
         if (tamanhoDaTela < 800) {
             postIframe.style = 'width:320px; height:350px;';
             postIframe.width(320);
@@ -1571,6 +1561,16 @@
                 postIframe.height(300);
             }
         }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const postIframe = document.getElementById('postIframe');
+            if (postIframe) {
+                const postIframeButoes = document.querySelector('.social-action-bar__button');
+                if (postIframeButoes) {
+                    postIframeButoes.disabled = true;
+                }
+            }
+        })
 
         function fecharAlerta() {
             document.getElementById('spanInacabado').style = 'display:none';
