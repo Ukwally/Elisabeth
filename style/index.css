@@ -819,7 +819,7 @@ header {
   .ElisabetTxt
   .hastagName {
   font-family: sans-serif;
-  color: var(--mainBlue5);
+  color: var(--mainBlue10);
   font-size: 3.22rem;
   font-weight: 700;
 }
