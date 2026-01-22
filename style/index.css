@@ -790,7 +790,8 @@ header {
   */
 }
 .section-banner .banner-description-side .banner-txt-tittle .ElisabetTxt {
-  color: var(--goldBlue1);
+  /*color: var(--goldBlue1);*/
+  color: var(--goldBlue7);
   /*
   background: linear-gradient(45deg, #4e7efe, #0d99ff, #4e7efe);
   -webkit-background-clip: text;
@@ -836,7 +837,8 @@ header {
 .section-banner .banner-description-side .banner-txt-description {
   font-size: 1.27rem;
   /*color: var(--goldBlue1); super Cor inicial golden*/
-  color: var(--mainBlue8);
+  color: var(--mainBlue13);
+  font-weight: 200;
   /*
     color: var(--mainBlue14);
     font-weight: 300;
@@ -899,9 +901,11 @@ header {
   align-items: center;*/
 
   /*box-shadow: 0 14px 20px -8px rgba(0, 70, 255, 0.4);
-  background-color: #4e7efe;*/
+  background-color: #4e7efe;
+  */
   box-shadow: 0 14px 20px -8px rgba(0, 70, 255, 0.4);
-  background-color: var(--goldBlue1);
+  /*background-color: var(--goldBlue1);*/
+  background-color: var(--goldBlue7);
   color: #fff;
 }
 .banner-acssoes-btn1 span {
