@@ -464,12 +464,12 @@ header {
   color: white;
   transition: all 0.8s;
 
-  background-color: var(--mainBlue5);
+  background-color: var(--mainBlue6);
   border: 3px solid var(--mainBlue2);
 }
 .button:hover {
   border: 3px solid var(--mainBlue4);
-  background-color: var(--mainBlue3);
+  background-color: var(--mainBlue5);
   box-sizing: border-box;
 }
 /*SECTION RECRUTADORES*/

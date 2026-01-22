@@ -415,7 +415,7 @@ main {
   align-items: center;
   font-family: monospace;
   color: var(--mainBlue6);
-  border-top: 2px solid var(--mainBlue4);
+  border-top: 2px solid var(--mainBlue3);
 }
 #top-info .networks-set {
   display: flex;
@@ -534,6 +534,7 @@ header {
   z-index: 200;
   top: 0;
   left: 0;
+  overflow: hidden;
 }
 .header-action nav #icon-close-menu {
   background-color: var(--bg2);
@@ -544,6 +545,12 @@ header {
   display: flex;
   justify-content: end;
   box-sizing: border-box;
+  transform: translateX(200px);
+  transition: all 100ms;
+}
+.header-action nav #icon-close-menu.visivel {
+  transform: translateX(0);
+  transition: all 100ms;
 }
 .header-action nav .nav-item-set {
   background-color: white;
@@ -552,6 +559,12 @@ header {
   float: right;
   display: flex;
   flex-direction: column;
+  transform: translateX(200px);
+  transition: all 100ms;
+}
+.header-action nav .nav-item-set.visivel {
+  transform: translateX(0);
+  transition: all 100ms;
 }
 .header-action nav .nav-item-set a {
   display: flex;
@@ -578,6 +591,7 @@ header {
     box-sizing: border-box;
     padding: 0;
     height: fit-content;
+    transform: translateX(0);
   }
   .header-action nav .nav-item-set {
     background-color: transparent;
@@ -586,6 +600,7 @@ header {
     float: none;
     display: flex;
     flex-direction: row;
+    transform: translateX(0);
   }
 
   .header-action nav .nav-item-set a {
@@ -626,6 +641,7 @@ header {
     height: fit-content;
     width: fit-content;
     z-index: 1;
+    overflow:unset;
   }
   /*Inicio Como o elemento da nav vai aparecer no grande*/
 
@@ -655,13 +671,13 @@ header {
   color: white;
   transition: all 0.8s;
 
-  background-color: var(--mainBlue5);
+  background-color: var(--mainBlue6);
   border: 3px solid var(--mainBlue2);
   line-height: 1;
 }
 .button:hover {
   border: 3px solid var(--mainBlue4);
-  background-color: var(--mainBlue6);
+  background-color: var(--mainBlue5);
   box-sizing: border-box;
 }
 /*section site inacabado*/
@@ -803,7 +819,7 @@ header {
   .ElisabetTxt
   .hastagName {
   font-family: sans-serif;
-  color: var(--mainBlue12);
+  color: var(--mainBlue5);
   font-size: 3.22rem;
   font-weight: 700;
 }
@@ -1870,7 +1886,7 @@ header {
 .section-testimony .testimony-set .testimony-item {
   /*max-width: 250px; con esta medida a margem orizontal fica muito bonita no meu telefone*/
   max-width: 100%;
-  height: 250px;
+  min-height: 285px;
   background-color: white;
   margin: 20px;
   border-radius: 4px;
@@ -2009,11 +2025,10 @@ header {
   .testimony-item-body-description {
   font-size: 14px;
   color: var(--dark15);
-  font-weight: 300;
+  font-weight: 300 !important;
   font-family: ui-sans-serif, system-ui, sans-serif;
   margin-top: 0;
   overflow: auto;
-  max-height: 62px;
   scrollbar-width: thin;
 }
 
@@ -2447,6 +2462,8 @@ header {
   padding: 0 5%;
   justify-content: space-around;
   padding-bottom: 100px;
+  overflow: hidden;
+  max-width: 100%;
 }
 .plataformas-set .plataformas {
   max-width: 30px;
@@ -2468,6 +2485,9 @@ header {
   padding: 2% 5%;
   background-color: var(--bg2-1);
   height: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
 }
 @media only screen and (min-width: 800px) {
   .section-posts {

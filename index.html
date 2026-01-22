@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#78c6ed">
+    <meta name="theme-color" content="#61bdea">
     <title>🚀 | Elisabeth</title>
     <link rel="stylesheet" href="./style/index.css">
     <!--link rel="icon" type="image/x-icon" href="./assets/icons/angola-circular.png"-->
@@ -42,7 +42,7 @@
                         <path d="m6 6 12 12" />
                     </svg>
                 </span>
-                <span style="display: flex;" class="nav-item-set">
+                <span style="display: flex;" class="nav-item-set" id="nav-item-set-id">
                     <a href="#top-info" onclick="abrirMenu()">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -764,7 +764,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </small>
-                        <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
+                        <p class="testimony-item-body-description"><sup><i class="fa fa-quote-left"></i></sup>
                             Excelente
                             profissional. Excelente profissional. Excelente<sup><i class="fa fa-quote-right"></i></sup>
                         </p>
@@ -796,7 +796,7 @@
                             <i class="fa fa-star"></i>
                         </small>
 
-                        <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
+                        <p class="testimony-item-body-description"><sup><i class="fa fa-quote-left"></i></sup>
                             Excelente
                             profissional. Excelente profissional. Excelente.<sup><i class="fa fa-quote-right"></i></sup>
                         </p>
@@ -827,7 +827,7 @@
                             <i class="fa fa-star"></i>
                             <i class="fa fa-star"></i>
                         </small>
-                        <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
+                        <p class="testimony-item-body-description"><sup><i class="fa fa-quote-left"></i></sup>
                             Elisabeth é uma excelente
                             profissional, tive o privilégio
                             de ser seu colega de equipa e
@@ -1669,6 +1669,12 @@
         function abrirMenu() {
             document.getElementById('menu').classList.toggle('hidden-menu');
             document.getElementById('icon-close-menu').classList.toggle('hidden');
+
+            setTimeout(() => {
+                document.getElementById('icon-close-menu').classList.toggle('visivel');
+                document.getElementById('nav-item-set-id').classList.toggle('visivel');
+            }, 1);
+
         }
     </script>
 </body>
