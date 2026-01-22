@@ -789,8 +789,10 @@
                             <i class="fa fa-star"></i>
                         </small>
                         <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
-                            Elisabeth <span class="textoOcultoNoMobile"> é uma excelente profissional, tive o privilégio de ser seu colega de equipa e
-                            pela experiência demonstrada ela</span> é super dedicada e comprometida com entrega de resultados
+                            Elisabeth <span class="textoOcultoNoMobile"> é uma excelente profissional, tive o privilégio
+                                de ser seu colega de equipa e
+                                pela experiência demonstrada ela</span> é super dedicada e comprometida com entrega de
+                            resultados
                             de alta qualidade
                             <sup><i class="fa fa-quote-right"></i></sup>
                         </p>
@@ -1281,8 +1283,9 @@
         </div>
         <section class="section section-posts">
             <div class="post-set">
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7280594269336162304"
-                    frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
+                <iframe id="postIframe"
+                    src="https://www.linkedin.com/embed/feed/update/urn:li:share:7280594269336162304" frameborder="0"
+                    allowfullscreen="" title="Publicação incorporada"></iframe>
             </div>
         </section>
         <section class="section section-contacts" id="contacto">
@@ -1539,6 +1542,27 @@
     </footer>
     <script src="./scripts/index.js"></script>
     <script>
+
+        const tamanhoDaTela = screen.availWidth;
+        const postIframe = document.getElementById('postIframe');
+
+        if (tamanhoDaTela < 800) {
+            postIframe.style = 'width:320px; height:350px;';
+            postIframe.width(320);
+            postIframe.height(350);
+        } else {
+            if (tamanhoDaTela < 1000) {
+                postIframe.style = 'width:504px; height:350px;';
+
+                postIframe.width(504);
+                postIframe.height(350);
+            } else {
+                postIframe.style = 'width:704px; height:350px;';
+
+                postIframe.width(704);
+                postIframe.height(350);
+            }
+        }
 
         function fecharAlerta() {
             document.getElementById('spanInacabado').style = 'display:none';
