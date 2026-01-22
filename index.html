@@ -1274,14 +1274,14 @@
             </div>
         </section>
 
-        <div class="div-tittle div-tittle-posts" id="posts">
-            <!--h1 class="tittle-tittle">Posts </h1-->
-            <!--h3-- class="tittle-subtittle">Publicações Recentes</!--h3-->
-            <!--p class="tittle-description">Publicações Recentes</p-->
-            <h5><b class="cor-azul">PUBLICAÇÕES </b>| LEADS</h5>
-            <h4>Linkedin</h4>
-        </div>
         <section class="section section-posts">
+            <div class="div-tittle div-tittle-posts" id="posts">
+                <!--h1 class="tittle-tittle">Posts </h1-->
+                <!--h3-- class="tittle-subtittle">Publicações Recentes</!--h3-->
+                <!--p class="tittle-description">Publicações Recentes</p-->
+                <h5><b class="cor-azul">PUBLICAÇÕES </b>| LEADS</h5>
+                <h4>Linkedin</h4>
+            </div>
             <div class="post-set">
                 <iframe id="postIframe"
                     src="https://www.linkedin.com/embed/feed/update/urn:li:share:7280594269336162304" frameborder="0"
@@ -1545,7 +1545,8 @@
 
         const tamanhoDaTela = screen.availWidth;
         const postIframe = document.getElementById('postIframe');
-        const postIframeButoes = document.querySelector('.social-action-bar__button').disabled=true;
+        const postIframeButoes = document.querySelector('.social-action-bar__button');
+        postIframeButoes.disabled = true;
 
         if (tamanhoDaTela < 800) {
             postIframe.style = 'width:320px; height:350px;';

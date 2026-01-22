@@ -256,9 +256,9 @@ main {
 .div-tittle-posts {
   padding-left: 5%;
   padding-right: 5%;
-  padding-top: 20%;
   background-color: white;
   padding-bottom: 20px;
+  width: 100%;
 }
 .div-tittle-experiencias {
   padding-left: 5%;
@@ -394,6 +394,7 @@ main {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 5%;
+    max-width: 30%;
   }
   .div-tittle-experiencias {
     padding-left: 10%;
@@ -2361,11 +2362,19 @@ header {
 /*CONTOMIZATION OF CONTACTS POSTS*/
 .section-posts {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   padding: 2% 5%;
   background-color: var(--bg2-1);
   height: fit-content;
+}
+@media only screen and (min-width: 800px) {
+  .section-posts {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 .div-tittle-posts h5 {
   margin-bottom: 0;
@@ -2378,6 +2387,9 @@ header {
 }
 .section-post .post-set {
   height: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 /*CONTOMIZATION OF CONTACTS SECTION*/
 .section-contacts {
