@@ -2,6 +2,7 @@ Upercase no softwares por:?
 
 "Google Sans", Roboto, Arial, Helvetica, sans-serif
 "Product Sans",Arial,Helvetica,sans-serif.
+ FigtreeVF,sans-serif (Super técnico)
 
 Formação Académica & Certificações com links ?
 Competências Técnicas?
