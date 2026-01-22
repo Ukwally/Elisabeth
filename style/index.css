@@ -2379,22 +2379,6 @@ header {
 .section-post .post-set {
   height: fit-content;
 }
-.section-post .post-set iframe {
-  width: 320px;
-  height: 350px;
-}
-@media only screen and (min-width: 800px) {
-  .section-post .post-set iframe {
-    width: 504px;
-    height: 350px;
-  }
-}
-@media only screen and (min-width: 1000px) {
-  .section-post .post-set iframe {
-    width: 704px;
-    height: 350px;
-  }
-}
 /*CONTOMIZATION OF CONTACTS SECTION*/
 .section-contacts {
   background-color: white;
