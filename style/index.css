@@ -2383,13 +2383,13 @@ header {
   /*max-height: 243px;*/
   /*max-width: 504px;*/
   max-width: 100%;
+  max-width: 650px;
 }
 
 @media only screen and (min-width: 800px) {
   .section-post .post-set iframe {
     /*max-height: 243px;*/
     /*max-width: 504px;*/
-    max-width: 50%;
   }
 }
 /*CONTOMIZATION OF CONTACTS SECTION*/
