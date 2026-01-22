@@ -2385,8 +2385,9 @@ header {
   margin-top: 10px;
   font-size: 2rem !important;
 }
-.section-post .post-set {
+.section-posts .post-set {
   height: fit-content;
+  padding: 2% 2%;
   display: flex;
   align-items: center;
   justify-content: space-around;
