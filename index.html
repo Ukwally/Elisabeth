@@ -1545,8 +1545,14 @@
 
         const tamanhoDaTela = screen.availWidth;
         const postIframe = document.getElementById('postIframe');
-        const postIframeButoes = document.querySelector('.social-action-bar__button');
-        postIframeButoes.disabled = true;
+        if (postIframe) {
+            document.addEventListener('DOMContentLoaded', () => {
+                const postIframeButoes = document.querySelector('.social-action-bar__button');
+                if (postIframeButoes) {
+                    postIframeButoes.disabled = true;
+                }
+            })
+        }
 
         if (tamanhoDaTela < 800) {
             postIframe.style = 'width:320px; height:350px;';
