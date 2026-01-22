@@ -25,7 +25,6 @@ html {
   --intBlue1: #9abff5;
   --intBlue2: #81b0f3;
 
-  
   --goldBlue0: #3398ce;
   --goldBlue0-2claro: #67aacd;
   --goldBlue0-3claro: #a4d5ed;
@@ -254,6 +253,13 @@ main {
   background-color: white;
   padding-bottom: 20px;
 }
+.div-tittle-posts {
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 20%;
+  background-color: white;
+  padding-bottom: 20px;
+}
 .div-tittle-experiencias {
   padding-left: 5%;
   padding-right: 5%;
@@ -380,6 +386,11 @@ main {
     text-align: unset;
   }
   .div-tittle-servicos {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+  }
+  .div-tittle-posts {
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 5%;
@@ -653,6 +664,7 @@ header {
   box-sizing: border-box;
 }
 /*section site inacabado*/
+/* Section inacabado
 .section-site-inacabado {
   background-color: var(--bg2);
   padding: 1% 5%;
@@ -693,7 +705,7 @@ header {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-}
+}*/
 /*End of header costomisation*/
 .section-banner {
   /*background: url(../assets/images/bg-image.png);*/
@@ -1019,12 +1031,17 @@ header {
 .section-introduction .porque-contactar .motivo-contactar-body {
   margin-left: 4%;
 }
-.section-introduction .porque-contactar .motivo-contactar-body small{
+.section-introduction .porque-contactar .motivo-contactar-body small {
   color: var(--font-color2);
 }
 .section-introduction a {
- /*background-color: var(--goldComplemento1);*/
-  background: linear-gradient(45deg,var(--mainBlue3), var(--mainBlue5),var(--mainBlue3));
+  /*background-color: var(--goldComplemento1);*/
+  background: linear-gradient(
+    45deg,
+    var(--mainBlue3),
+    var(--mainBlue5),
+    var(--mainBlue3)
+  );
   color: var(--white-color2);
   font-size: 1.1rem;
   font-weight: 600;
@@ -2209,7 +2226,7 @@ header {
 .section-whatsapp .whatsapp-loop .div-bg3 .div-bg2 .div-bg1 svg {
   max-width: 30px;
   max-height: 30px;
-  fill: white!important;
+  fill: white !important;
 }
 .section-whatsapp .whatsapp-loop .div-bg3 .div-bg2 .div-bg1 {
   width: 40px;
@@ -2342,24 +2359,39 @@ header {
 }
 
 /*CONTOMIZATION OF CONTACTS POSTS*/
-
-.section-post {
+.section-posts {
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 2% 5%;
   background-color: var(--bg2-1);
   height: fit-content;
-  
+}
+.div-tittle-posts h5 {
+  margin-bottom: 0;
+  font-weight: 300;
+}
+.div-tittle-posts h4 {
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-size: 2rem !important;
 }
 .section-post .post-set {
   height: fit-content;
 }
-.section-post .post-set iframe{
-  max-height:243px;
-  max-width:504px;
+.section-post .post-set iframe {
+  /*max-height: 243px;*/
+  /*max-width: 504px;*/
+  max-width: 100%;
 }
 
+@media only screen and (min-width: 800px) {
+  .section-post .post-set iframe {
+    /*max-height: 243px;*/
+    /*max-width: 504px;*/
+    max-width: 50%;
+  }
+}
 /*CONTOMIZATION OF CONTACTS SECTION*/
 .section-contacts {
   background-color: white;

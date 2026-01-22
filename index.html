@@ -109,7 +109,7 @@
             <button class="button btn-contratar" onclick="mostrarModalRecrutar()">CONTRATAR</button>
         </div>
     </header>
-    <section class="section-site-inacabado" id="spanInacabado">
+    <!--section-- class="section-site-inacabado" id="spanInacabado">
         <div>
             <span style="display: flex; align-items: center;">
                 <svg style="margin-right: 10px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -133,7 +133,7 @@
         <div class="percentagem" style="display: none;">
             <div><small>57%</small></div>
         </div>
-    </section>
+    </!--section-->
     <!-- Crio sites, apps e sistemas personalizados, modernos e eficientes, além de soluções que automatizam processos e aumentam sua produtividade.-->
     <main>
         <section class="section section-banner">
@@ -419,7 +419,8 @@
                         tecnologia, estratégia e
                         criatividade, permitindo-me desenvolver <b class="cor-azul">competências técnicas</b> e visão
                         analítica para resolver
-                        desafios complexos.</p>
+                        desafios complexos.
+                    </p>
 
                     <ul>
                         <li>
@@ -778,7 +779,7 @@
                         <img src="./assets/icons/user.png" alt="Caxiombo">
                     </div>
                     <div class="testimony-item-body">
-                        <p class="testimony-item-body-tittle">Eugênio Caxiombo</p>
+                        <p class="testimony-item-body-tittle">Eugênio Cachiombo</p>
                         <small>Engenheiro informático</small> <br>
                         <small>
                             <i class="fa fa-star"></i>
@@ -788,8 +789,8 @@
                             <i class="fa fa-star"></i>
                         </small>
                         <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
-                            Elisabeth é uma excelente profissional, tive o privilégio de ser seu colega de equipa e
-                            pela experiência demonstrada ela é super dedicada e comprometida com entrega de resultados
+                            Elisabeth <span class="textoOcultoNoMobile"> é uma excelente profissional, tive o privilégio de ser seu colega de equipa e
+                            pela experiência demonstrada ela</span> é super dedicada e comprometida com entrega de resultados
                             de alta qualidade
                             <sup><i class="fa fa-quote-right"></i></sup>
                         </p>
@@ -1271,10 +1272,17 @@
             </div>
         </section>
 
-        <section class="section section-post">
+        <div class="div-tittle div-tittle-posts" id="posts">
+            <!--h1 class="tittle-tittle">Posts </h1-->
+            <!--h3-- class="tittle-subtittle">Publicações Recentes</!--h3-->
+            <!--p class="tittle-description">Publicações Recentes</p-->
+            <h5><b class="cor-azul">PUBLICAÇÕES </b>| LEADS</h5>
+            <h4>Linkedin</h4>
+        </div>
+        <section class="section section-posts">
             <div class="post-set">
-                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7280594269336162304" 
-                     frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
+                <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:share:7280594269336162304"
+                    frameborder="0" allowfullscreen="" title="Publicação incorporada"></iframe>
             </div>
         </section>
         <section class="section section-contacts" id="contacto">
@@ -1363,7 +1371,7 @@
                     <span class="close-dialog" onclick="mostrarAviso()">&#10005</span>
                 </div>
                 <div class="dialog-body">
-                    Prezado(a)! <br>
+                    Prezado! <br>
                     As informações neste site podem estar desatualizadas, e incompletas.
                     Para obter informações completas você precisa contactar-me <br>
                     Obrigada!
