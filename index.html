@@ -370,15 +370,125 @@
                     performance e confiabilidade.--></p>
             </div>
         </section>
+        <section class="section section-portfolio">
+            <div class="div-tittle div-tittle-portfolio" id="portfolio">
+                <!--h1-- class="tittle-tittle">Portfólio</!--h1-->
+                <h1 class="tittle-tittle animado "> <span class="textoOcultoNoMobile">Meus</span> projetos</h1>
+                <h3 class="tittle-subtittle animado ">Conheça alguns dos projetos que eu tornei realidade</h3>
+                <p class="tittle-description animado"> <span class="textoOcultoNoMobile">Aqui encontras uma seleção de
+                        meus
+                        trabalhos e projetos desenvolvidos.</span>
+                    Cada projeto reflete a minha dedicação <span class="textoOcultoNoMobile"> à qualidade, inovação e à
+                        criação de soluções eficientes e
+                        criativas</span>. Explora e descobre o impacto de cada.
+                    <!--em diferentes áreas e tecnologias.-->
+                </p>
+            </div>
+            <div class="portfolio-tabs">
+                <span class="portfolio-tabs-item" id="mobile-tab-botton" onclick="openMobileTab()">Mobile</span>
+                <span class="portfolio-tabs-item" id="web-tab-botton" onclick="openWebTab()">Web</span>
+                <span class="portfolio-tabs-item" id="desktp-tab-botton" onclick="openDesktopTab()">Desktop</span>
+            </div>
+            <div class="portfolio-items-set">
+                <div class="portfolio-item" id="mobile-tab">
+                    <div class="animado">
+                        <span class="portfolio-item-description">
+                            <span class="porto-item-descrip-tittle">DTSER</span>
+                            <span class="porto-item-descrip-subtittle">Identificação de veículos</span>
+                            <span class="porto-item-descrip-subtittle">React Native | Node.js |</span>
+                            <span class="portfolio-icon-tech-set">
+                                <img src="./assets/svgs/react.svg" width="30">
+                                <img src="./assets/svgs/nodedotjs.svg" width="30">
+                                <!--img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nodedotjs.svg" width="30"-->
+                                <img src="./assets/svgs/python.svg" width="30">
+                            </span>
+                        </span>
+                        <img src="./assets/images/Canvas-App-banner-Mobile6-grande.png" alt="Imagem">
+                        <span class="portfolio-item-loop">
+                            <i class="fa fa-download" onclick="mostrarModalInfo()"></i> Baixar App
+                        </span>
+                    </div>
+                    <div class="animado">
+                        <span class="portfolio-item-description">
+                            <span class="porto-item-descrip-tittle">LUCAR</span>
+                            <span class="porto-item-descrip-subtittle">Identificação de veículos</span>
+                            <span class="porto-item-descrip-subtittle"> React Native | Node.js |</span>
+                            <span class="portfolio-icon-tech-set">
+                                <img src="./assets/svgs/react.svg" width="30">
+                                <img src="./assets/svgs/nodedotjs.svg" width="30">
+                                <img src="./assets/svgs/python.svg" width="30">
+                            </span>
+                        </span>
+                        <img src="./assets/images/Canvas-App-banner-Mobile7-claro-grande.png" alt="Imagem">
+                        <!--span class="portfolio-item-loop>
+                            <i class="fa fa-download"></i> Baixar App
+                        </!--span-->
+                    </div>
+                </div>
+                <div class="portfolio-item" id="web-tab">
+                    <div class="animado">
+                        <img src="./assets/images/web-soft-selisnova2.png" alt="">
+                        <span class="portfolio-item-loop">
+                            <a href="https://ukwally.github.io/selisnova"> <i class="fa fa-globe"
+                                    style="margin-right: 5px;"></i>Ver site</a>
+                        </span>
+                    </div>
+                    <div class="animado">
+                        <img src="./assets/images/web-soft-InovaHelth.png" alt="">
+                        <span class="portfolio-item-loop">
+                            <a href="https://ukwally.github.io/InovaHelth/"><i class="fa fa-globe"
+                                    style="margin-right: 5px;"></i>Ver site</a>
+                        </span>
+                    </div>
+                </div>
+                <div class="portfolio-item" id="desktop-tab"
+                    style=" align-items: center; justify-content: center; flex-direction: column; text-transform: uppercase;">
+                    <!--img style="background-color:#fff7e6; border: 1px solid #ffe6b3;border-radius: 10px; margin-bottom: 50px;max-width: 100px; max-height: 100px; padding: 20px;"
+                        src="./assets/icons/warning.gif" alt=""-->
+                    <p
+                        style="font-size: 16px;color: #ffd480;background-color:#fff7e6; border: 1px solid #ffe6b3;border-radius: 10px;padding:10px 20px; font-weight: 100; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                        ⚡Conteúdo indisponível de momento
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section section-about" id="sobre">
+            <div class="div-tittle div-tittle-about">
+                <h1 class="tittle-tittle">Quem sou</h1>
+                <!--h3-- class="tittle-subtittle">Engenharia, criatividade e tecnologia em harmonia.</!--h3-->
+                <p class="tittle-description">Saiba mais sobre mim...</p>
+            </div>
+            <div class="about-div">
+                <div class="about-img animado"><img src="./assets/images/elisabeth.png" alt="#Elisabeth Photo"></div>
+                <div class="about-txt animado">
+                    <strong>Elisabeth Pedro</strong>
+                    <small>Engenheira informática</small>
+                    <span class="about-networks-set">
+                        <a> <i class="fa fa-facebook" onclick="mostrarRedeSocialIndisponivel('Facebook')"></i></a>
+                        <a href="https://www.linkedin.com/in/elisain"> <i class=" fa fa-linkedin"></i></a>
+                        <a> <i class="fa fa-twitter" onclick="mostrarRedeSocialIndisponivel('Twitter')"></i></a>
+                    </span>
+                    <span class="about-txt-description">
+                        Engenheira informática licenciada em Angola em 2024 com certificado de honra. Especialista em
+                        desenvolvimento de softwares, automação, redes de computadores e cibersegurança. <br>
+                        Com Certificação <b>CISCO</b>. <br><small style="color: grey; font-size: 12px;">⚡ Vamos
+                            construir algo
+                            incrível juntos</small>
+                    </span>
+                </div>
+            </div>
+        </section>
         <aside class="horizontal-add" style="background-color: white;">
             <div> </div>
         </aside>
         <div class="div-tittle div-tittle-experiencias" id="curriculo">
             <h1 class="tittle-tittle animado">Experiências</h1>
             <h3 class="tittle-subtittle animado">Profissionais</h3>
-            <p class="tittle-description">Ao longo dos anos, trabalhei em diversos projetos que envolveram tecnologia,
+            <p class="tittle-description">
+                Ao longo dos anos, trabalhei em diversos projetos que envolveram tecnologia,
                 estratégia e criatividade, permitindo-me desenvolver competências técnicas e visão analítica para
-                resolver desafios complexos:</p>
+                resolver desafios complexos:
+            </p>
         </div>
         <section class="section section-resume">
             <div class="section-resume-set animado">
@@ -437,59 +547,64 @@
                             </svg>
                             Desenvolvimento de Chat Robô
                         </li>
-                        <li>
-                            <i class="material-icons cor-azul">check</i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
-                                <path d="M20 6 9 17l-5-5" />
-                            </svg>
-                            Resolução de problemas técnicos (hardware/software)
-                        </li>
-                        <li>
-                            <i class="material-icons cor-azul">check</i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
-                                <path d="M20 6 9 17l-5-5" />
-                            </svg>
-                            Suporte em redes e acessos
-                        <li>
-                            <i class="material-icons cor-azul">check</i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
-                                <path d="M20 6 9 17l-5-5" />
-                            </svg>
-                            Suporte em impressoras e email
-                        </li>
-                        <li>
-                            <i class="material-icons cor-azul">check</i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
-                                <path d="M20 6 9 17l-5-5" />
-                            </svg>
-                            Instalação e configuração de equipamentos
-                        </li>
-                        <li>
-                            <i class="material-icons cor-azul">check</i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
-                                <path d="M20 6 9 17l-5-5" />
-                            </svg>
-                            Desenvolvimento de aplicações web
-                        </li>
-                        <li>
-                            <i class="material-icons cor-azul">check</i>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
-                                <path d="M20 6 9 17l-5-5" />
-                            </svg>
-                            Integração com APIs e bases de dados
-                        </li>
+
+                        <span class="textoOcultoNoMobile">
+                            <li>
+                                <i class="material-icons cor-azul">check</i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Resolução de problemas técnicos (hardware/software)
+                            </li>
+                            <li>
+                                <i class="material-icons cor-azul">check</i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Suporte em redes e acessos
+
+                            </li>
+                            <li>
+                                <i class="material-icons cor-azul">check</i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Suporte em impressoras e email
+                            </li>
+                            <li>
+                                <i class="material-icons cor-azul">check</i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Instalação e configuração de equipamentos
+                            </li>
+                            <li>
+                                <i class="material-icons cor-azul">check</i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Desenvolvimento de aplicações web
+                            </li>
+                            <li>
+                                <i class="material-icons cor-azul">check</i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="lucide lucide-check-icon lucide-check">
+                                    <path d="M20 6 9 17l-5-5" />
+                                </svg>
+                                Integração com APIs e bases de dados
+                            </li>
+                        </span>
                     </ul>
                     <span class="resume-action">
                         <a href="more.html" class="animado"> VER MAIS DADOS ➡</a>
@@ -632,274 +747,12 @@
                 <small>Soluções de sucesso</small>
             </div>
         </section>
-        <section class="section section-portfolio">
-            <div class="div-tittle div-tittle-portfolio" id="portfolio">
-                <!--h1-- class="tittle-tittle">Portfólio</!--h1-->
-                <h1 class="tittle-tittle animado "> <span class="textoOcultoNoMobile">Meus</span> projetos</h1>
-                <h3 class="tittle-subtittle animado ">Conheça alguns dos projetos que eu tornei realidade</h3>
-                <p class="tittle-description animado"> <span class="textoOcultoNoMobile">Aqui encontras uma seleção de
-                        meus
-                        trabalhos e projetos desenvolvidos.</span>
-                    Cada projeto reflete a minha dedicação <span class="textoOcultoNoMobile"> à qualidade, inovação e à
-                        criação de soluções eficientes e
-                        criativas</span>. Explora e descobre o impacto de cada.
-                    <!--em diferentes áreas e tecnologias.-->
-                </p>
-            </div>
-            <div class="portfolio-tabs">
-                <span class="portfolio-tabs-item" id="mobile-tab-botton" onclick="openMobileTab()">Mobile</span>
-                <span class="portfolio-tabs-item" id="web-tab-botton" onclick="openWebTab()">Web</span>
-                <span class="portfolio-tabs-item" id="desktp-tab-botton" onclick="openDesktopTab()">Desktop</span>
-            </div>
-            <div class="portfolio-items-set">
-                <div class="portfolio-item" id="mobile-tab">
-                    <div class="animado">
-                        <span class="portfolio-item-description">
-                            <span class="porto-item-descrip-tittle">DTSER</span>
-                            <span class="porto-item-descrip-subtittle">Identificação de veículos</span>
-                            <span class="porto-item-descrip-subtittle">React Native | Node.js |</span>
-                            <span class="portfolio-icon-tech-set">
-                                <img src="./assets/svgs/react.svg" width="30">
-                                <img src="./assets/svgs/nodedotjs.svg" width="30">
-                                <!--img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/nodedotjs.svg" width="30"-->
-                                <img src="./assets/svgs/python.svg" width="30">
-                            </span>
-                        </span>
-                        <img src="./assets/images/Canvas-App-banner-Mobile6-grande.png" alt="Imagem">
-                        <span class="portfolio-item-loop">
-                            <i class="fa fa-download" onclick="mostrarModalInfo()"></i> Baixar App
-                        </span>
-                    </div>
-                    <div class="animado">
-                        <span class="portfolio-item-description">
-                            <span class="porto-item-descrip-tittle">LUCAR</span>
-                            <span class="porto-item-descrip-subtittle">Identificação de veículos</span>
-                            <span class="porto-item-descrip-subtittle"> React Native | Node.js |</span>
-                            <span class="portfolio-icon-tech-set">
-                                <img src="./assets/svgs/react.svg" width="30">
-                                <img src="./assets/svgs/nodedotjs.svg" width="30">
-                                <img src="./assets/svgs/python.svg" width="30">
-                            </span>
-                        </span>
-                        <img src="./assets/images/Canvas-App-banner-Mobile7-claro-grande.png" alt="Imagem">
-                        <!--span class="portfolio-item-loop>
-                            <i class="fa fa-download"></i> Baixar App
-                        </!--span-->
-                    </div>
-                </div>
-                <div class="portfolio-item" id="web-tab">
-                    <div class="animado">
-                        <img src="./assets/images/web-soft-selisnova2.png" alt="">
-                        <span class="portfolio-item-loop">
-                            <a href="https://ukwally.github.io/selisnova"> <i class="fa fa-globe"
-                                    style="margin-right: 5px;"></i>Ver site</a>
-                        </span>
-                    </div>
-                    <div class="animado">
-                        <img src="./assets/images/web-soft-InovaHelth.png" alt="">
-                        <span class="portfolio-item-loop">
-                            <a href="https://ukwally.github.io/InovaHelth/"><i class="fa fa-globe"
-                                    style="margin-right: 5px;"></i>Ver site</a>
-                        </span>
-                    </div>
-                </div>
-                <div class="portfolio-item" id="desktop-tab"
-                    style=" align-items: center; justify-content: center; flex-direction: column; text-transform: uppercase;">
-                    <!--img style="background-color:#fff7e6; border: 1px solid #ffe6b3;border-radius: 10px; margin-bottom: 50px;max-width: 100px; max-height: 100px; padding: 20px;"
-                        src="./assets/icons/warning.gif" alt=""-->
-                    <p
-                        style="font-size: 16px;color: #ffd480;background-color:#fff7e6; border: 1px solid #ffe6b3;border-radius: 10px;padding:10px 20px; font-weight: 100; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-                        ⚡Conteúdo indisponível de momento
-                    </p>
-                </div>
-            </div>
-        </section>
+
         <!--div class="div-tittle div-tittle-testemunhas">
             <h1 class="tittle-tittle">O Que Dizem Sobre o Meu Trabalho</h1>
             <h3 class="tittle-subtittle">A confiança dos clientes é o meu melhor resultado.</h3>
             <p class="tittle-description">Conhece o feedback de clientes e parceiros que confiaram em mim para desenvolver as suas soluções digitais. Cada opinião reflete dedicação, transparência e compromisso com a qualidade.</p>
         </!--div-->
-        <section class=" section section-testimony">
-            <div class="div-tittle div-tittle-testemunhas">
-                <h1 class="tittle-tittle">Testemunhas</h1>
-                <!--h3 class="tittle-subtittle">A confiança dos clientes é o meu melhor resultado.</!--h3-->
-                <p class="tittle-description">A opinião dos meus clientes e parceiros é a melhor prova da qualidade do
-                    meu
-                    trabalho.
-                </p>
-                <b> Lê o que profissionais dizem sobre as experiências e
-                    resultados<span class="textoOcultoNoMobile"> que encontrei em cada colaboração </span>.
-                </b>
-
-            </div>
-            <div class="testimony-set">
-                <!--div-- class="testimony-item-text">
-                    <span>
-                        Lê o que profissionais dizem sobre as experiências, resultados e o valor que encontrei em cada
-                        colaboração.
-                    </span>
-                </!--div-->
-                <div class="testimony-item">
-                    <div class="testimony-item-head">
-                        <img src="./assets/icons/user.png" alt="Vemba">
-                        <!--span-- style="display: flex; justify-content: center; flex-direction: column;">
-                            <p class="testimony-item-body-tittle">Joy Vemba</p>
-                            <small>Engenheiro Eletrónico</small>
-                            <small>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </small>
-                        </!--span-->
-                    </div>
-                    <div class="testimony-item-body">
-                        <p class="testimony-item-body-tittle">Joy Vemba</p>
-                        <small>Engenheiro Eletrónico</small> <br>
-                        <small>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </small>
-                        <p class="testimony-item-body-description"><sup><i class="fa fa-quote-left"></i></sup>
-                            Excelente
-                            profissional. Excelente profissional. Excelente<sup><i class="fa fa-quote-right"></i></sup>
-                        </p>
-                    </div>
-                </div>
-                <div class="testimony-item">
-                    <div class="testimony-item-head">
-                        <img src="./assets/icons/user.png" alt="Fayenda">
-                        <!--span-- style="display: flex; justify-content: center; flex-direction: column;">
-                            <p class="testimony-item-body-tittle">António Fayenda</p>
-                            <small>Engenheiro informático</small>
-                            <small>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </small>
-                        </--span-->
-                    </div>
-                    <div class="testimony-item-body">
-                        <p class="testimony-item-body-tittle">António Fayenda</p>
-                        <small>Engenheiro informático</small> <br>
-                        <small>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </small>
-
-                        <p class="testimony-item-body-description"><sup><i class="fa fa-quote-left"></i></sup>
-                            Excelente
-                            profissional. Excelente profissional. Excelente.<sup><i class="fa fa-quote-right"></i></sup>
-                        </p>
-                    </div>
-                </div>
-                <div class="testimony-item">
-                    <div class="testimony-item-head">
-                        <img src="./assets/icons/user.png" alt="Caxiombo">
-                        <!--span-- style="display: flex; justify-content: center; flex-direction: column;">
-                            <p class="testimony-item-body-tittle">Eugênio Cach.</p>
-                            <small>Engenheiro informático</small>
-                            <small>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                            </small>
-                        </!--span-->
-                    </div>
-                    <div class="testimony-item-body">
-                        <p class="testimony-item-body-tittle">Eugênio Cachiombo</p>
-                        <small>Engenheiro informático</small> <br>
-                        <small>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </small>
-                        <p class="testimony-item-body-description"><sup><i class="fa fa-quote-left"></i></sup>
-                            Elisabeth é uma excelente
-                            profissional, tive o privilégio
-                            de ser seu colega de equipa e
-                            pela experiência demonstrada ela é super dedicada e comprometida com entrega de
-                            resultados
-                            de alta qualidade
-                            <sup><i class="fa fa-quote-right"></i></sup>
-                        </p>
-                    </div>
-                </div>
-                <div class="testimony-item" id="testimony-item-joy-duplicado" style="display: none;">
-                    <div class="testimony-item-head">
-                        <img src="./assets/icons/user.png" alt="Vemba">
-                    </div>
-                    <div class="testimony-item-body">
-                        <p class="testimony-item-body-tittle">Joy Vemba</p>
-                        <small>Engenheiro Eletrónico</small> <br>
-                        <small>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                            <i class="fa fa-star"></i>
-                        </small>
-                        <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
-                            Excelente
-                            profissional. Excelente profissional. Excelente<sup><i class="fa fa-quote-right"></i></sup>
-                        </p>
-                    </div>
-                </div>
-                <svg class="animado" id="svg-aspas" xmlns="http://www.w3.org/2000/svg" width="162" height="162"
-                    fill="none" viewBox="0 0 162 162">
-                    <mask id="b" fill="#fff">
-                        <path
-                            d="M97.203 47.04c8.113-7.886 18.004-13.871 28.906-17.492a78 78 0 0 1 33.969-3.39c11.443 1.39 22.401 5.295 32.024 11.411s17.656 14.28 23.476 23.86c5.819 9.579 9.269 20.318 10.083 31.385a69.85 69.85 0 0 1-5.387 32.44c-4.358 10.272-11.115 19.443-19.747 26.801-8.632 7.359-18.908 12.709-30.034 15.637l-6.17-21.698c7.666-2.017 14.746-5.703 20.694-10.773 5.948-5.071 10.603-11.389 13.606-18.467a48.14 48.14 0 0 0 3.712-22.352c-.561-7.625-2.938-15.025-6.948-21.625s-9.544-12.226-16.175-16.44-14.181-6.904-22.065-7.863a53.75 53.75 0 0 0-23.405 2.336c-7.513 2.495-14.327 6.62-19.918 12.053z">
-                        </path>
-                    </mask>
-                    <path stroke="url(#a)" stroke-dasharray="6, 6" stroke-width="2"
-                        d="M97.203 47.04c8.113-7.886 18.004-13.871 28.906-17.492a78 78 0 0 1 33.969-3.39c11.443 1.39 22.401 5.295 32.024 11.411s17.656 14.28 23.476 23.86c5.819 9.579 9.269 20.318 10.083 31.385a69.85 69.85 0 0 1-5.387 32.44c-4.358 10.272-11.115 19.443-19.747 26.801-8.632 7.359-18.908 12.709-30.034 15.637l-6.17-21.698c7.666-2.017 14.746-5.703 20.694-10.773 5.948-5.071 10.603-11.389 13.606-18.467a48.14 48.14 0 0 0 3.712-22.352c-.561-7.625-2.938-15.025-6.948-21.625s-9.544-12.226-16.175-16.44-14.181-6.904-22.065-7.863a53.75 53.75 0 0 0-23.405 2.336c-7.513 2.495-14.327 6.62-19.918 12.053z"
-                        mask="url(#b)" style="stroke:url(#a)" transform="translate(-63.992 -25.587)"></path>
-                    <ellipse cx="8.066" cy="111.597" fill="#ffff" rx="53.677" ry="53.699"
-                        transform="matrix(.71707 -.697 .7243 .6895 0 0)"></ellipse>
-                    <g clip-path="url(#c)" transform="translate(-63.992 -25.587)">
-                        <path fill="#a5d9f3"
-                            d="m144.256 137.379 32.906 12.434a4.41 4.41 0 0 1 2.559 5.667l-9.326 24.679a4.41 4.41 0 0 1-5.667 2.559l-8.226-3.108-2.332 6.17c-.466 1.233-.375 1.883-1.609 1.417l-2.253-.527c-.411-.155-.95-.594-1.206-1.161l-4.734-10.484-12.545-4.741a4.41 4.41 0 0 1-2.559-5.667l9.325-24.679a4.41 4.41 0 0 1 5.667-2.559m9.961 29.617 8.227 3.108 3.264-8.638-.498-6.768-4.113-1.555.548 7.258-4.319-1.632zm-12.339-4.663 8.226 3.108 3.264-8.637-.498-6.769-4.113-1.554.548 7.257-4.319-1.632z">
-                        </path>
-                    </g>
-                    <g clip-path="url(#d)" transform="translate(-63.992 -25.587)">
-                        <path fill="#61bdea"
-                            d="M135.35 60.136 86.67 41.654c-3.346-1.27-7.124.428-8.394 3.775L64.414 81.938c-1.27 3.347.428 7.125 3.774 8.395l12.17 4.62-3.465 9.128c-.693 1.826-1.432 2.457.394 3.15l3.014 1.625c.609.231 1.637.274 2.477-.104l15.53-6.983 18.56 7.047c3.346 1.27 7.124-.428 8.395-3.775l13.862-36.51c1.27-3.346-.428-7.124-3.775-8.395M95.261 83.207l-12.17-4.62 4.852-12.779 7.19-7.017 6.085 2.31-7.725 7.51 6.389 2.426zm18.255 6.93-12.17-4.62 4.852-12.778 7.189-7.017 6.085 2.31-7.725 7.51 6.39 2.426z">
-                        </path>
-                    </g>
-                    <defs>
-                        <clipPath id="c">
-                            <path fill="#fff" d="m198.638 146.586-65.056-24.583-24.583 65.057 65.056 24.582z">
-                            </path>
-                        </clipPath>
-                        <clipPath id="d">
-                            <path fill="#fff" d="m66.438 14.055 96.242 36.54-36.54 96.243-96.243-36.54z"></path>
-                        </clipPath>
-                        <linearGradient id="a" x1="97.203" x2="199.995" y1="47.04" y2="152.793"
-                            gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#61bdea"></stop>
-                            <stop offset=".246" stop-color="#78c6ed"></stop>
-                            <stop offset=".516" stop-color="#78c6ed"></stop>
-                            <stop offset=".821" stop-color="#78c6ed"></stop>
-                            <stop offset="1" stop-color="#78c6ed"></stop>
-                        </linearGradient>
-                    </defs>
-                </svg>
-            </div>
-        </section>
         <section class="section section-more">
             <div class="section-more-rigth" style="width: 400px; height: 400px; display: none;">
                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -1172,32 +1025,7 @@
             </div>
             <--button>Pedir orçamento</--button>
         </section-->
-        <section class="section section-about" id="sobre">
-            <div class="div-tittle div-tittle-about">
-                <h1 class="tittle-tittle">Quem sou</h1>
-                <!--h3-- class="tittle-subtittle">Engenharia, criatividade e tecnologia em harmonia.</!--h3-->
-                <p class="tittle-description">Saiba mais sobre mim...</p>
-            </div>
-            <div class="about-div">
-                <div class="about-img animado"><img src="./assets/images/elisabeth.png" alt="#Elisabeth Photo"></div>
-                <div class="about-txt animado">
-                    <strong>Elisabeth Pedro</strong>
-                    <small>Engenheira informática</small>
-                    <span class="about-networks-set">
-                        <a> <i class="fa fa-facebook" onclick="mostrarRedeSocialIndisponivel('Facebook')"></i></a>
-                        <a href="https://www.linkedin.com/in/elisain"> <i class=" fa fa-linkedin"></i></a>
-                        <a> <i class="fa fa-twitter" onclick="mostrarRedeSocialIndisponivel('Twitter')"></i></a>
-                    </span>
-                    <span class="about-txt-description">
-                        Engenheira informática licenciada em Angola em 2024 com certificado de honra. Especialista em
-                        desenvolvimento de softwares, automação, redes de computadores e cibersegurança. <br>
-                        Com Certificação <b>CISCO</b>. <br><small style="color: grey; font-size: 12px;">⚡ Vamos
-                            construir algo
-                            incrível juntos</small>
-                    </span>
-                </div>
-            </div>
-        </section>
+
         <!--section-- class="section section-whatsapp">
             <div class="whatsapp-loop">
                 <div class="div-bg3">
@@ -1357,6 +1185,187 @@
                 <iframe id="postIframe"
                     src="https://www.linkedin.com/embed/feed/update/urn:li:share:7280594269336162304" frameborder="0"
                     allowfullscreen="" title="Publicação incorporada"></iframe>
+            </div>
+        </section>
+        <section class=" section section-testimony">
+            <div class="div-tittle div-tittle-testemunhas">
+                <h1 class="tittle-tittle">Testemunhas</h1>
+                <!--h3 class="tittle-subtittle">A confiança dos clientes é o meu melhor resultado.</!--h3-->
+                <p class="tittle-description">A opinião dos meus clientes e parceiros é a melhor prova da qualidade do
+                    meu
+                    trabalho.
+                </p>
+                <b> Lê o que profissionais dizem sobre as experiências e
+                    resultados<span class="textoOcultoNoMobile"> que encontrei em cada colaboração </span>.
+                </b>
+
+            </div>
+            <div class="testimony-set">
+                <!--div-- class="testimony-item-text">
+                    <span>
+                        Lê o que profissionais dizem sobre as experiências, resultados e o valor que encontrei em cada
+                        colaboração.
+                    </span>
+                </!--div-->
+                <div class="testimony-item">
+                    <div class="testimony-item-head">
+                        <img src="./assets/icons/user.png" alt="Vemba">
+                        <!--span-- style="display: flex; justify-content: center; flex-direction: column;">
+                            <p class="testimony-item-body-tittle">Joy Vemba</p>
+                            <small>Engenheiro Eletrónico</small>
+                            <small>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </small>
+                        </!--span-->
+                    </div>
+                    <div class="testimony-item-body">
+                        <p class="testimony-item-body-tittle">Joy Vemba</p>
+                        <small>Engenheiro Eletrónico</small> <br>
+                        <small>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </small>
+                        <p class="testimony-item-body-description"><sup><i class="fa fa-quote-left"></i></sup>
+                            Excelente
+                            profissional. Excelente profissional. Excelente<sup><i class="fa fa-quote-right"></i></sup>
+                        </p>
+                    </div>
+                </div>
+                <div class="testimony-item">
+                    <div class="testimony-item-head">
+                        <img src="./assets/icons/user.png" alt="Fayenda">
+                        <!--span-- style="display: flex; justify-content: center; flex-direction: column;">
+                            <p class="testimony-item-body-tittle">António Fayenda</p>
+                            <small>Engenheiro informático</small>
+                            <small>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </small>
+                        </--span-->
+                    </div>
+                    <div class="testimony-item-body">
+                        <p class="testimony-item-body-tittle">António Fayenda</p>
+                        <small>Engenheiro informático</small> <br>
+                        <small>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </small>
+
+                        <p class="testimony-item-body-description"><sup><i class="fa fa-quote-left"></i></sup>
+                            Excelente
+                            profissional. Excelente profissional. Excelente.<sup><i class="fa fa-quote-right"></i></sup>
+                        </p>
+                    </div>
+                </div>
+                <div class="testimony-item">
+                    <div class="testimony-item-head">
+                        <img src="./assets/icons/user.png" alt="Caxiombo">
+                        <!--span-- style="display: flex; justify-content: center; flex-direction: column;">
+                            <p class="testimony-item-body-tittle">Eugênio Cach.</p>
+                            <small>Engenheiro informático</small>
+                            <small>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </small>
+                        </!--span-->
+                    </div>
+                    <div class="testimony-item-body">
+                        <p class="testimony-item-body-tittle">Eugênio Cachiombo</p>
+                        <small>Engenheiro informático</small> <br>
+                        <small>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </small>
+                        <p class="testimony-item-body-description"><sup><i class="fa fa-quote-left"></i></sup>
+                            Elisabeth é uma excelente
+                            profissional, tive o privilégio
+                            de ser seu colega de equipa e
+                            pela experiência demonstrada ela é super dedicada e comprometida com entrega de
+                            resultados
+                            de alta qualidade
+                            <sup><i class="fa fa-quote-right"></i></sup>
+                        </p>
+                    </div>
+                </div>
+                <div class="testimony-item" id="testimony-item-joy-duplicado" style="display: none;">
+                    <div class="testimony-item-head">
+                        <img src="./assets/icons/user.png" alt="Vemba">
+                    </div>
+                    <div class="testimony-item-body">
+                        <p class="testimony-item-body-tittle">Joy Vemba</p>
+                        <small>Engenheiro Eletrónico</small> <br>
+                        <small>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </small>
+                        <p class="testimony-item-body-description"><!--sup><i class="fa fa-quote-left"></i></sup-->
+                            Excelente
+                            profissional. Excelente profissional. Excelente<sup><i class="fa fa-quote-right"></i></sup>
+                        </p>
+                    </div>
+                </div>
+                <svg class="animado" id="svg-aspas" xmlns="http://www.w3.org/2000/svg" width="162" height="162"
+                    fill="none" viewBox="0 0 162 162">
+                    <mask id="b" fill="#fff">
+                        <path
+                            d="M97.203 47.04c8.113-7.886 18.004-13.871 28.906-17.492a78 78 0 0 1 33.969-3.39c11.443 1.39 22.401 5.295 32.024 11.411s17.656 14.28 23.476 23.86c5.819 9.579 9.269 20.318 10.083 31.385a69.85 69.85 0 0 1-5.387 32.44c-4.358 10.272-11.115 19.443-19.747 26.801-8.632 7.359-18.908 12.709-30.034 15.637l-6.17-21.698c7.666-2.017 14.746-5.703 20.694-10.773 5.948-5.071 10.603-11.389 13.606-18.467a48.14 48.14 0 0 0 3.712-22.352c-.561-7.625-2.938-15.025-6.948-21.625s-9.544-12.226-16.175-16.44-14.181-6.904-22.065-7.863a53.75 53.75 0 0 0-23.405 2.336c-7.513 2.495-14.327 6.62-19.918 12.053z">
+                        </path>
+                    </mask>
+                    <path stroke="url(#a)" stroke-dasharray="6, 6" stroke-width="2"
+                        d="M97.203 47.04c8.113-7.886 18.004-13.871 28.906-17.492a78 78 0 0 1 33.969-3.39c11.443 1.39 22.401 5.295 32.024 11.411s17.656 14.28 23.476 23.86c5.819 9.579 9.269 20.318 10.083 31.385a69.85 69.85 0 0 1-5.387 32.44c-4.358 10.272-11.115 19.443-19.747 26.801-8.632 7.359-18.908 12.709-30.034 15.637l-6.17-21.698c7.666-2.017 14.746-5.703 20.694-10.773 5.948-5.071 10.603-11.389 13.606-18.467a48.14 48.14 0 0 0 3.712-22.352c-.561-7.625-2.938-15.025-6.948-21.625s-9.544-12.226-16.175-16.44-14.181-6.904-22.065-7.863a53.75 53.75 0 0 0-23.405 2.336c-7.513 2.495-14.327 6.62-19.918 12.053z"
+                        mask="url(#b)" style="stroke:url(#a)" transform="translate(-63.992 -25.587)"></path>
+                    <ellipse cx="8.066" cy="111.597" fill="#ffff" rx="53.677" ry="53.699"
+                        transform="matrix(.71707 -.697 .7243 .6895 0 0)"></ellipse>
+                    <g clip-path="url(#c)" transform="translate(-63.992 -25.587)">
+                        <path fill="#a5d9f3"
+                            d="m144.256 137.379 32.906 12.434a4.41 4.41 0 0 1 2.559 5.667l-9.326 24.679a4.41 4.41 0 0 1-5.667 2.559l-8.226-3.108-2.332 6.17c-.466 1.233-.375 1.883-1.609 1.417l-2.253-.527c-.411-.155-.95-.594-1.206-1.161l-4.734-10.484-12.545-4.741a4.41 4.41 0 0 1-2.559-5.667l9.325-24.679a4.41 4.41 0 0 1 5.667-2.559m9.961 29.617 8.227 3.108 3.264-8.638-.498-6.768-4.113-1.555.548 7.258-4.319-1.632zm-12.339-4.663 8.226 3.108 3.264-8.637-.498-6.769-4.113-1.554.548 7.257-4.319-1.632z">
+                        </path>
+                    </g>
+                    <g clip-path="url(#d)" transform="translate(-63.992 -25.587)">
+                        <path fill="#61bdea"
+                            d="M135.35 60.136 86.67 41.654c-3.346-1.27-7.124.428-8.394 3.775L64.414 81.938c-1.27 3.347.428 7.125 3.774 8.395l12.17 4.62-3.465 9.128c-.693 1.826-1.432 2.457.394 3.15l3.014 1.625c.609.231 1.637.274 2.477-.104l15.53-6.983 18.56 7.047c3.346 1.27 7.124-.428 8.395-3.775l13.862-36.51c1.27-3.346-.428-7.124-3.775-8.395M95.261 83.207l-12.17-4.62 4.852-12.779 7.19-7.017 6.085 2.31-7.725 7.51 6.389 2.426zm18.255 6.93-12.17-4.62 4.852-12.778 7.189-7.017 6.085 2.31-7.725 7.51 6.39 2.426z">
+                        </path>
+                    </g>
+                    <defs>
+                        <clipPath id="c">
+                            <path fill="#fff" d="m198.638 146.586-65.056-24.583-24.583 65.057 65.056 24.582z">
+                            </path>
+                        </clipPath>
+                        <clipPath id="d">
+                            <path fill="#fff" d="m66.438 14.055 96.242 36.54-36.54 96.243-96.243-36.54z"></path>
+                        </clipPath>
+                        <linearGradient id="a" x1="97.203" x2="199.995" y1="47.04" y2="152.793"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#61bdea"></stop>
+                            <stop offset=".246" stop-color="#78c6ed"></stop>
+                            <stop offset=".516" stop-color="#78c6ed"></stop>
+                            <stop offset=".821" stop-color="#78c6ed"></stop>
+                            <stop offset="1" stop-color="#78c6ed"></stop>
+                        </linearGradient>
+                    </defs>
+                </svg>
             </div>
         </section>
         <section class="section section-contacts" id="contacto">
