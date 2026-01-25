@@ -1635,7 +1635,12 @@
 
                 postIframe.width(504);
                 postIframe.height(300);
-            } else if (tamanhoDaTela >= 1000) {
+            } else if (tamanhoDaTela <= 1000) {
+                postIframe.style = 'width:600px; height:350px; box-sizing: border-box;';
+
+                postIframe.width(600);
+                postIframe.height(300);
+            } else {
                 postIframe.style = 'width:704px; height:350px; box-sizing: border-box;';
 
                 postIframe.width(704);
