@@ -1506,7 +1506,6 @@
                         <a href="https://www.linkedin.com/in/elisain"><i class="fa fa-linkedin"></i></a>
                         <a href="https://github.com/Ukwally/"><i class="fa fa-github"></i></a>
                         <a href="#lista-contactos" onclick="mostrarErroWhatsapp()"><i class="fa fa-plus"></i></a>
-
                     </small>
                 </div>
                 <div class="dialog-footer">
@@ -1618,17 +1617,17 @@
 
         const tamanhoDaTela = screen.availWidth;
         if (tamanhoDaTela < 800) {
-            postIframe.style = 'width:320px; height:320px;';
-            postIframe.width(320);
+            postIframe.style = 'width:310px; height:320px; box-sizing: border-box;';
+            postIframe.width(310);
             postIframe.height(320);
         } else {
             if (tamanhoDaTela < 1000) {
-                postIframe.style = 'width:504px; height:350px;';
+                postIframe.style = 'width:504px; height:350px; box-sizing: border-box;';
 
                 postIframe.width(504);
                 postIframe.height(300);
             } else if (tamanhoDaTela >= 1000) {
-                postIframe.style = 'width:704px; height:350px;';
+                postIframe.style = 'width:704px; height:350px; box-sizing: border-box;';
 
                 postIframe.width(704);
                 postIframe.height(300);

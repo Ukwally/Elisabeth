@@ -641,7 +641,7 @@ header {
     height: fit-content;
     width: fit-content;
     z-index: 1;
-    overflow:unset;
+    overflow: unset;
   }
   /*Inicio Como o elemento da nav vai aparecer no grande*/
 
@@ -1014,6 +1014,7 @@ header {
   flex-direction: row;
   border-radius: 5px;
   align-items: center;
+  padding: 2px;
 }
 .section-introduction
   .porque-contactar
@@ -2511,6 +2512,18 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  max-width: 100%;
+  box-sizing: border-box;
+  object-fit: cover;
+  position: relative;
+}
+.section-posts .post-set::before {
+  content: "";
+  position: absolute;
+  background-color: #00000000;
+  height: 100%;
+  width: 100%;
+  z-index: 20;
 }
 /*CONTOMIZATION OF CONTACTS SECTION*/
 .section-contacts {
@@ -2972,6 +2985,9 @@ footer .termos-condicoes small a {
   margin-top: 10px;
   font-weight: 600;
 }
+.dialog .dialog-card .dialog-body small a {
+  text-decoration: none;
+}
 .dialog .dialog-card .dialog-body .dialog-btn {
   text-decoration: none;
   background-color: var(--mainBlue1);
@@ -2984,7 +3000,7 @@ footer .termos-condicoes small a {
 }
 .dialog .dialog-card .dialog-body small a i {
   margin-right: 10px;
-  border: 0.2px solid var(--mainBlue4);
+  border: 1px solid var(--mainBlue4);
   color: var(--goldBlue1);
   height: 30px;
   width: 30px;
