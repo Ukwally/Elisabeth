@@ -310,11 +310,15 @@ body {
   right: 0;
   background-color: var(--mainGreen1);
   color: var(--mainGreen14);
-  padding: 2px 7px;
+  padding: 5px 12px;
   border-radius: 10px;
   margin: 5px;
   z-index: 2;
   font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .cabecario {
   display: flex;
@@ -334,11 +338,11 @@ body {
 .cabecario .span-cap-welcome {
   color: var(--complementar10);
   font-weight: 500;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
 .cabecario .span-cap-cta {
   color: var(--font-color1);
-  font-size: 0.7rem;
+  font-size: 0.8rem;
 }
 /*COSTOMIZATION OF LIST*/
 .lista {
@@ -436,6 +440,7 @@ body {
 }
 .codigo-qr h3 {
   margin-bottom: 10px;
+  color: var(--font-color2);
 }
 .codigo-qr small {
   margin-bottom: 20px;
