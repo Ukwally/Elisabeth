@@ -77,7 +77,7 @@
                 <li>
                     <span class="span0">📈 </span>
                     <span class="span1">
-                        <a href="images/Flayer_servicos_elisabeth.jpg" download="Flayer_servicos_elisabeth.jpg">
+                        <a href="#" onclick="mostrarRedeSocialIndisponivel('Flayer')">
                             <!--i-- class="fa fa-download"></!--i-->
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -161,6 +161,29 @@
         </div>
     </div>
 
+    <div class="dialog hidden" id="modal-erro-RedeSocial">
+        <div class="dialog-card">
+            <div class="dialog-head">
+                <span class="close-dialog" onclick="mostrarRedeSocialIndisponivel('Flayer')">&#10005</span>
+            </div>
+            <div class="dialog-body">
+                <span>O <span class="cor-azul" style="font-weight: bold !important;" id="nomeDaRede"> </span> está
+                    quase pronto. Está a ser atualizado.</span>
+                <span class="counter">
+                    <span class="counter-item counter-dias">
+                     
+                    </span>
+                </span>
+                <small>
+                    Mas você pode usar o cartão de visitas e outros métodos.
+                </small>
+            </div>
+            <div class="dialog-footer">
+                <span class="cor-azul"></span>
+            </div>
+        </div>
+    </div>
+
 
     <script>
         const btnSaberMais = document.getElementById('btn-saber-mais');
@@ -172,6 +195,8 @@
             document.getElementById('modal').classList.toggle('hidden');
         }
     </script>
+
+    <script src="../scripts/index.js"></script>
 
 </body>
 
