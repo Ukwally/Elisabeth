@@ -111,7 +111,7 @@ function contarTempo() {
 
 function contarTempo() {
     const inicio = Date.now();
-    const final = new Date('2026-03-02').getTime();
+    const final = new Date('2026-03-17').getTime();
     const falta = final - inicio;
 
     const segundos = Math.floor(falta / 1000) % 60;
@@ -178,3 +178,18 @@ employer.name='Elisabeth Pedro';
 employer.skills[backend,frontend,server,AI,hosting,]
 
 */
+
+
+
+/*function contar (){
+    const comeco = Date();
+    const fim = new Date('2026-03-02').getTime();
+
+            console.log('comeco:' + comeco)
+            console.log('fim:' + fim)
+
+    if (comeco < fim) {
+   
+    }
+}
+contar();*/

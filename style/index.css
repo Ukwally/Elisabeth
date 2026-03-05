@@ -175,6 +175,14 @@ html {
   --complementar18: #332200;
   --complementar19: #1a1100;
   --complementar20: #000000;
+
+
+
+  --jwwtBlue1:'#3e6ba3';
+  --jwwtBlue2:'#4e7fbc';
+  --jwwtBlue3:'#6b94c7';
+  --jwwtBlueTxt1:'#4477a1';
+  --jwwtBlueTxt2:'#2878bb';
 }
 body {
   margin: 0px;
