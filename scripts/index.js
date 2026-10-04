@@ -1,4 +1,7 @@
 /*Constomize didamic Header*/
+
+//window.confirm('você já tem o meu número guardado? %2 Já tenho %2 guardar agora.')
+
 document.addEventListener('DOMContentLoaded', () => {
     "use strict";
     //inicio animação banner
