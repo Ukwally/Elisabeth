@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plataforma de Cursos — Desenvolva sua Carreira</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f3f2ef;
+            color: rgba(0, 0, 0, 0.9);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Container Principal */
+        .container {
+            width: 100%;
+            max-width: 1128px;
+            padding: 24px 16px;
+        }
+
+        /* Cabeçalho Estilo LinkedIn */
+        header {
+            background: #ffffff;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+        }
+
+        header h1 {
+            font-size: 24px;
+            color: rgba(0, 0, 0, 0.9);
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        header p {
+            color: rgba(0, 0, 0, 0.6);
+            font-size: 14px;
+        }
+
+        /* Barra de Filtros e Busca Estilo LinkedIn */
+        .search-filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            background: #ffffff;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+        }
+
+        .search-box {
+            flex: 1;
+            min-width: 260px;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .search-box svg {
+            position: absolute;
+            left: 12px;
+            fill: rgba(0, 0, 0, 0.6);
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 8px 12px 8px 38px;
+            background-color: #edf2f7;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            color: rgba(0, 0, 0, 0.9);
+            outline: none;
+            transition: background-color 0.2s, box-shadow 0.2s;
+        }
+
+        .search-box input:focus {
+            background-color: #ffffff;
+            box-shadow: 0 0 0 2px #0a66c2;
+        }
+
+        .filter-tags {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+
+        .tag {
+            background-color: #ffffff;
+            color: rgba(0, 0, 0, 0.6);
+            padding: 6px 12px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            white-space: nowrap;
+            transition: all 0.2s;
+        }
+
+        .tag.active {
+            background-color: #057642;
+            color: #ffffff;
+            border-color: #057642;
+        }
+
+        .tag:hover:not(.active) {
+            background-color: rgba(0, 0, 0, 0.04);
+            border-color: rgba(0, 0, 0, 0.9);
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        /* Grade de Cursos */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+            width: 100%;
+        }
+
+        /* Card do Curso Estilo LinkedIn */
+        .course-card {
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
+            transition: box-shadow 0.2s;
+        }
+
+        .course-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .course-image {
+            width: 100%;
+            height: 140px;
+            background-color: #0a66c2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 16px;
+            position: relative;
+        }
+
+        .course-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.75);
+            color: #ffffff;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .course-content {
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .course-category {
+            color: #0a66c2;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+            letter-spacing: 0.5px;
+        }
+
+        .course-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.9);
+            margin-bottom: 12px;
+            line-height: 1.35;
+        }
+
+        /* Bloco do Instrutor com Foto */
+        .course-instructor {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+
+        .instructor-avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 1px solid #e0e0e0;
+        }
+
+        .instructor-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .instructor-name {
+            font-size: 13px;
+            font-weight: 600;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .instructor-role {
+            font-size: 11px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Meta Informações com Ícones SVG */
+        .course-meta {
+            display: flex;
+            gap: 16px;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.6);
+            margin-bottom: 16px;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 12px;
+            margin-top: auto;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .meta-item svg {
+            fill: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Rodapé do Card */
+        .course-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 8px;
+        }
+
+        .course-price {
+            font-size: 18px;
+            font-weight: 700;
+            color: rgba(0, 0, 0, 0.9);
+        }
+
+        .course-price.free {
+            color: #057642;
+        }
+
+        .btn-enroll {
+            background-color: #0a66c2;
+            color: #ffffff;
+            border: none;
+            padding: 6px 16px;
+            border-radius: 16px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .btn-enroll:hover {
+            background-color: #004182;
+        }
+
+        .btn-enroll.free-btn {
+            background-color: #057642;
+        }
+
+        .btn-enroll.free-btn:hover {
+            background-color: #044b2a;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .search-filter-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .filter-tags {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Cabeçalho -->
+    <header>
+        <h1>Explore Nossos Cursos</h1>
+        <p>Aprenda novas habilidades com especialistas do mercado de engenharia e performance.</p>
+    </header>
+
+    <!-- Barra de Ferramentas (Busca e Filtros) -->
+    <div class="search-filter-bar">
+        <div class="search-box">
+            <!-- Ícone Busca Google SVG -->
+            <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
+                <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-260q133 0 226.5-93.5T700-580q0-133-93.5-226.5T380-900q-133 0-226.5 93.5T60-580q0 133 93.5 226.5T380-260Z"/>
+            </svg>
+            <input type="text" placeholder="Buscar por cursos, ferramentas ou instrutores...">
+        </div>
+        <div class="filter-tags">
+            <button class="tag active">Todos</button>
+            <button class="tag">Engenharia</button>
+            <button class="tag">Performance</button>
+            <button class="tag">Gestão</button>
+            <button class="tag">Gratuitos</button>
+        </div>
+    </div>
+
+    <!-- Grade de Cursos -->
+    <main class="courses-grid">
+        
+        <!-- Curso 1 -->
+        <div class="course-card">
+            <div class="course-image" style="background: linear-gradient(135deg, #0a66c2, #004182);">
+                Lean Six Sigma
+                <span class="course-badge">Mais vendido</span>
+            </div>
+            <div class="course-content">
+                <span class="course-category">Performance Industrial</span>
+                <h2 class="course-title">Excelência Operacional com Lean Manufacturing</h2>
+                
+                <div class="course-instructor">
+                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Carlos Silva">
+                    <div class="instructor-info">
+                        <span class="instructor-name">Carlos Silva</span>
+                        <span class="instructor-role">Black Belt</span>
+                    </div>
+                </div>
+
+                <div class="course-meta">
+                    <div class="meta-item">
+                        <!-- Ícone Relógio Google SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"><path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg>
+                        <span>24 horas</span>
+                    </div>
+                    <div class="meta-item">
+                        <!-- Ícone Aulas Google SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm80-80h400v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Z"/></svg>
+                        <span>45 aulas</span>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <span class="course-price">R$ 249,90</span>
+                    <button class="btn-enroll">Ver Curso</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curso 2 -->
+        <div class="course-card">
+            <div class="course-image" style="background: linear-gradient(135deg, #0073b1, #004b76);">
+                Gestão Ágil
+            </div>
+            <div class="course-content">
+                <span class="course-category">Gestão</span>
+                <h2 class="course-title">Scrum e Kanban para Engenharia de Performance</h2>
+                
+                <div class="course-instructor">
+                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Amanda Costa">
+                    <div class="instructor-info">
+                        <span class="instructor-name">Amanda Costa</span>
+                        <span class="instructor-role">Agile Coach</span>
+                    </div>
+                </div>
+
+                <div class="course-meta">
+                    <div class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"><path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg>
+                        <span>12 horas</span>
+                    </div>
+                    <div class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm80-80h400v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Z"/></svg>
+                        <span>20 aulas</span>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <span class="course-price">R$ 119,00</span>
+                    <button class="btn-enroll">Ver Curso</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Curso 3 (Elisabeth Pedro) -->
+        <div class="course-card">
+            <div class="course-image" style="background: linear-gradient(135deg, #057642, #004b2a);">
+                Green Belt
+                <span class="course-badge" style="background-color: #057642;">Bônus Grátis</span>
+            </div>
+            <div class="course-content">
+                <span class="course-category">Engenharia</span>
+                <h2 class="course-title">Introdução à Análise de Dados e Indicadores (KPIs)</h2>
+                
+                <!-- Bloco de Foto da Elisabeth Pedro -->
+                <div class="course-instructor">
+                    <!-- AQUI: Substitua o 'src' abaixo pelo link da foto real da Elisabeth Pedro -->
+                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Elisabeth Pedro">
+                    <div class="instructor-info">
+                        <span class="instructor-name">Elisabeth Pedro</span>
+                        <span class="instructor-role">Especialista em Dados</span>
+                    </div>
+                </div>
+
+                <div class="course-meta">
+                    <div class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"><path d="m612-292 56-56-148-148v-184h-80v216l172 172ZM480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg>
+                        <span>4 horas</span>
+                    </div>
+                    <div class="meta-item">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="16" viewBox="0 -960 960 960" width="16"><path d="M200-120q-33 0-56.5-23.5T120-200v-560q0-33 23.5-56.5T200-840h560q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H200Zm0-80h560v-560H200v560Zm80-80h400v-80H280v80Zm0-160h400v-80H280v80Zm0-160h400v-80H280v80Z"/></svg>
+                        <span>8 aulas</span>
+                    </div>
+                </div>
+                <div class="course-footer">
+                    <span class="course-price free">Gratuito</span>
+                    <button class="btn-enroll free-btn">Acessar</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
