@@ -233,6 +233,34 @@
             color: rgba(0, 0, 0, 0.6);
         }
 
+        /* Modalidade (Online, Presencial, Ao Domicílio) */
+        .course-modality {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 4px;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .modality-online {
+            background-color: #e8f4fd;
+            color: #0a66c2;
+        }
+
+        .modality-presencial {
+            background-color: #fef3e2;
+            color: #b86b00;
+        }
+
+        .modality-domicilio {
+            background-color: #e6f4ea;
+            color: #057642;
+        }
+
         /* Meta Informações com Ícones SVG */
         .course-meta {
             display: flex;
@@ -314,7 +342,7 @@
 <div class="container">
     <!-- Cabeçalho -->
     <header>
-        <h1>Explore Nossos Cursos</h1>
+        <h1>Explore Meus Cursos</h1>
         <p>Aprenda novas habilidades com especialistas do mercado de engenharia e performance.</p>
     </header>
 
@@ -323,7 +351,7 @@
         <div class="search-box">
             <!-- Ícone Busca Google SVG -->
             <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20">
-                <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-260q133 0 226.5-93.5T700-580q0-133-93.5-226.5T380-900q-133 0-226.5 93.5T60-580q0 133 93.5 226.5T380-260Z"/>
+                <path d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-260q133 0 226.5-93.5T700-580q0-133-93.5-226.5T380-900q-133 0-226.5 93.5T60-580q0 133 93.5 227.5T380-260Z"/>
             </svg>
             <input type="text" placeholder="Buscar por cursos, ferramentas ou instrutores...">
         </div>
@@ -351,12 +379,14 @@
                 <h2 class="course-title">Excelência Operacional com Lean Manufacturing</h2>
                 
                 <div class="course-instructor">
-                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Carlos Silva">
+                    <img class="instructor-avatar" src="./assets/images/elisabeth.png" alt="Carlos Silva">
                     <div class="instructor-info">
                         <span class="instructor-name">Carlos Silva</span>
                         <span class="instructor-role">Black Belt</span>
                     </div>
                 </div>
+
+                <div class="course-modality modality-online">Online</div>
 
                 <div class="course-meta">
                     <div class="meta-item">
@@ -369,7 +399,7 @@
                     </div>
                 </div>
                 <div class="course-footer">
-                    <span class="course-price">R$ 249,90</span>
+                    <span class="course-price">Kz 249,90</span>
                     <button class="btn-enroll">Ver Curso</button>
                 </div>
             </div>
@@ -385,12 +415,14 @@
                 <h2 class="course-title">Scrum e Kanban para Engenharia de Performance</h2>
                 
                 <div class="course-instructor">
-                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Amanda Costa">
+                    <img class="instructor-avatar" src="./assets/images/elisabeth.png" alt="Amanda Costa">
                     <div class="instructor-info">
                         <span class="instructor-name">Amanda Costa</span>
                         <span class="instructor-role">Agile Coach</span>
                     </div>
                 </div>
+
+                <div class="course-modality modality-presencial">Presencial</div>
 
                 <div class="course-meta">
                     <div class="meta-item">
@@ -403,7 +435,7 @@
                     </div>
                 </div>
                 <div class="course-footer">
-                    <span class="course-price">R$ 119,00</span>
+                    <span class="course-price">Kz 119,00</span>
                     <button class="btn-enroll">Ver Curso</button>
                 </div>
             </div>
@@ -420,12 +452,14 @@
                 <h2 class="course-title">Introdução à Análise de Dados e Indicadores (KPIs)</h2>
                 
                 <div class="course-instructor">
-                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Elisabeth Pedro">
+                    <img class="instructor-avatar" src="./assets/images/elisabeth.png" alt="Elisabeth Pedro">
                     <div class="instructor-info">
                         <span class="instructor-name">Elisabeth Pedro</span>
                         <span class="instructor-role">Especialista em Dados</span>
                     </div>
                 </div>
+
+                <div class="course-modality modality-domicilio">Ao Domicílio</div>
 
                 <div class="course-meta">
                     <div class="meta-item">
@@ -455,12 +489,14 @@
                 <h2 class="course-title">Teams + Outlook: Comunicação e Gestão de E-mails Eficiente</h2>
                 
                 <div class="course-instructor">
-                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Lucas Martins">
+                    <img class="instructor-avatar" src="./assets/images/elisabeth.png" alt="Lucas Martins">
                     <div class="instructor-info">
                         <span class="instructor-name">Lucas Martins</span>
                         <span class="instructor-role">Especialista M365</span>
                     </div>
                 </div>
+
+                <div class="course-modality modality-online">Online</div>
 
                 <div class="course-meta">
                     <div class="meta-item">
@@ -473,7 +509,7 @@
                     </div>
                 </div>
                 <div class="course-footer">
-                    <span class="course-price">R$ 89,90</span>
+                    <span class="course-price">Kz 89,90</span>
                     <button class="btn-enroll">Ver Curso</button>
                 </div>
             </div>
@@ -490,12 +526,14 @@
                 <h2 class="course-title">Excel: Do Zero ao Profissional para o Mercado</h2>
                 
                 <div class="course-instructor">
-                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Beatriz Souza">
+                    <img class="instructor-avatar" src="./assets/images/elisabeth.png" alt="Beatriz Souza">
                     <div class="instructor-info">
                         <span class="instructor-name">Beatriz Souza</span>
                         <span class="instructor-role">Microsoft MVP</span>
                     </div>
                 </div>
+
+                <div class="course-modality modality-presencial">Presencial</div>
 
                 <div class="course-meta">
                     <div class="meta-item">
@@ -508,7 +546,7 @@
                     </div>
                 </div>
                 <div class="course-footer">
-                    <span class="course-price">R$ 149,90</span>
+                    <span class="course-price">Kz 149,90</span>
                     <button class="btn-enroll">Ver Curso</button>
                 </div>
             </div>
@@ -524,12 +562,14 @@
                 <h2 class="course-title">OneDrive, SharePoint e Microsoft Lists na Prática</h2>
                 
                 <div class="course-instructor">
-                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Rafael Mendes">
+                    <img class="instructor-avatar" src="./assets/images/elisabeth.png" alt="Rafael Mendes">
                     <div class="instructor-info">
                         <span class="instructor-name">Rafael Mendes</span>
                         <span class="instructor-role">Cloud Architect</span>
                     </div>
                 </div>
+
+                <div class="course-modality modality-online">Online</div>
 
                 <div class="course-meta">
                     <div class="meta-item">
@@ -542,7 +582,7 @@
                     </div>
                 </div>
                 <div class="course-footer">
-                    <span class="course-price">R$ 129,90</span>
+                    <span class="course-price">Kz 129,90</span>
                     <button class="btn-enroll">Ver Curso</button>
                 </div>
             </div>
@@ -559,12 +599,14 @@
                 <h2 class="course-title">Power Apps e Power Automate: Automação sem Código</h2>
                 
                 <div class="course-instructor">
-                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Juliana Ribeiro">
+                    <img class="instructor-avatar" src="./assets/images/elisabeth.png" alt="Juliana Ribeiro">
                     <div class="instructor-info">
                         <span class="instructor-name">Juliana Ribeiro</span>
                         <span class="instructor-role">Low-Code Developer</span>
                     </div>
                 </div>
+
+                <div class="course-modality modality-domicilio">Ao Domicílio</div>
 
                 <div class="course-meta">
                     <div class="meta-item">
@@ -577,7 +619,7 @@
                     </div>
                 </div>
                 <div class="course-footer">
-                    <span class="course-price">R$ 219,90</span>
+                    <span class="course-price">Kz 219,90</span>
                     <button class="btn-enroll">Ver Curso</button>
                 </div>
             </div>
@@ -594,12 +636,14 @@
                 <h2 class="course-title">Power BI e Excel Avançado para Tomada de Decisão</h2>
                 
                 <div class="course-instructor">
-                    <img class="instructor-avatar" src="https://via.placeholder.com/150" alt="Marcos Vinícius">
+                    <img class="instructor-avatar" src="./assets/images/elisabeth.png" alt="Marcos Vinícius">
                     <div class="instructor-info">
                         <span class="instructor-name">Marcos Vinícius</span>
                         <span class="instructor-role">Data Engineer</span>
                     </div>
                 </div>
+
+                <div class="course-modality modality-online">Online</div>
 
                 <div class="course-meta">
                     <div class="meta-item">
@@ -612,7 +656,7 @@
                     </div>
                 </div>
                 <div class="course-footer">
-                    <span class="course-price">R$ 279,90</span>
+                    <span class="course-price">Kz 279,90</span>
                     <button class="btn-enroll">Ver Curso</button>
                 </div>
             </div>
