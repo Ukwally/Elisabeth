@@ -176,13 +176,11 @@ html {
   --complementar19: #1a1100;
   --complementar20: #000000;
 
-
-
-  --jwwtBlue1:'#3e6ba3';
-  --jwwtBlue2:'#4e7fbc';
-  --jwwtBlue3:'#6b94c7';
-  --jwwtBlueTxt1:'#4477a1';
-  --jwwtBlueTxt2:'#2878bb';
+  --jwwtBlue1: "#3e6ba3";
+  --jwwtBlue2: "#4e7fbc";
+  --jwwtBlue3: "#6b94c7";
+  --jwwtBlueTxt1: "#4477a1";
+  --jwwtBlueTxt2: "#2878bb";
 }
 body {
   margin: 0px;
@@ -1964,10 +1962,19 @@ header {
 
 .section-testimony .testimony-set .testimony-item .testimony-item-head {
   display: flex;
+  height: 100px;
+  width: 100px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  object-fit: cover;
+  overflow: hidden;
 }
 .section-testimony .testimony-set .testimony-item .testimony-item-head img {
-  max-width: 90px;
-  max-height: 90px;
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 50%;
 }
 .section-testimony .testimony-set .testimony-item .testimony-item-body {
   padding-left: 10px;
@@ -2158,6 +2165,11 @@ header {
     right: -25px;
     top: -25px;
   }
+}
+/*SECTION-CURSOS CTA*/
+.section-cursos-cts {
+  background-color: var(--mainBlue14);
+  height: 500px;
 }
 /*SECTION ABOUT*/
 .section-about {
