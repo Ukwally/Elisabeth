@@ -2166,11 +2166,6 @@ header {
     top: -25px;
   }
 }
-/*SECTION-CURSOS CTA*/
-.section-cursos-cts {
-  background-color: var(--mainBlue14);
-  height: 500px;
-}
 /*SECTION ABOUT*/
 .section-about {
   background-color: white;
