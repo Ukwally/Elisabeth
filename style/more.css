@@ -234,9 +234,7 @@ main {
   font-size: 1.2rem;
 }
 
-.div-tittle-valores {
-  padding: 5% 10% 0;
-}
+
 .div-tittle-contactos h1 span {
   color: var(--mainGreen13) !important;
   font-size: 3rem !important;
@@ -695,52 +693,6 @@ header {
   border-radius: 5px;
   text-transform: uppercase;
   font-size: 0.8rem;
-}
-/*COSTOM SECTION VALORES*/
-.section-valores {
-  padding: 5% 10%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.section-valores .div-valor {
-  background-color: var(--white-color1);
-  background-color: var(--mainBlue4);
-  padding: 12px 40px;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  margin-bottom: 20px;
-  align-items: center;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-top: 4px solid var(--mainBlue2);
-}
-.section-valores .div-valor svg {
-  stroke: var(--mainBlue4);
-  stroke-width: 1px;
-  margin-bottom: 10px;
-  height: 40px;
-  width: 40px;
-  padding: 10px;
-  border-radius: 50%;
-  border: 0.1rem solid transparent;
-  background-color: var(--mainBlue2);
-}
-.section-valores .div-valor span {
-  color: white;
-  font-size: 1.5rem;
-  font-weight: 400;
-}
-@media only screen and (min-width: 800px) {
-  .section-valores {
-    padding: 5% 10%;
-    display: flex;
-    justify-content: space-around;
-  }
-  .section-valores .div-valor {
-    width: calc(70% / 3);
-  }
 }
 /*CONTOMIZATION OF SECTION CTA ENTREVISTA*/
 .section-cta-entrevista-txt {
