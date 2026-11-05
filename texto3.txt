@@ -1,0 +1,46 @@
+"
+<table style='width:100%; border-collapse:collapse; font-family:Arial; font-size:12px;'>
+
+<tr>
+    <th style='border:1px solid #999; padding:12px; background:#E7E6E6;'>Linha</th>
+    <th style='border:1px solid #999; padding:12px; background:#E7E6E6;'>Área</th>
+    <th style='border:1px solid #999; padding:12px; background:#E7E6E6;'>O que verificar</th>
+    <th style='border:1px solid #999; padding:12px; background:#E7E6E6;'>OK / NOT OK</th>
+</tr>
+" &
+
+Concat(
+    Filter(
+        AppDigitalExceptionalWetCleaning;
+        finalStatus.Value = "Verificado"
+    ) As Limpeza;
+
+    Concat(
+        Filter(
+            AppDigitalExceptionalWetCleaningCheklist;
+            CleaningID = Limpeza.ID
+        ) As Check;
+
+        "
+        <tr>
+            <td style='border:1px solid #999; padding:14px; text-align:center;'>" &
+                Limpeza.Machine.Value &
+            "</td>
+
+            <td style='border:1px solid #999; padding:14px; text-align:center;'>" &
+                Check.Area &
+            "</td>
+
+            <td style='border:1px solid #999; padding:14px; text-align:center;'>" &
+                Check.Item &
+            "</td>
+
+            <td style='border:1px solid #999; padding:14px; text-align:center; font-weight:bold;'>" &
+                Check.Resultado.Value &
+            "</td>
+        </tr>
+        "
+    )
+) &
+
+"</table>"
